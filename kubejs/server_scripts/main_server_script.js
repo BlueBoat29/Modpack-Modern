@@ -208,6 +208,7 @@ ServerEvents.recipes(event => {
 	registerCreateConnectedRecipes(event)
 	registerCreatedecoRecipes(event)
 	registerCreateHorsePowerBlockRecipes(event)
+	registerCreateHypertubeRecipes(event)
 	registerDiggerHelmetRecipes(event)
 	registerDomumOrnamentumRecipes(event)
 	registerEndermanOverhaulRecipes(event)
