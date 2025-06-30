@@ -1,0 +1,26 @@
+
+[tfg]
+	#
+	# Max familiarity an adult may reach
+	#Range: 0.0 ~ 1.0
+	moonRabbitFamiliarityCap = 0.35
+	#
+	# Days until animal reaches adulthood
+	#Range: > 0
+	moonRabbitAdulthoodDays = 80
+	#
+	# Uses before animal becomes old and can no longer be used
+	#Range: > 0
+	moonRabbitUses = 40
+	#
+	# Does the animal eat rotten food?
+	moonRabbitEatsRottenFood = true
+	#
+	# Length of pregnancy in days
+	#Range: > 0
+	moonRabbitGestationDays = 19
+	#
+	# Max number of children born
+	#Range: 0 ~ 100
+	moonRabbitChildCount = 6
+
