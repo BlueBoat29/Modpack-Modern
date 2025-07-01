@@ -306,4 +306,15 @@ const registerTFGItems = (event) => {
     event.create('tfg:titanium_hull_reinforcement')
         .translationKey('item.tfg.titanium_hull_reinforcement')
     //#endregion
+	
+	//Tacz Helper Region
+	event.create('tfg:flintlock_mechanism')
+		.translationKey('item.tfg.flintlock_mechanism')
+	event.create('tfg:clockwork_mechanism')
+		.translationKey('item.tfg.clockwork_mechanism')
+	event.create('tfg:advanced_clockwork_mechanism')
+		.translationKey('item.tfg.advanced_clockwork_mechanism')
+	event.create('tfg:certus_mechanism')
+		.translationKey('item.tfg.certus_mechanism')
+	//endregion
 }
