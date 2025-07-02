@@ -251,7 +251,7 @@ ServerEvents.recipes(event => {
 })
 
 TaCZServerEvents.gunIndexLoad((event) => {
-	
+	gunIndexLogic(event)
 })
 
 TaCZServerEvents.ammoIndexLoad((event) => {
@@ -259,5 +259,5 @@ TaCZServerEvents.ammoIndexLoad((event) => {
 })
 
 TaCZServerEvents.attachmentIndexLoad((event) => {
-	
+	attachmentIndexLogic(event)
 })
