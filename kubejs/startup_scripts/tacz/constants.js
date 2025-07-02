@@ -329,18 +329,38 @@ global.TACZ_ATTACH_INDEX = [
 	'applied_armorer:extended_battery_aa_3'
 ]
 
-
-
-
-
-
-
-global.TACZ_ENABLED_GUNS = []
+global.TACZ_ENABLED_GUNS = [
+	//Pistol
+	'ulv_guns:flintlock',
+	'create_armorer:pistol_revolver_torque',
+	'applied_armorer:niklas_pistol_semi_right',
+	'applied_armorer:niklas_pistol_semi_pride',
+	'applied_armorer:niklas_pistol_double_win_win',
+	
+	//Sniper
+	'tacz:springfield1873',
+	'create_armorer:sniper_semi_clockwork',
+	'applied_armorer:moritz_sniper_semi_k30',
+	
+	//Rifle
+	'create_armorer:rifle_assult_crane',
+	'applied_armorer:moritz_rifle_ar77',
+	
+	//Shotgun
+	'ulv_guns:blunderbuss',
+	'create_armorer:shotgun_pump_bearing',
+	'applied_armorer:moritz_shotgun_sg914',
+	
+	//SMG
 	
 	
+	//Heavy
+	'create_armorer:mg_platemag_flywheel',
+	'applied_armorer:moritz_gernade_gl3'
+
+];
 	
-
-
+	
 global.TACZ_ENABLED_AMMO = [
 	'tacz:12g',
 	'tacz:45_70',
@@ -351,12 +371,8 @@ global.TACZ_ENABLED_AMMO = [
 	'applied_armorer:fluix_infused_grenade',
 	'applied_armorer:cluster_quartz_bullet',
 	'ulv_guns:lead_shot'
-]
+];
 	
-	
-	
-
-
 global.TACZ_ENABLED_ATTACH = [
 	//scope
 	'tacz:scope_1873_6x',
@@ -369,6 +385,9 @@ global.TACZ_ENABLED_ATTACH = [
 	'applied_armorer:si_ms_12',
 	'applied_armorer:scope_ms_14',
 	'applied_armorer:si_pricision',
+	//These two aren't obtainable but used as default for guns, so need to exist
+	'applied_armorer:si_pride_default',
+	'applied_armorer:si_xs_07',
 	//'applied_armorer:si_simple_3',
 	//'applied_armorer:si_profession',
 	//'applied_armorer:sight_type_3741',
@@ -386,14 +405,14 @@ global.TACZ_ENABLED_ATTACH = [
 	
 	//grip
 	'create_armorer:grip_wooden',
-	'create_armorer:grip_gantry_shaft',
+	'create_armorer:grip_gantry_shaft'
 	
 	//mag
 	
 	
 	//laser
 
-]
+];
 	
 	
 	
