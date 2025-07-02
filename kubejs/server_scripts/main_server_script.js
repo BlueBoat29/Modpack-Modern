@@ -237,6 +237,7 @@ ServerEvents.recipes(event => {
 	registerSophisticatedBackpacksRecipes(event)
 	registerSimplylightRecipes(event)
 	registerSpeciesRecipes(event)
+	registerTACZRecipes(event)
 	registerTFCRecipes(event)
 	registerTFCBetterBFRecipes(event)
 	registerTFCLunchBoxRecipes(event)
@@ -247,4 +248,16 @@ ServerEvents.recipes(event => {
 	registerTreeTapRecipes(event)
 	registerVintageImprovementsRecipes(event)
 	registerWaterFlasksRecipes(event)
+})
+
+TaCZServerEvents.gunIndexLoad((event) => {
+	
+})
+
+TaCZServerEvents.ammoIndexLoad((event) => {
+	ammoIndexLogic(event)
+})
+
+TaCZServerEvents.attachmentIndexLoad((event) => {
+	
 })
