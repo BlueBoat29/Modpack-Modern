@@ -29,7 +29,7 @@ function registerTACZMiscRecipes(event) {
 		.itemInputs('2x greate:aluminium_cogwheel', 'greate:silicone_rubber_belt_connector', '2x #forge:springs/aluminium', 
 					'8x #forge:screws/aluminium', '#forge:gears/cobalt_brass', '3x #forge:rings/silicone_rubber')
 		.itemOutputs('tfg:advanced_clockwork_mechanism')
-		.EUt(128)
+		.EUt(GTValues.VA[GTValues.MV])
 		.duration(80)
 		
 	event.recipes.gtceu.assembler('tfg:certus_mechanism')
@@ -38,6 +38,6 @@ function registerTACZMiscRecipes(event) {
 					'16x #forge:fine_wires/red_alloy')
 		.inputFluids(Fluid.of('gtceu:soldering_alloy', 288))
 		.itemOutputs('tfg:certus_mechanism')
-		.EUt(2048)
+		.EUt(GTValues.VA[GTValues.EV])
 		.duration(80)
 }
