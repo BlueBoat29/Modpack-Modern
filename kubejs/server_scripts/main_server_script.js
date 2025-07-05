@@ -42,11 +42,12 @@ ServerEvents.tags('item', event => {
 	registerRnrItemTags(event)
 	registerSophisticatedBackpacksItemTags(event)
 	registerSpeciesItemTags(event)
+	registerTACZItemTags(event)
 	registerTFCAmbientalItemTags(event)
 	registerTFCItemTags(event)
 	registerTFCTextileItemTags(event)
 	registerTFGItemTags(event)
-  registerTFCLunchboxItemTags(event)
+    registerTFCLunchboxItemTags(event)
 	registerVintageImprovementsItemTags(event)
 })
 
