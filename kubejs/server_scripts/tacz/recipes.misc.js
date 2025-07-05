@@ -2,6 +2,67 @@
 
 function registerTACZMiscRecipes(event) {
 	
+	event.shaped('tfg:small_casing_extruder_mold',[
+		'   ',
+		'AB ',
+		'   '
+	],{
+		A: '#forge:tools/wire_cutters',
+		B: 'gtceu:empty_mold'
+	}).id('tfg:small_casing_extruder_mold');
+	
+	event.shaped('tfg:large_casing_extruder_mold',[
+		'   ',
+		'AB ',
+		'  C'
+	],{
+		A: '#forge:tools/wire_cutters',
+		B: 'gtceu:empty_mold',
+		C: '#forge:tools/files'
+	}).id('tfg:large_casing_extruder_mold');
+	
+	event.shaped('tfg:shell_casing_extruder_mold',[
+		'  C',
+		'AB ',
+		'   '
+	],{
+		A: '#forge:tools/wire_cutters',
+		B: 'gtceu:empty_mold',
+		C: '#forge:tools/files'
+	}).id('tfg:shell_casing_extruder_mold');
+	
+	const extruderMolds = [
+	'tfg:shell_casing_extruder_mold',
+	'tfg:small_casing_extruder_mold',
+	'tfg:large_casing_extruder_mold'
+    ]
+	
+	extruderMolds.forEach(mold => {
+
+		event.recipes.gtceu.arc_furnace(`arc_${mold}`.replace("tfg:", ""))
+			.itemInputs(mold)
+			.itemOutputs(ChemicalHelper.get(TagPrefix.ingot, GTMaterials.Steel, 4))
+			.duration(224)
+			.EUt(GTValues.VA[GTValues.LV])
+			.category(GTRecipeCategories.ARC_FURNACE_RECYCLING)
+
+		event.recipes.gtceu.macerator(`macerate_${mold}`.replace("tfg:", ""))
+			.itemInputs(mold)
+			.itemOutputs(ChemicalHelper.get(TagPrefix.dust, GTMaterials.Steel, 4))
+			.duration(224)
+			.EUt(GTValues.VA[GTValues.ULV])
+			.category(GTRecipeCategories.MACERATOR_RECYCLING)
+
+		event.recipes.gtceu.forming_press(`copy_shape_${mold}`.replace("tfg:", ""))
+			.itemInputs('gtceu:empty_mold')
+			.notConsumable(mold)
+			.itemOutputs(mold)
+			.duration(120)
+			.EUt(GTValues.VA[GTValues.LV])
+	})
+	
+	
+	
 	event.shaped('tfg:flintlock_mechanism', [
 		'ABC',
 		'DEF',
@@ -18,12 +79,7 @@ function registerTACZMiscRecipes(event) {
 		I: '#forge:tools/hammers'
 	}).id('tfg:shaped/flintlock_mechanism');
 	
-	/*event.recipes.gtceu.assembler('tfg:clockwork_mechanism')
-		.itemInputs('2x greate:steel_cogwheel', 'greate:rubber_belt_connector', '#forge:springs/steel', 
-					'4x #forge:screws/steel', '#forge:rings/brass', '2x #forge:rings/rubber')
-		.itemOutputs('tfg:clockwork_mechanism')
-		.EUt(32)
-		.duration(80)*/
+	
 	
 	event.recipes.gtceu.assembler('tfg:advanced_clockwork_mechanism')
 		.itemInputs('2x greate:aluminium_cogwheel', 'greate:silicone_rubber_belt_connector', '2x #forge:springs/aluminium', 
