@@ -321,5 +321,12 @@ const registerTFGItems = (event) => {
 		.translationKey('item.tfg.shell_casing_extruder_mold')
 	event.create('tfg:large_casing_extruder_mold')
 		.translationKey('item.tfg.large_casing_extruder_mold')
+		
+	event.create('tfg:small_bullet_casing')
+		.translationKey('tfg:small_bullet_casing')
+	event.create('tfg:shell_bullet_casing')
+		.translationKey('tfg:shell_bullet_casing')
+	event.create('tfg:large_bullet_casing')
+		.translationKey('tfg:large_bullet_casing')
 	//endregion
 }

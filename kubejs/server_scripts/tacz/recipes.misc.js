@@ -2,6 +2,32 @@
 
 function registerTACZMiscRecipes(event) {
 	
+	//Targets etc
+	event.shaped('tacz:target',[
+		'ABA',
+		'BCB',
+		' B '
+	],{
+		A: '#forge:dyes/red',
+		B: '#forge:plates/steel',
+		C: '#forge:rods/long/wood'
+	}).id('tfg_tacz:target');
+	
+	event.shaped('tacz:statue',[
+		'BAB',
+		'BAB',
+		' A '
+	],{
+		A: 'tfc:rock/chiseled/marble',
+		B: 'tfc:rock/smooth/marble_stairs'
+	}).id('tfg_tacz:statue');
+	
+	event.shapeless('tacz:target_minecart',
+		['tacz:target', 'minecraft:minecart']
+	).id('tfg_tacz:target_minecart');
+	
+	
+	//Molds
 	event.shaped('tfg:small_casing_extruder_mold',[
 		'   ',
 		'AB ',
@@ -61,8 +87,7 @@ function registerTACZMiscRecipes(event) {
 			.EUt(GTValues.VA[GTValues.LV])
 	})
 	
-	
-	
+	//Mechanisms
 	event.shaped('tfg:flintlock_mechanism', [
 		'ABC',
 		'DEF',
@@ -78,8 +103,6 @@ function registerTACZMiscRecipes(event) {
 		H: '#forge:small_gears/steel',
 		I: '#forge:tools/hammers'
 	}).id('tfg:shaped/flintlock_mechanism');
-	
-	
 	
 	event.recipes.gtceu.assembler('tfg:advanced_clockwork_mechanism')
 		.itemInputs('2x greate:aluminium_cogwheel', 'greate:silicone_rubber_belt_connector', '2x #forge:springs/aluminium', 
