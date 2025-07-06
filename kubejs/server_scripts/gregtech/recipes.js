@@ -28,7 +28,7 @@ const registerGTCEURecipes = (event) => {
 		.EUt(30)
 
 	//#endregion
-
+		
 	//#region Выход: Кварцевый песок
 
 	event.shaped('gtceu:quartz_sand_dust', [
@@ -58,6 +58,10 @@ const registerGTCEURecipes = (event) => {
 		.itemOutputs('2x tfc:powder/flux')
 		.duration(30)
 		.EUt(2)
+
+	event.recipes.greate.pressing('2x tfc:powder/flux', '#tfc:fluxstone')
+		.recipeTier(0)
+		.id('greate:pressing/flux')
 
 	//#region Выход: Диоксид силикона
 
@@ -625,7 +629,7 @@ const registerGTCEURecipes = (event) => {
 	// #endregion
 
 	// #region Add all glass colors to macerator/hammer
-	event.remove({ id: "gtceu:macerator/macerate_glass" });
+	removeMaceratorRecipe(event, 'macerate_glass');
 	event.recipes.gtceu.macerator("gtceu:macerator/macerate_glass")
 		.itemInputs(
 			"#forge:glass"
@@ -634,7 +638,7 @@ const registerGTCEURecipes = (event) => {
 		.duration(20)
 		.EUt(2);
 
-	event.remove({ id: "gtceu:macerator/macerate_glass_pane" });
+	removeMaceratorRecipe(event, 'macerate_glass_pane');
 	event.recipes.gtceu.macerator("gtceu:macerator/macerate_glass_pane")
 		.itemInputs(
 			"#forge:glass_panes"
@@ -786,7 +790,7 @@ const registerGTCEURecipes = (event) => {
 
 		// Macerator
 		global.TFC_HARDWOOD_TYPES.forEach(wood => {
-			event.remove(`gtceu:macerator/macerate_wood/hanging_sign/${metal.getName()}/${wood}`)
+			removeMaceratorRecipe(event, `macerate_wood/hanging_sign/${metal.getName()}/${wood}`)
 			event.recipes.gtceu.macerator(`gtceu:macerator/macerate_wood/hanging_sign/${metal.getName()}/${wood}`)
 				.itemInputs(`tfc:wood/hanging_sign/${metal.getName()}/${wood}`)
 				.itemOutputs('gtceu:hardwood_dust')
@@ -797,7 +801,7 @@ const registerGTCEURecipes = (event) => {
 		})
 
 		global.TFC_SOFTWOOD_TYPES.forEach(wood => {
-			event.remove(`gtceu:macerator/macerate_wood/hanging_sign/${metal.getName()}/${wood}`)
+			removeMaceratorRecipe(event, `macerate_wood/hanging_sign/${metal.getName()}/${wood}`)
 			event.recipes.gtceu.macerator(`gtceu:macerator/macerate_wood/hanging_sign/${metal.getName()}/${wood}`)
 				.itemInputs(`tfc:wood/hanging_sign/${metal.getName()}/${wood}`)
 				.itemOutputs('gtceu:wood_dust')
@@ -1233,4 +1237,8 @@ const registerGTCEURecipes = (event) => {
 
 	event.smelting('minecraft:iron_ingot', '#forge:ingots/wrought_iron')
 		.id('tfg:revert_wrought_iron_ingot')
+
+	event.replaceOutput({ id: 'gtceu:distillery/distill_biomass_to_water' }, 'gtceu:wood_dust', 'gtceu:carbon_dust')
+	event.replaceOutput({ id: 'gtceu:distillery/distill_biomass_to_ethanol' }, 'gtceu:wood_dust', 'gtceu:carbon_dust')
+	event.replaceOutput({ id: 'gtceu:distillation_tower/distill_biomass' }, 'gtceu:wood_dust', 'gtceu:carbon_dust')
 }

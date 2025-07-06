@@ -21,6 +21,7 @@ ServerEvents.tags('item', event => {
 	registerCreateAdditionsItemTags(event)
 	registerCreateConnectedItemTags(event)
 	registerCreateDecoItemTags(event)
+	registerCreateFactoryLogisticsItemTags(event)
 	registerDiggerHelmetItemTags(event)
 	registerEndermanOverhaulItemTags(event)
 	registerEveryCompatItemTags(event)
@@ -181,6 +182,10 @@ GTCEuServerEvents.bedrockOreVeins(event => {
 	registerGTCEUBedrockOreVeins(event)
 })
 
+GTCEuServerEvents.fluidVeins(event => {
+	registerGTCEUBedrockFluidVeins(event)
+})
+
 /**
  * Событие регистрации рецептов.
  * Срабатывает после инициализации датапаков и тегов.
@@ -208,6 +213,7 @@ ServerEvents.recipes(event => {
 	registerCreateAdditionsRecipes(event)
 	registerCreateConnectedRecipes(event)
 	registerCreatedecoRecipes(event)
+	registerCreateFactoryLogisticsRecipes(event)
 	registerCreateHorsePowerBlockRecipes(event)
 	registerCreateHypertubeRecipes(event)
 	registerDiggerHelmetRecipes(event)
