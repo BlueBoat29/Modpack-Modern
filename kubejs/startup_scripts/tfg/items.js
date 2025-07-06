@@ -314,13 +314,7 @@ const registerTFGItems = (event) => {
 		.translationKey('item.tfg.advanced_clockwork_mechanism')
 	event.create('tfg:certus_mechanism')
 		.translationKey('item.tfg.certus_mechanism')
-		
-	event.create('tfg:small_casing_extruder_mold')
-		.translationKey('item.tfg.small_casing_extruder_mold')
-	event.create('tfg:shell_casing_extruder_mold')
-		.translationKey('item.tfg.shell_casing_extruder_mold')
-	event.create('tfg:large_casing_extruder_mold')
-		.translationKey('item.tfg.large_casing_extruder_mold')
+
 		
 	event.create('tfg:small_bullet_casing')
 		.translationKey('tfg:small_bullet_casing')

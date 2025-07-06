@@ -57,36 +57,6 @@ function registerTACZMiscRecipes(event) {
 		C: '#forge:tools/files'
 	}).id('tfg:shell_casing_extruder_mold');
 	
-	const extruderMolds = [
-	'tfg:shell_casing_extruder_mold',
-	'tfg:small_casing_extruder_mold',
-	'tfg:large_casing_extruder_mold'
-    ]
-	
-	extruderMolds.forEach(mold => {
-
-		event.recipes.gtceu.arc_furnace(`arc_${mold}`.replace("tfg:", ""))
-			.itemInputs(mold)
-			.itemOutputs(ChemicalHelper.get(TagPrefix.ingot, GTMaterials.Steel, 4))
-			.duration(224)
-			.EUt(GTValues.VA[GTValues.LV])
-			.category(GTRecipeCategories.ARC_FURNACE_RECYCLING)
-
-		event.recipes.gtceu.macerator(`macerate_${mold}`.replace("tfg:", ""))
-			.itemInputs(mold)
-			.itemOutputs(ChemicalHelper.get(TagPrefix.dust, GTMaterials.Steel, 4))
-			.duration(224)
-			.EUt(GTValues.VA[GTValues.ULV])
-			.category(GTRecipeCategories.MACERATOR_RECYCLING)
-
-		event.recipes.gtceu.forming_press(`copy_shape_${mold}`.replace("tfg:", ""))
-			.itemInputs('gtceu:empty_mold')
-			.notConsumable(mold)
-			.itemOutputs(mold)
-			.duration(120)
-			.EUt(GTValues.VA[GTValues.LV])
-	})
-	
 	//Mechanisms
 	event.shaped('tfg:flintlock_mechanism', [
 		'ABC',
