@@ -624,6 +624,8 @@ function registerTFGMiscellaneousRecipes(event) {
 		.outputFluid(Fluid.of('gtceu:seed_oil', 120))
 		.id('tfg:barrel/sunflower_to_oil')
 
+	
+
 	// Not-ender pearl stuff
 
 	event.recipes.gtceu.chemical_reactor('kaolinite')
@@ -745,4 +747,29 @@ function registerTFGMiscellaneousRecipes(event) {
 		.itemOutputs('gtceu:quantum_eye')
 		.duration(24 * 20)
 		.EUt(480)
+
+	//Rock-wool stuff
+	event.recipes.gtceu.mixer('aes_mix')
+		.itemInputs('5x gtceu:silicon_dioxide_dust', '4x gtceu:quicklime_dust', 'gtceu:magnesia_dust')
+		.itemOutputs('10x tfg:aes_mix_dust')
+		.duration(80)
+		.EUt(GTValues.VA[GTValues.EV])
+	
+	event.recipes.gtceu.electric_blast_furnace('molten_aes')
+		.itemInputs('2x tfg:aes_mix_dust')
+		.outputFluids(Fluid.of('tfg:molten_aes', 1000))
+		.chancedOutput('gtceu:ash_dust', 3000, 0)
+		.circuit(1)
+		.duration(400)
+		.blastFurnaceTemp(3000)
+		.EUt(GTValues.VA[GTValues.EV])
+	event.recipes.gtceu.electric_blast_furnace('molten_aes_he')
+		.itemInputs('2x tfg:aes_mix_dust')
+		.inputFluids(Fluid.of('gtceu:helium', 200))
+		.outputFluids(Fluid.of('tfg:molten_aes', 1000))
+		.circuit(2)
+		.duration(140)
+		.blastFurnaceTemp(3000)
+		.EUt(GTValues.VA[GTValues.EV])
+
 }

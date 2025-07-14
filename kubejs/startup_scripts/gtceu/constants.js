@@ -144,6 +144,11 @@ global.GTCEU_DISABLED_ITEMS = [
     'gtceu:wax_dust',
     'gtceu:small_wax_dust',
     'gtceu:tiny_wax_dust',
+	
+	//Depricated
+	'gtceu:calcium_carbonate_dust',
+	'gtceu:small_calcium_carbonate_dust',
+	'gtceu:tiny_calcium_carbonate_dust',
 
     // Sculk
     'gtceu:tiny_echo_shard_dust',

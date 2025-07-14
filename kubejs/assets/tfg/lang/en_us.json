@@ -465,6 +465,8 @@
   "material.tfg.acetylene": "Acetylene",
   "material.tfg.1_1_1_2_tetrafluoroethane": "1,1,1,2-Tetrafluoroethane",
   "material.tfg.isobutane": "Isobutane",
+  "material.tfg.aes_mix": "Alkaline Earth Silicate Mixture",
+  "material.tfg.molten_aes": "Molten Alkaline Earth Silicate",
   "tfg.creative_tab.tfg": "TerraFirmaGreg",
   "tfg.disabled_portal": "Portal magic seems to be blocked by an unknown force, try reaching another dimension by going down or up",
   "tfg.tooltip.food_trait.refrigerating": "§bRefrigerating",
