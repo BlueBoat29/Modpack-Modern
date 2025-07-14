@@ -29,8 +29,8 @@ function registerTACZMiscRecipes(event) {
 	
 	//Molds
 	event.shaped('tfg:small_casing_extruder_mold',[
-		'   ',
-		'AB ',
+		'  A',
+		' B ',
 		'   '
 	],{
 		A: '#forge:tools/wire_cutters',
@@ -89,4 +89,5 @@ function registerTACZMiscRecipes(event) {
 		.itemOutputs('tfg:certus_mechanism')
 		.EUt(GTValues.VA[GTValues.EV])
 		.duration(80)
+
 }
