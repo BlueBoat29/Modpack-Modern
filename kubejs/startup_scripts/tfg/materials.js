@@ -112,7 +112,8 @@ const registerTFGMaterials = (event) => {
 		.components('2x aluminium', '2x silicon', '9x oxygen', '4x hydrogen')
 		.color(0xEEB9AD)
 		.secondaryColor(0xF6A797)
-
+	
+	//Region Rockwool
 	event.create('tfg:aes_mix')
 		.dust()
 		.flags(GTMaterialFlags.DECOMPOSITION_BY_CENTRIFUGING)
@@ -126,7 +127,7 @@ const registerTFGMaterials = (event) => {
 		.components('5x silicon_dioxide', '4x quicklime', '1x magnesia')
 		.color(0xe65609)
 		.secondaryColor(0xe65609)
-		
+	//end region
 	event.create('tfg:vitrified_pearl')
 		.dust()
 		.flags(GTMaterialFlags.DECOMPOSITION_BY_CENTRIFUGING)
