@@ -89,4 +89,5 @@ function registerTACZMiscRecipes(event) {
 		.itemOutputs('tfg:certus_mechanism')
 		.EUt(GTValues.VA[GTValues.EV])
 		.duration(80)
+
 }

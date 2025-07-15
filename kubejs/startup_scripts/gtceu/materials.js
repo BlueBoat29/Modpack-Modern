@@ -150,6 +150,7 @@ const registerGTCEuMaterialModification = (event) => {
 	GTMaterials.Tin.addFlags(GENERATE_DOUBLE_INGOTS);
 	GTMaterials.Zinc.addFlags(GENERATE_DOUBLE_INGOTS, GENERATE_BOLT_SCREW);
 	GTMaterials.SterlingSilver.addFlags(GENERATE_DOUBLE_INGOTS);
+
 	//
 	//        /* Имеют инструменты, броню TFC, двойные слитки */
 	GTMaterials.Copper.addFlags(GENERATE_DOUBLE_INGOTS, HAS_TFC_TOOL, HAS_TFC_ARMOR, HAS_TFC_UTILITY, CAN_BE_UNMOLDED);

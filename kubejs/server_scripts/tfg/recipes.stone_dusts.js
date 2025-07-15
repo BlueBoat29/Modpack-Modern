@@ -102,7 +102,7 @@ function registerTFGStoneDustRecipes(event) {
 		.duration(480)
 		.itemInputs(ChemicalHelper.get(TagPrefix.dust, TFGHelpers.getMaterial('limestone'), 1))
 		.itemOutputs(ChemicalHelper.get(TagPrefix.dustSmall, GTMaterials.SiliconDioxide, 1))
-		.chancedOutput(ChemicalHelper.get(TagPrefix.dustTiny, GTMaterials.Calcium, 1), 5500, 500)
+		.chancedOutput(ChemicalHelper.get(TagPrefix.dustTiny, GTMaterials.Calcite, 1), 5500, 500)
 		.chancedOutput(ChemicalHelper.get(TagPrefix.dustTiny, GTMaterials.MetalMixture, 1), 1500, 500)
 		.outputFluids(Fluid.of('gtceu:oxygen', 36))
 
@@ -205,7 +205,7 @@ function registerTFGStoneDustRecipes(event) {
 		.duration(480)
 		.itemInputs(ChemicalHelper.get(TagPrefix.dust, TFGHelpers.getMaterial('dripstone'), 1))
 		.itemOutputs(ChemicalHelper.get(TagPrefix.dustSmall, GTMaterials.SiliconDioxide, 1))
-		.chancedOutput(ChemicalHelper.get(TagPrefix.dustTiny, GTMaterials.CalciumCarbonate, 1), 8500, 500)
+		.chancedOutput(ChemicalHelper.get(TagPrefix.dustTiny, GTMaterials.Calcite, 1), 8500, 500)
 		.chancedOutput(ChemicalHelper.get(TagPrefix.dustTiny, GTMaterials.CalciumHydroxide, 1), 1500, 500)
 		.outputFluids(Fluid.of('gtceu:oxygen', 12))
 
