@@ -1,6 +1,12 @@
 # Changelog
 
 ## [Unreleased]
+### Changes
+- Added harvest baskets to pick fruit from fruit trees and berry bushes (#1338) @Redeix
+- Added ice soup @Pyritie
+- Gave plants tag to bushes so they can be used for other things (#1338) @Redeix
+- Allowed elytra's to be repaired regardless of damage (#1338) @Redeix
+- Increased maximum range of rope/elevator pulleys to 400 blocks (#1347) @Pyritie
 ### Bug fixes
 - Fixed yeast food processor conflict (#1310) @Redeix
 - Fixed seed oil voiding in barrels (#1310) @Redeix
@@ -13,7 +19,18 @@
 - Fixed bug with Extruder Mold crafting (#1298) @BlueBoat29
 - Fixed texture issues found on some of the Extruder Mold textures @BlueBoat29
 - Added default GUI Scale (#1313) @Redeix
-
+- Added Kelp and Seaweed drying to electric oven (#1315) @BlueBoat29
+- Added Nugget anvil recipe and 45-70 bullet assembler recipe @BlueBoat29 @Pyritie
+- Fixed AFC wood stomping barrel recipes @BlueBoat29
+- Fixed rotten cheese in moon quest reward @Pyritie
+- Fixed create + greate configs (#1300) @HiddenOwlllll1 @Pyritie
+- Fixed blue steel diving suit looking like netherite (#1293) @Pyritie
+- Fixed anthracite not working with blaze burners @Pyritie
+- Fixed baked potato recipe missing from oven (#1338) @Redeix
+- Fixed sea water barrel recipes (#1338) @Redeix
+- Fixed Quests #1318 #1291 and finish other quests related stuffs @TomPlop
+- Integrated Ad Astra wood types with tfc (#1346) @Redeix
+- Fixed duplicate pizza dough recipe @Pyritie
 
 ## [0.10.0] - 13.07.2025
 - [!WARNING] If you're upgrading your world from 0.9 to 0.10, please read the upgrade guide [here](https://github.com/TerraFirmaGreg-Team/Modpack-Modern/wiki/%5BEN%5D-Upgrading-from-0.9-to-0.10). We do not recommend using Alpha versions for progression, but if you do, please make frequent backups!
