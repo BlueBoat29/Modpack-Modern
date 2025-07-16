@@ -345,10 +345,10 @@ const registerTFGItems = (event) => {
 	//endregion
 	
 	//Tier 2 Rocket Parts
-	event.create('tfg:rocket_fin_t2')
-		.translationKey('tfg:rocket_fin_t2')
 	event.create('tfg:rocket_cone_t2')
 		.translationKey('tfg:rocket_cone_t2')
+	event.create('tfg:rocket_fin_t2')
+		.translationKey('tfg:rocket_fin_t2')
 	//endregion
 }
 

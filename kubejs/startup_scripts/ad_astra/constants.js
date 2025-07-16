@@ -68,10 +68,12 @@ global.AD_ASTRA_DISABLED_ITEMS =
 	'ad_astra:glacio_lapis_ore',
 
 	// Disabled until EV planet
-
+/*
 	'ad_astra:tier_2_rocket',
 	'ad_astra:desh_engine',
-
+	'tfg:rocket_fin_t2',
+	'tfg:rocket_cone_t2',
+*/
 	// Disabled until IV planets
 
 	'ad_astra:tier_3_rocket',
