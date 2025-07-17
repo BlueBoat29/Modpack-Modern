@@ -273,4 +273,6 @@ function registerTFCLoots(event) {
 		.removeLoot(ItemFilter.ALWAYS_TRUE)
 		.addLoot('firmalife:ice_shavings')
 		.addSequenceLoot(LootEntry.of('tfc:powder/salt').when(c => c.randomChance(0.2)))
+		
+	
 }
