@@ -24,6 +24,7 @@
     "minecraft:player": false,
     "minecraft:arrow": false,
     "create": false,
+    "sandworm_mod": false,
     "minecraft:ender_dragon": false
   },
   "version": 2,
