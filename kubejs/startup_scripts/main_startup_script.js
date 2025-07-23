@@ -73,6 +73,8 @@ TFCEvents.registerFoodTrait(event => {
 	registerTFGFoodTraits(event)
 })
 
+
+
 Platform.mods.primitive_creatures.name = "Primitive Creatures";
 Platform.mods.tfg.name = "TerraFirmaGreg";
 Platform.mods.kubejs.name = "TerraFirmaGreg";

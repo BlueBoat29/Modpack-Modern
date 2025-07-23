@@ -260,6 +260,8 @@ ServerEvents.recipes(event => {
 	registerWaterFlasksRecipes(event)
 })
 
+
+
 TaCZServerEvents.gunIndexLoad((event) => {
 	gunIndexLogic(event)
 })
@@ -270,4 +272,11 @@ TaCZServerEvents.ammoIndexLoad((event) => {
 
 TaCZServerEvents.attachmentIndexLoad((event) => {
 	attachmentIndexLogic(event)
+})
+
+TaCZServerEvents.attachmentTagsLoad((event) => {
+	//const id = event.getId().toString();
+	const tags = event.getAttachmentTags();
+	console.log(tags);
+	//console.log(id);
 })
