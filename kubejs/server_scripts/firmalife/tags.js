@@ -19,10 +19,41 @@ const registerFirmaLifeItemTags = (event) => {
 
     // Удаление тегов у руд
     event.removeAllTagsFrom("/tfc:ore/[^*]+/[^*]+/")
+
+    
 }
 
 const registerFirmaLifeBlockTags = (event) => {
     
+    // Удаление тегов у отключенных предметов
+    global.FIRMALIFE_DISABLED_ITEMS.forEach(item => {
+        event.removeAllTagsFrom(item)
+    })
+
+    // Удаление тегов у руд
+    event.removeAllTagsFrom("/tfc:ore/[^*]+/[^*]+/")
+	
+	//greenhouse wall fixes
+	event.remove('firmalife:always_valid_greenhouse_wall', '#minecraft:doors')
+	event.remove('firmalife:always_valid_greenhouse_wall', '#minecraft:trapdoors')
+	
+	const greenhouse_tiers = [
+		'treated_wood',
+		'weathered_treated_wood',
+		'copper',
+		'exposed_copper',
+		'weathered_copper',
+		'oxidized_copper',
+		'iron',
+		'rusted_iron',
+		'stainless_steel'
+	]
+
+	greenhouse_tiers.forEach(tier => {
+		event.add('firmalife:always_valid_greenhouse_wall', 'firmalife:' + tier + '_greenhouse_door')
+		event.add('firmalife:always_valid_greenhouse_wall', 'firmalife:' + tier + '_greenhouse_trapdoor')
+	})
+
     // Удаление тегов у отключенных предметов
     global.FIRMALIFE_DISABLED_ITEMS.forEach(item => {
         event.removeAllTagsFrom(item)

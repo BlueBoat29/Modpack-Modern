@@ -52,8 +52,6 @@ const registerGTCEuTagPrefixes = (event) => {
 	TagPrefix.pipeNonupleFluid.defaultTagPath("nonuple_fluid_pipes/%s")
 	TagPrefix.pipeNonupleFluid.unformattedTagPath("nonuple_fluid_pipes")
 
-	
-	// FirmaLife Shit
 
 	TagPrefix.pipeSmallItem.defaultTagPath("small_item_pipes/%s")
 	TagPrefix.pipeSmallItem.unformattedTagPath("small_item_pipes")

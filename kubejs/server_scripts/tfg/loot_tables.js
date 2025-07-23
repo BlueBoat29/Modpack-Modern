@@ -150,4 +150,6 @@ function registerTFGLoots(event) {
 		event.addBlockLootModifier(id)
 			.addLoot(id)
 	})
+
 };
+
