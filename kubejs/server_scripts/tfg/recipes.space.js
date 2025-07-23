@@ -255,5 +255,4 @@ function registerTFGSpaceRecipes(event) {
 		.duration(300)
 		.EUt(GTValues.VA[GTValues.EV])
 		.cleanroom(CleanroomType.CLEANROOM)
-		.dimension('ad_astra:moon')
 }
