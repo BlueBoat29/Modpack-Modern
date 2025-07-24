@@ -363,13 +363,16 @@ global.TACZ_ENABLED_GUNS = [
 	'ulv_guns:blunderbuss',
 	'create_armorer:shotgun_pump_bearing',
 	'applied_armorer:moritz_shotgun_sg914',
+	'tacz:db_short',
+	'tacz:db_long',
 	
 	//SMG
 	
 	
 	//Heavy
 	'create_armorer:mg_platemag_flywheel',
-	'applied_armorer:moritz_gernade_gl3'
+	'applied_armorer:moritz_gernade_gl3',
+	'create_armorer:cannon_40mm_salamander'
 
 ];
 	
@@ -379,6 +382,7 @@ global.TACZ_ENABLED_AMMO = [
 	'tacz:45_70',
 	'create_armorer:slap',
 	'create_armorer:rbapb',
+	'create_armorer:40mmhe',
 	'applied_armorer:hard_core_quartz_bullet',
 	'applied_armorer:etched_quartz_bullet',
 	'applied_armorer:fluix_infused_grenade',
@@ -393,6 +397,7 @@ global.TACZ_ENABLED_ATTACH = [
 	'create_armorer:scope_telephoto',
 	'create_armorer:sight_standard',
 	'create_armorer:sight_medium_distance',
+	'create_armorer:sight_simple',
 	'applied_armorer:si_double_sided_mirror',
 	'applied_armorer:scope_xgs_905',
 	'applied_armorer:si_ms_12',
@@ -418,10 +423,13 @@ global.TACZ_ENABLED_ATTACH = [
 	
 	//grip
 	'create_armorer:grip_wooden',
-	'create_armorer:grip_gantry_shaft'
+	'create_armorer:grip_gantry_shaft',
+	'create_armorer:grip_shaft',
 	
 	//mag
-	
+	'create_armorer:extended_mag_ca_1',
+	'create_armorer:extended_mag_ca_2',
+	'create_armorer:extended_mag_ca_3'
 	
 	//laser
 

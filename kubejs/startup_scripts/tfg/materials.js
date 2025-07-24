@@ -59,7 +59,7 @@ const registerTFGMaterials = (event) => {
 		.color(0x3c253d)
 		.iconSet('metallic')
 		.flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR)
-		.blastTemp(4500, 'mid', 1024, 1200)
+		.blastTemp(3000, 'mid', 1024, 1200)
 	
 	event.create('vitrified_asbestos')
 		.dust()
