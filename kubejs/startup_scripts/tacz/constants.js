@@ -425,11 +425,22 @@ global.TACZ_ENABLED_ATTACH = [
 	'create_armorer:grip_wooden',
 	'create_armorer:grip_gantry_shaft',
 	'create_armorer:grip_shaft',
+	'applied_armorer:grip_hf_17',
+	'applied_armorer:grip_stable',
+	'applied_armorer:grip_light',
+	'applied_armorer:grip_lf11',
+	'applied_armorer:grip_sl_2',
 	
 	//mag
 	'create_armorer:extended_mag_ca_1',
 	'create_armorer:extended_mag_ca_2',
-	'create_armorer:extended_mag_ca_3'
+	'create_armorer:extended_mag_ca_3',
+	'applied_armorer:extended_mag_aa_1',
+	'applied_armorer:extended_mag_aa_2',
+	'applied_armorer:extended_mag_aa_3',
+	'applied_armorer:extended_mid_mag_aa_1',
+	'applied_armorer:extended_mid_mag_aa_2',
+	'applied_armorer:extended_mid_mag_aa_3'
 	
 	//laser
 
