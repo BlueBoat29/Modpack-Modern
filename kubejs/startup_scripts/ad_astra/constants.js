@@ -44,6 +44,7 @@ global.AD_ASTRA_DISABLED_ITEMS =
 	'ad_astra:ti_69',
 	'ad_astra:steel_cable',
 	'ad_astra:desh_cable',
+	'ad_astra:glacian_leaves',
 
 	// Don't tag prefix these, several systems rely on all ore blocks being gregtech's generated ones
 	'ad_astra:moon_ice_shard_ore',
@@ -72,6 +73,8 @@ global.AD_ASTRA_DISABLED_ITEMS =
 
 	'ad_astra:tier_2_rocket',
 	'ad_astra:desh_engine',
+	'tfg:rocket_fin_t2',
+	'tfg:rocket_cone_t2',
 
 	// Disabled until IV planets
 

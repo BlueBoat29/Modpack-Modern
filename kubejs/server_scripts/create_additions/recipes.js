@@ -96,7 +96,7 @@ const registerCreateAdditionsRecipes = (event) => {
 
 	//#region Liquid blaze burners
 
-	event.recipes.tfc.anvil('createaddition:straw', '#forge:plates/tin_alloy', ['shrink_second_last', 'upset_not_last', 'punch_last'])
+	event.recipes.tfc.anvil('createaddition:straw', '#forge:plates/tin_alloy', ['punch_last', 'shrink_second_last', 'upset_not_last'])
 		.tier(3)
 		.id(`tfc:anvil/straw`)
 
@@ -221,4 +221,7 @@ const registerCreateAdditionsRecipes = (event) => {
 		burnTime: 4 * 9 * 9
 	}).id('tfg:createadditions/liquid_burning/steam')
 	//#endregion
+	
+	event.shapeless('createaddition:diamond_grit_sandpaper', ['minecraft:paper', 'tfc:glue', '#forge:dusts/diamond'])
+		.id('tfg:shapeless/diamond_grit_sand_paper')
 }
