@@ -18,8 +18,8 @@
     pill_event.forEach(pill_event => {
 
         ItemEvents.rightClicked(event => {
-            const {item,server,player,player:{x,y,z,username}} = event
-            if (item.id != `tfg:${pill_event}_pill`) return
+            const {item,server,player,player:{x,y,z}} = event
+            if (item.id !== `tfg:${pill_event}_pill`) return
             item.count--
             player.addItemCooldown(item, 100)
             server.runCommandSilent(`effect give ${player.username} minecraft:${pill_event} 480 0 true`)
@@ -27,8 +27,8 @@
         });
 
         ItemEvents.rightClicked(event => {
-            const {item,server,player,player:{x,y,z,username}} = event
-            if (item.id != `tfg:${pill_event}_tablet`) return
+            const {item,server,player,player:{x,y,z}} = event
+            if (item.id !== `tfg:${pill_event}_tablet`) return
             item.count--
             player.addItemCooldown(item, 100)
             server.runCommandSilent(`effect give ${player.username} minecraft:${pill_event} 1800 0 true`)
@@ -37,8 +37,8 @@
     });
 
     ItemEvents.rightClicked(event => {
-        const {item,server,player,player:{x,y,z,username}} = event
-        if (item.id != `tfg:antipoison_pill`) return
+        const {item,server,player,player:{x,y,z}} = event
+        if (item.id !== `tfg:antipoison_pill`) return
         item.count--
         player.addItemCooldown(item, 50)
         event.player.removeEffect('minecraft:poison')
@@ -46,8 +46,8 @@
     });
 
     ItemEvents.rightClicked(event => {
-        const {item,server,player,player:{x,y,z,username}} = event
-        if (item.id != `tfg:antipoison_tablet`) return
+        const {item,server,player,player:{x,y,z}} = event
+        if (item.id !== `tfg:antipoison_tablet`) return
         item.count--
         player.addItemCooldown(item, 50)
         event.player.removeEffect('minecraft:poison')
@@ -75,8 +75,8 @@
     salvo_event.forEach(salvo_event => {
 
         ItemEvents.rightClicked(event => {
-            const {item,server,player,player:{x,y,z,username}} = event
-            if (item.id != `tfg:${salvo_event}_salvo`) return
+            const {item,server,player,player:{x,y,z}} = event
+            if (item.id !== `tfg:${salvo_event}_salvo`) return
             item.count--
             player.addItemCooldown(item, 100)
             server.runCommandSilent(`effect give ${player.username} minecraft:${salvo_event} 480 0 true`)
@@ -85,8 +85,8 @@
     });
 
 ItemEvents.rightClicked(event => {
-    const {item,server,player,player:{x,y,z,username}} = event
-    if (item.id != `tfg:absorption_salvo`) return
+    const {item,server,player,player:{x,y,z}} = event
+    if (item.id !== `tfg:absorption_salvo`) return
     item.count--
     player.addItemCooldown(item, 200)
     server.runCommandSilent(`effect give ${player.username} minecraft:absorption 480 4 true`)
@@ -94,8 +94,8 @@ ItemEvents.rightClicked(event => {
 });
 
 ItemEvents.rightClicked(event => {
-    const {item,server,player,player:{x,y,z,username}} = event
-    if (item.id != `tfg:instant_health_salvo`) return
+    const {item,server,player,player:{x,y,z}} = event
+    if (item.id !== `tfg:instant_health_salvo`) return
     item.count--
     player.addItemCooldown(item, 100)
     server.runCommandSilent(`effect give ${player.username} minecraft:instant_health 1 1 true`)
@@ -107,29 +107,30 @@ ItemEvents.rightClicked(event => {
 // Vase Sounds
 global.MINECRAFT_DYE_NAMES.forEach(color => {
     BlockEvents.rightClicked(event => {
-        const {block,server,player,player:{x,y,z,username}} = event
-        if (block.id != `tfg:decorative_vase/${color}`) {return}{
+        const {block,server,player} = event
+        if (block.id !== `tfg:decorative_vase/${color}`) return
         server.runCommandSilent(`playsound tfc:block.quern.drag block ${player.username} ${block.x} ${block.y} ${block.z} 0.3 2.0 0.1`)
-    }})
+    
+})
 });
 
 
 BlockEvents.rightClicked(event => {
-    const {block,server,player,player:{x,y,z,username}} = event
-    if (block.id != 'tfg:decorative_vase') {return}{
+    const {block,server,player} = event
+    if (block.id !== 'tfg:decorative_vase') return
     server.runCommandSilent(`playsound tfc:block.quern.drag block ${player.username} ${block.x} ${block.y} ${block.z} 0.3 2.0 0.1`)
-}});
+});
 //#endregion
 
-BlockEvents.rightClicked(event=>{
+BlockEvents.rightClicked(event => {
     let item = event.item
-    if(item.id != 'tfg:armor_stand_arms') return
+    if (item.id !== 'tfg:armor_stand_arms') return
     let mob = event.block[event.facing].createEntity('minecraft:armor_stand')
     mob.mergeNbt('{ShowArms:1b}')
     mob.setPos(mob.x + 0.5, mob.y, mob.z + 0.5)
     mob.setYaw(event.player.yaw + 180)
     mob.spawn()
-    if (event.player.isCreative() == false){
+    if (event.player.isCreative() === false){
         item.shrink(1)
     }
 })
@@ -139,10 +140,8 @@ BlockEvents.rightClicked(event=>{
  * @param {Internal.Player} player
  * @returns {Internal.CompoundTag}
  */
-function getTFGPersistentDataRoot(player)
-{
-    if(!player.persistentData.contains("tfg:custom_data"))
-    {
+function getTFGPersistentDataRoot(player) {
+    if (!player.persistentData.contains("tfg:custom_data")) {
         player.persistentData.put("tfg:custom_data", {});
     }
     return player.persistentData.getCompound("tfg:custom_data")
@@ -186,13 +185,13 @@ function getTFGPersistentDataRoot(player)
             ItemEvents.entityInteracted(`tfg:fishing_net/${tier}`, (event) => {
                 const {item, player, server, target} = event;
 
-                if (target.type != `tfc:${fish}`) return
+                if (target.type !== `tfc:${fish}`) return
                     server.runCommandSilent(`particle minecraft:bubble_pop ${target.x} ${target.y} ${target.z} 0.5 0.5 0.5 0.00001 10`)
                     server.runCommandSilent(`playsound minecraft:entity.player.splash player ${player.username} ${target.x} ${target.y} ${target.z} 2 2 1`)
                     server.runCommandSilent(`tp ${target.uuid} ${target.x} ${target.y - 382} ${target.z}`)
                     event.player.give(`tfc:food/${fish}`)
                     player.swing()
-                    if (player.isCreative() == false){
+                    if (player.isCreative() === false){
                         item.damageValue++
                         if (item.damageValue >= item.maxDamage) {
                             server.runCommandSilent(`playsound minecraft:item.shield.break player ${player.username} ${player.x} ${player.y} ${player.z} 1 1 1`)
@@ -207,13 +206,13 @@ function getTFGPersistentDataRoot(player)
             ItemEvents.entityInteracted(`tfg:fishing_net/${tier}`, (event) => {
                 const {item, player, server, target} = event;
 
-                if (target.type != `tfc:${shellfish}`) return
+                if (target.type !== `tfc:${shellfish}`) return
                     server.runCommandSilent(`particle minecraft:bubble_pop ${target.x} ${target.y} ${target.z} 0.5 0.5 0.5 0.00001 10`)
                     server.runCommandSilent(`playsound minecraft:entity.player.splash player ${player.username} ${target.x} ${target.y} ${target.z} 2 2 1`)
                     server.runCommandSilent(`tp ${target.uuid} ${target.x} ${target.y - 382} ${target.z}`)
                     event.player.give('tfc:food/shellfish')
                     player.swing()
-                    if (player.isCreative() == false){
+                    if (player.isCreative() === false){
                         item.damageValue++
                         if (item.damageValue >= item.maxDamage) {
                             server.runCommandSilent(`playsound minecraft:item.shield.break player ${player.username} ${player.x} ${player.y} ${player.z} 1 1 1`)
@@ -227,13 +226,13 @@ function getTFGPersistentDataRoot(player)
         ItemEvents.entityInteracted(`tfg:fishing_net/${tier}`, (event) => {
             const {item, player, server, target} = event;
 
-            if (target.type != 'tfc:pufferfish') return
+            if (target.type !== 'tfc:pufferfish') return
                 server.runCommandSilent(`particle minecraft:bubble_pop ${target.x} ${target.y} ${target.z} 0.5 0.5 0.5 0.00001 10`)
                 server.runCommandSilent(`playsound minecraft:entity.player.splash player ${player.username} ${target.x} ${target.y} ${target.z} 2 2 1`)
                 server.runCommandSilent(`tp ${target.uuid} ${target.x} ${target.y - 382} ${target.z}`)
                 event.player.give('minecraft:pufferfish')
                 player.swing()
-                if (player.isCreative() == false){
+                if (player.isCreative() === false){
                     item.damageValue++
                     if (item.damageValue >= item.maxDamage) {
                         server.runCommandSilent(`playsound minecraft:item.shield.break player ${player.username} ${player.x} ${player.y} ${player.z} 1 1 1`)
@@ -247,11 +246,95 @@ function getTFGPersistentDataRoot(player)
 //#region Block Interactions
 
 /**
+ * @typedef {Object} BrickVariant
+ * @property {string} brick_type - The name of the brick variant.
+ * @property {string|null} brick - Main brick block ID.
+ * @property {string|null} brick_stairs - Brick stairs block ID.
+ * @property {string|null} brick_slab - Brick slab block ID.
+ * @property {string|null} brick_wall - Brick wall block ID.
+ * @property {string|null} cracked_brick - Cracked brick block ID.
+ * @property {string|null} cracked_stairs - Cracked brick stairs block ID.
+ * @property {string|null} cracked_slab - Cracked brick slab block ID.
+ * @property {string|null} cracked_wall - Cracked brick wall block ID.
+ * @property {string|null} mossy_brick - Mossy brick block ID.
+ * @property {string|null} mossy_stairs - Mossy brick stairs block ID.
+ * @property {string|null} mossy_slab - Mossy brick slab block ID.
+ * @property {string|null} mossy_wall - Mossy brick wall block ID.
+ * @property {string|null} smooth_brick - Smooth brick block ID.
+ * @property {string|null} smooth_stairs - Smooth brick stairs block ID.
+ * @property {string|null} smooth_slab - Smooth brick slab block ID.
+ * @property {string|null} smooth_wall - Smooth brick wall block ID.
+ * @property {string|null} chiseled_brick - Chiseled brick block ID.
+ */
+
+/** @type {BrickVariant[]} */
+global.BRICK_INDEX = (global.TFC_STONE_TYPES ? global.TFC_STONE_TYPES : []).map(tfc_stone => ({
+	brick_type: tfc_stone,
+	brick: `tfc:rock/bricks/${tfc_stone}`, brick_stairs: `tfc:rock/bricks/${tfc_stone}_stairs`, brick_slab: `tfc:rock/bricks/${tfc_stone}_slab`, brick_wall: `tfc:rock/bricks/${tfc_stone}_wall`, 
+	cracked_brick: `tfc:rock/cracked_bricks/${tfc_stone}`, cracked_stairs: `tfc:rock/cracked_bricks/${tfc_stone}_stairs`, cracked_slab: `tfc:rock/cracked_bricks/${tfc_stone}_slab`, cracked_wall: `tfc:rock/cracked_bricks/${tfc_stone}_wall`, 
+	mossy_brick: `tfc:rock/mossy_bricks/${tfc_stone}`, mossy_stairs: `tfc:rock/mossy_bricks/${tfc_stone}_stairs`, mossy_slab: `tfc:rock/mossy_bricks/${tfc_stone}_slab`, mossy_wall: `tfc:rock/mossy_bricks/${tfc_stone}_wall`,
+	smooth_brick: `tfc:rock/smooth/${tfc_stone}`, smooth_stairs: `tfc:rock/smooth/${tfc_stone}_stairs`, smooth_slab: `tfc:rock/smooth/${tfc_stone}_slab`, smooth_wall: `tfc:rock/smooth/${tfc_stone}_wall`, 
+	chiseled_brick: `tfc:rock/chiseled/${tfc_stone}`
+}));
+(global.CREATE_DECO_BRICK_TYPES ? global.CREATE_DECO_BRICK_TYPES : []).slice(0, -1).forEach(create_brick => {
+  global.BRICK_INDEX.push({
+		brick_type: create_brick,
+		brick: `createdeco:${create_brick}_bricks`, brick_stairs: `createdeco:${create_brick}_brick_stairs`, brick_slab: `createdeco:${create_brick}_brick_slab`, brick_wall: `createdeco:${create_brick}_brick_wall`,	
+		cracked_brick: `createdeco:cracked_${create_brick}_bricks`, cracked_stairs: `createdeco:cracked_${create_brick}_brick_stairs`, cracked_slab: `createdeco:cracked_${create_brick}_brick_slab`, cracked_wall: `createdeco:cracked_${create_brick}_brick_wall`, 
+		mossy_brick: `createdeco:mossy_${create_brick}_bricks`, mossy_stairs: `createdeco:mossy_${create_brick}_brick_stairs`, mossy_slab: `createdeco:mossy_${create_brick}_brick_slab`, mossy_wall: `createdeco:mossy_${create_brick}_brick_wall`,
+		smooth_brick: `createdeco:corner_${create_brick}_bricks`, smooth_stairs: `createdeco:corner_${create_brick}_brick_stairs`, smooth_slab: `createdeco:corner_${create_brick}_brick_slab`, smooth_wall: `createdeco:corner_${create_brick}_brick_wall`,
+		chiseled_brick: `createdeco:tiled_${create_brick}_bricks`
+	})
+});
+global.BRICK_INDEX = global.BRICK_INDEX.concat([
+	// {
+	// brick_type: '',
+	// brick: '', brick_stairs: '', brick_slab: '', brick_wall: '',
+	// cracked_brick: '', cracked_stairs: '', cracked_slab: '', cracked_wall: '', 
+	// mossy_brick: '', mossy_stairs: '', mossy_slab: '', mossy_wallL: '',
+	// smooth_brick: '', smooth_stairs: '', smooth_slab: '', smooth_wall: '',
+	// chiseled_brick: ''
+	// },
+	{
+	brick_type: 'red',
+	brick: 'minecraft:bricks', brick_stairs: 'minecraft:brick_stairs', brick_slab: 'minecraft:brick_slab', brick_wall: 'minecraft:brick_wall',
+	cracked_brick: 'createdeco:cracked_red_bricks', cracked_stairs: 'createdeco:cracked_red_brick_stairs', cracked_slab: 'createdeco:cracked_red_brick_slab', cracked_wall: 'createdeco:cracked_red_brick_wall', 
+	mossy_brick: 'createdeco:mossy_red_bricks', mossy_stairs: 'createdeco:mossy_red_brick_stairs', mossy_slab: 'createdeco:mossy_red_brick_slab', mossy_wall: 'createdeco:mossy_red_brick_wall',
+	smooth_brick: 'createdeco:corner_red_bricks', smooth_stairs: 'createdeco:corner_red_brick_stairs', smooth_slab: 'createdeco:corner_red_brick_slab', smooth_wall: 'createdeco:corner_red_brick_wall',
+	chiseled_brick: 'createdeco:tiled_red_bricks'
+	},
+	{
+	brick_type: 'light_concrete',
+	brick: 'gtceu:light_concrete_bricks', brick_stairs: null, brick_slab: null, brick_wall: null,
+	cracked_brick: 'gtceu:cracked_light_concrete_bricks', cracked_stairs: null, cracked_slab: null, cracked_wall: null, 
+	mossy_brick: 'gtceu:mossy_light_concrete_bricks', mossy_stairs: null, mossy_slab: null, mossy_wall: null,
+	smooth_brick: 'gtceu:polished_light_concrete', smooth_stairs: null, smooth_slab: null, smooth_wall: null,
+	chiseled_brick: 'gtceu:chiseled_light_concrete'
+	},
+	{
+	brick_type: 'dark_concrete',
+	brick: 'gtceu:dark_concrete_bricks', brick_stairs: null, brick_slab: null, brick_wall: null,
+	cracked_brick: 'gtceu:cracked_dark_concrete_bricks', cracked_stairs: null, cracked_slab: null, cracked_wall: null, 
+	mossy_brick: 'gtceu:mossy_dark_concrete_bricks', mossy_stairs: null, mossy_slab: null, mossy_wall: null,
+	smooth_brick: 'gtceu:polished_dark_concrete', smooth_stairs: null, smooth_slab: null, smooth_wall: null,
+	chiseled_brick: 'gtceu:chiseled_dark_concrete'
+	},
+	{
+	brick_type: 'red_granite',
+	brick: 'gtceu:red_granite_bricks', brick_stairs: null, brick_slab: null, brick_wall: null,
+	cracked_brick: 'gtceu:cracked_red_granite_bricks', cracked_stairs: null, cracked_slab: null, cracked_wall: null, 
+	mossy_brick: 'gtceu:mossy_red_granite_bricks', mossy_stairs: null, mossy_slab: null, mossy_wall: null,
+	smooth_brick: 'gtceu:polished_red_granite', smooth_stairs: null, smooth_slab: null, smooth_wall: null,
+	chiseled_brick: 'gtceu:chiseled_red_granite'
+	}
+]);
+
+/**
  * Function for replacing a block with another block by crouch-right-clicking with a tool.
- * 
+ *
  * If input and output is null recipe will just return.
  *
- * @param {*} event 
+ * @param {*} event
  * @param {string} inputBlock -Block ID to be replaced. Accepts a Tag, but not recommended.
  * @param {string} outputBlock -Block ID of the replacement.
  * @param {string} toolId -Item ID of the tool.
@@ -263,7 +346,7 @@ function getTFGPersistentDataRoot(player)
 function transformBlockWithTool(event, inputBlock, outputBlock, toolId, damageTool, soundId, particleId, copyBlockstate) {
     const { server, item, player, block } = event;
 
-    if (!inputBlock || !outputBlock) {return};
+    if (!inputBlock || !outputBlock) return;
 
     if (inputBlock.startsWith('#')) {
         if (!block.hasTag(inputBlock.substring(1))) return;
@@ -272,15 +355,15 @@ function transformBlockWithTool(event, inputBlock, outputBlock, toolId, damageTo
     }
 
     if (toolId.startsWith('#')) {
-        if (item.isEmpty() || !player.mainHandItem.hasTag(toolId.substring(1))) {return};
+        if (item.isEmpty() || !player.mainHandItem.hasTag(toolId.substring(1))) return;
     } else {
-        if (item.isEmpty() || player.mainHandItem.id !== toolId) {return};
+        if (item.isEmpty() || player.mainHandItem.id !== toolId) return;
     }
 
-    if (!player.crouching) {return};
+    if (!player.crouching) return;
 
     let state = block.getBlockState().toString();
-    if (state.includes('[') && copyBlockstate == true) {
+    if (state.includes('[') && copyBlockstate === true) {
         state = state.substring(state.indexOf('['));
     } else {
         state = '';
@@ -309,10 +392,10 @@ function transformBlockWithTool(event, inputBlock, outputBlock, toolId, damageTo
 
 /**
  * Function for replacing a block with another block by crouch-right-clicking with an item.
- * 
+ *
  * If input and output is null recipe will just return.
  *
- * @param {*} event 
+ * @param {*} event
  * @param {string} inputBlock -Block ID to be replaced. Accepts a Tag, but not recommended.
  * @param {string} outputBlock -Block ID of the replacement.
  * @param {string} itemId -Item ID of the consumed item. Accepts Tags.
@@ -325,7 +408,7 @@ function transformBlockWithTool(event, inputBlock, outputBlock, toolId, damageTo
 function transformBlockWithItem(event, inputBlock, outputBlock, itemId, consumeItem, consumeAmount, soundId, particleId, copyBlockstate) {
         const { server, item, player, block } = event;
 
-        if (!inputBlock || !outputBlock) {return};
+        if (!inputBlock || !outputBlock) return;
 
         if (inputBlock.startsWith('#')) {
             if (!block.hasTag(inputBlock.substring(1))) return;
@@ -334,14 +417,14 @@ function transformBlockWithItem(event, inputBlock, outputBlock, itemId, consumeI
         }
 
         if (itemId.startsWith('#')) {
-            if (item.isEmpty() || !player.mainHandItem.hasTag(itemId.substring(1))) {return};
+            if (item.isEmpty() || !player.mainHandItem.hasTag(itemId.substring(1))) return;
         } else {
-            if (item.isEmpty() || player.mainHandItem.id != itemId) {return};
+            if (item.isEmpty() || player.mainHandItem.id !== itemId) return;
         }
-        if (!player.crouching) {return};
+        if (!player.crouching) return;
 
-        var state = block.getBlockState().toString()
-        if (state.includes('[') && copyBlockstate == true){
+        let state = block.getBlockState().toString()
+        if (state.includes('[') && copyBlockstate === true){
             state = state.substring(block.getBlockState().toString().indexOf('['));
         } else {
             state = ''
@@ -415,6 +498,32 @@ BlockEvents.rightClicked(event => {
         transformBlockWithTool(event, b.brick, b.smooth_brick, '#create:sandpaper', true, 'create:sanding_short', 'minecraft:crit', true);
         transformBlockWithTool(event, b.mossy_brick, b.smooth_brick, '#create:sandpaper', true, 'create:sanding_short', 'minecraft:crit', true);
         transformBlockWithTool(event, b.cracked_brick, b.smooth_brick, '#create:sandpaper', true, 'create:sanding_short', 'minecraft:crit', true);
+        // smooth ->
+        transformBlockWithTool(event, b.smooth_brick, b.cracked_brick, '#forge:tools/hammers',true, 'minecraft:block.copper.hit', 'minecraft:crit', true);
+        transformBlockWithItem(event, b.smooth_brick, b.mossy_brick, '#tfc:compost_greens_low', true, 1, 'minecraft:block.moss.hit', 'minecraft:item_slime', true);
+        transformBlockWithItem(event, b.smooth_brick, b.mossy_brick, 'gtceu:plant_ball', true, 1, 'minecraft:block.moss.hit', 'minecraft:item_slime', true);
+        transformBlockWithTool(event, b.smooth_brick, b.brick, '#forge:tools/files', true, 'minecraft:block.beehive.shear', 'minecraft:crit', true);
     }
+    //Other TFC Blocks
+    global.TFC_STONE_TYPES.forEach(stone => {
+        //cobble -> mossy
+        transformBlockWithItem(event, `tfc:rock/cobble/${stone}`, `tfc:rock/mossy_cobble/${stone}`, '#tfc:compost_greens_low', true, 1, 'minecraft:block.moss.hit', 'minecraft:item_slime', true);
+        transformBlockWithItem(event, `tfc:rock/cobble/${stone}`, `tfc:rock/mossy_cobble/${stone}`, 'gtceu:plant_ball', true, 1, 'minecraft:block.moss.hit', 'minecraft:item_slime', true);
+        transformBlockWithItem(event, `tfc:rock/cobble/${stone}_stairs`, `tfc:rock/mossy_cobble/${stone}_stairs`, '#tfc:compost_greens_low', true, 1, 'minecraft:block.moss.hit', 'minecraft:item_slime', true);
+        transformBlockWithItem(event, `tfc:rock/cobble/${stone}_stairs`, `tfc:rock/mossy_cobble/${stone}_stairs`, 'gtceu:plant_ball', true, 1, 'minecraft:block.moss.hit', 'minecraft:item_slime', true);
+        transformBlockWithItem(event, `tfc:rock/cobble/${stone}_slab`, `tfc:rock/mossy_cobble/${stone}_slab`, '#tfc:compost_greens_low', true, 1, 'minecraft:block.moss.hit', 'minecraft:item_slime', true);
+        transformBlockWithItem(event, `tfc:rock/cobble/${stone}_slab`, `tfc:rock/mossy_cobble/${stone}_slab`, 'gtceu:plant_ball', true, 1, 'minecraft:block.moss.hit', 'minecraft:item_slime', true);
+        transformBlockWithItem(event, `tfc:rock/cobble/${stone}_wall`, `tfc:rock/mossy_cobble/${stone}_wall`, '#tfc:compost_greens_low', true, 1, 'minecraft:block.moss.hit', 'minecraft:item_slime', true);
+        transformBlockWithItem(event, `tfc:rock/cobble/${stone}_wall`, `tfc:rock/mossy_cobble/${stone}_wall`, 'gtceu:plant_ball', true, 1, 'minecraft:block.moss.hit', 'minecraft:item_slime', true);
+        //mossy -> cobble
+        transformBlockWithTool(event, `tfc:rock/mossy_cobble/${stone}`, `tfc:rock/cobble/${stone}`, '#forge:tools/knives', true, 'minecraft:item.axe.wax_off', 'minecraft:item_slime', true);
+        transformBlockWithItem(event, `tfc:rock/mossy_cobble/${stone}`, `tfc:rock/cobble/${stone}`, 'tfc:groundcover/pumice', true, 1, 'minecraft:item.axe.wax_off', 'minecraft:item_slime', true);
+        transformBlockWithTool(event, `tfc:rock/mossy_cobble/${stone}_stairs`, `tfc:rock/cobble/${stone}_stairs`, '#forge:tools/knives', true, 'minecraft:item.axe.wax_off', 'minecraft:item_slime', true);
+        transformBlockWithItem(event, `tfc:rock/mossy_cobble/${stone}_stairs`, `tfc:rock/cobble/${stone}_stairs`, 'tfc:groundcover/pumice', true, 1, 'minecraft:item.axe.wax_off', 'minecraft:item_slime', true);
+        transformBlockWithTool(event, `tfc:rock/mossy_cobble/${stone}_slab`, `tfc:rock/cobble/${stone}_slab`, '#forge:tools/knives', true, 'minecraft:item.axe.wax_off', 'minecraft:item_slime', true);
+        transformBlockWithItem(event, `tfc:rock/mossy_cobble/${stone}_slab`, `tfc:rock/cobble/${stone}_slab`, 'tfc:groundcover/pumice', true, 1, 'minecraft:item.axe.wax_off', 'minecraft:item_slime', true);
+        transformBlockWithTool(event, `tfc:rock/mossy_cobble/${stone}_wall`, `tfc:rock/cobble/${stone}_wall`, '#forge:tools/knives', true, 'minecraft:item.axe.wax_off', 'minecraft:item_slime', true);
+        transformBlockWithItem(event, `tfc:rock/mossy_cobble/${stone}_wall`, `tfc:rock/cobble/${stone}_wall`, 'tfc:groundcover/pumice', true, 1, 'minecraft:item.axe.wax_off', 'minecraft:item_slime', true);
+    });
 });
 //#endregion

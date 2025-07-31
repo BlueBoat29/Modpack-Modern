@@ -96,10 +96,9 @@ const registerAdAstraRecipes = (event) => {
 
 	//#endregion
 
-	//region tier 2 rocket DISABLED UNTIL EV
-	
+	//region tier 2 rocket
 	event.remove({ mod: 'gtceu', input: 'gtceu:hot_rocket_alloy_t2_ingot' })
-
+	
 	event.recipes.gtceu.mixer('tfg:rocket_alloy_t2')
 		.itemInputs('19x #forge:dusts/titanium', '3x #forge:small_dusts/chromium', '3x #forge:small_dusts/tin', '3x #forge:small_dusts/aluminium')
 		.inputFluids(Fluid.of('gtceu:vanadium', 540))
@@ -125,34 +124,6 @@ const registerAdAstraRecipes = (event) => {
 	event.recipes.gtceu.assembler('tfg:rocket_cone_t2')
 		.itemInputs('gtceu:ev_emitter', '#forge:dense_plates/rocket_alloy_t2', '#forge:double_plates/titanium', '#forge:double_plates/desh')
 		.itemOutputs('tfg:rocket_cone_t2')
-		.duration(1440)
-		.circuit(3)
-		.EUt(GTValues.VA[GTValues.EV])
-	
-	event.recipes.gtceu.assembler('tfg:rocket_desh_engine')
-		.itemInputs(
-			'4x #forge:double_plates/titanium',
-			'4x #gtceu:circuits/ev',
-			'gtceu:ev_electric_pump',
-			'3x gtceu:advanced_power_thruster',
-			'4x #forge:rods/magnetic_neodymium',
-			'#forge:rotors/titanium')
-		.inputFluids(Fluid.of('gtceu:desh', 144 * 12))
-		.itemOutputs('ad_astra:desh_engine')
-		.duration(800)
-		.circuit(3)
-		.EUt(GTValues.VA[GTValues.EV])
-	
-	event.recipes.gtceu.assembler('ad_astra:tier_2_rocket')
-		.itemInputs(
-			'12x #forge:dense_plates/rocket_alloy_t2',
-			'4x tfg:rocket_fin_t2',
-			'1x ad_astra:desh_engine',
-			'1x tfg:rocket_cone_t2',
-			'12x #forge:insulation_t2/roll'
-		)
-		.inputFluids(Fluid.of('tfg:cryogenized_fluix', 144 * 2 * 16))
-		.itemOutputs('ad_astra:tier_2_rocket')
 		.duration(1440)
 		.circuit(3)
 		.EUt(GTValues.VA[GTValues.EV])
