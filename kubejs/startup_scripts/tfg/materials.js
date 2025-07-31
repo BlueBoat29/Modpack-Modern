@@ -61,7 +61,9 @@ const registerTFGMaterials = (event) => {
 		.color(0x3c253d)
 		.iconSet('metallic')
 		.flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR)
+
 		.blastTemp(3200, 'mid', 1024, 1100)
+
 	
 	event.create('rocket_alloy_t3')
 		.ingot()

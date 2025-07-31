@@ -18,14 +18,12 @@ StartupEvents.registry('entity_type', event => {
 
 BlockEvents.modification(event => {
 	registerAdAstraBlockModifications(event)
-	registerSpeciesBlockModifications(event)
 })
 
 ItemEvents.modification(event => {
 	registerBeneathItemModifications(event)
 	registerConstructionWandsItemModifications(event)
 	registerCreateItemModifications(event)
-	registerFirmalifeItemModifications(event)
 	registerGTCEuItemModifications(event)
 	registerMinecraftItemModifications(event)
 })
@@ -57,7 +55,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 	registerGTCEuMaterials(event)
 	registerGreateMaterials(event)
 	registerTFGMaterials(event)
-	registerTFGNuclearMaterials(event)
 })
 
 GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
@@ -74,8 +71,14 @@ GTCEuStartupEvents.registry('gtceu:dimension_marker', event => {
 })
 
 GTCEuStartupEvents.registry("gtceu:element", event => {
-	registerTFGElement(event)
+    registerTFGElement(event)
 })
+
+TFCEvents.registerFoodTrait(event => {
+	registerTFGFoodTraits(event)
+})
+
+
 
 Platform.mods.primitive_creatures.name = "Primitive Creatures";
 Platform.mods.tfg.name = "TerraFirmaGreg";

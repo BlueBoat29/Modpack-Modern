@@ -1,9 +1,6 @@
 // priority: 0
 "use strict";
 
-/**
- * @param {Internal.RecipesEventJS_} event 
- */
 const registerAdAstraRecipes = (event) => {
 
 	event.remove({ mod: 'ad_astra' })
@@ -99,11 +96,11 @@ const registerAdAstraRecipes = (event) => {
 
 	//#endregion
 
-
 	//region tier 2 rocket DISABLED UNTIL EV
 	
 	event.remove({ mod: 'gtceu', input: 'gtceu:hot_rocket_alloy_t2_ingot' })
 /*
+
 	event.recipes.gtceu.mixer('tfg:rocket_alloy_t2')
 		.itemInputs('19x #forge:dusts/titanium', '3x #forge:small_dusts/chromium', '3x #forge:small_dusts/tin', '3x #forge:small_dusts/aluminium')
 		.inputFluids(Fluid.of('gtceu:vanadium', 540))
@@ -134,7 +131,6 @@ const registerAdAstraRecipes = (event) => {
 		.duration(1440)
 		.circuit(3)
 		.EUt(GTValues.VA[GTValues.EV])
-
 	
 	event.recipes.gtceu.assembler('tfg:rocket_desh_engine')
 		.itemInputs(
@@ -514,7 +510,7 @@ const registerAdAstraRecipes = (event) => {
 		.category(GTRecipeCategories.CHEM_DYES)
 
 	global.MINECRAFT_DYE_NAMES.forEach(color => {
-		if (color !== "white") {
+		if (color != "white") {
 			event.recipes.gtceu.chemical_bath(`tfg:ad_astra_${color}_flag`)
 				.itemInputs('ad_astra:white_flag')
 				.inputFluids(Fluid.of(`tfc:${color}_dye`, 36))
@@ -861,18 +857,6 @@ const registerAdAstraRecipes = (event) => {
 		structure: "tfg:orbit/space_station"
 	})
 
-	event.custom({
-		type: "ad_astra:space_station_recipe",
-		dimension: "ad_astra:mars_orbit",
-		ingredients: [
-			{ count: 43, ingredient: { item: "gtceu:aluminium_frame" }},
-			{ count: 24, ingredient: { item: "gtceu:glass_plate" }},
-			{ count: 4, ingredient: { item: "minecraft:glowstone_dust" }},
-			{ count: 1, ingredient: { item: "ad_astra:launch_pad" }}
-		],
-		structure: "tfg:orbit/space_station"
-	})
-
 	//#endregion
 
 	//#region Wood
@@ -906,14 +890,8 @@ const registerAdAstraRecipes = (event) => {
 			B: ChemicalHelper.get(TagPrefix.rod, GTMaterials.Wood, 1),
 		}).id('tfg:shaped/strophar_ladder')
 
-
-		generateGreenHouseRecipe(event, '8x ad_astra:strophar_mushroom', 'tfg:semiheavy_ammoniacal_water', 16000,
-			'64x ad_astra:strophar_stem', 'tfg:green_house/strophar_mushroom', 'ad_astra:mars', 8, 
-			'16x ad_astra:strophar_cap', GTValues.VA[GTValues.MV])
-		generateGreenHouseRecipe(event, '8x ad_astra:aeronos_mushroom', 'tfg:semiheavy_ammoniacal_water', 16000, 
-			'64x ad_astra:aeronos_stem', 'tfg:green_house/aeronos_mushroom', 'ad_astra:mars', 8,
-			'16x ad_astra:aeronos_cap', GTValues.VA[GTValues.MV])
-		// TODO: needs a sapling
-		//generateGreenHouseRecipe(event, '8x ___', 16000, '64x ad_astra:glacian_log', 'tfg:green_house/glacian_tree', 'ad_astra:mars', 8, '8x species:alphacene_moss_block', GTValues.VA[GTValues.MV])
+		generateGreenHouseRecipe(event, '8x ad_astra:glacian_fur', 16000, '64x ad_astra:glacian_log', 'tfg:green_house/glacian_tree', 'ad_astra:moon', 8, '8x ad_astra:glacian_leaves', GTValues.VA[GTValues.MV])
+		generateGreenHouseRecipe(event, '8x ad_astra:strophar_mushroom', 16000, '64x ad_astra:strophar_stem', 'tfg:green_house/strophar_mushroom', 'ad_astra:moon', 8, '16x ad_astra:strophar_cap', GTValues.VA[GTValues.MV])
+		generateGreenHouseRecipe(event, '8x ad_astra:aeronos_mushroom', 16000, '64x ad_astra:aeronos_stem', 'tfg:green_house/aeronos_mushroom', 'ad_astra:moon', 8, '16x ad_astra:aeronos_cap', GTValues.VA[GTValues.MV])
 	//#endregion
 }
