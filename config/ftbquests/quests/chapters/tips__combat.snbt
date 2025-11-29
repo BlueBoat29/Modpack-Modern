@@ -1,0 +1,1121 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "tips__combat"
+	group: "19428C6E7A36D463"
+	icon: {
+		Count: 1
+		id: "gtceu:diamond_sword"
+		tag: {
+			Damage: 0
+			DisallowContainerItem: 0b
+			GT.Behaviours: { }
+			GT.Tool: {
+				AttackDamage: 10.0f
+				AttackSpeed: -2.3000002f
+				DefaultEnchantments: [ ]
+				MaxDamage: 4607
+			}
+			HideFlags: 2
+		}
+	}
+	id: "72E4C93BA4A0AD00"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["0EDFCD5F30AAE7D7"]
+			id: "611C053A562DA9F0"
+			tasks: [{
+				id: "00495DAC40B0F961"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/anvil/wrought_iron"
+				}
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["611C053A562DA9F0"]
+			id: "66950FBFBEB9CC05"
+			tasks: [{
+				id: "6DD7E10022E1E7C9"
+				item: {
+					Count: 1
+					id: "minecraft:crossbow"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["611C053A562DA9F0"]
+			id: "62F1A506C308991C"
+			tasks: [{
+				id: "43983678529CE786"
+				item: "tfg:flintlock_mechanism"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["611C053A562DA9F0"]
+			id: "2E3C021FEAE6A490"
+			tasks: [{
+				id: "3A2365D1C475B3EA"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/anvil/black_steel"
+				}
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"66950FBFBEB9CC05"
+				"2E3C021FEAE6A490"
+			]
+			id: "13373A2C78C8FB52"
+			tasks: [{
+				id: "4BE1575C5EB0E127"
+				item: {
+					Count: 1
+					id: "species:crankbow"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["62F1A506C308991C"]
+			icon: {
+				Count: 1
+				id: "tacz:modern_kinetic_gun"
+				tag: {
+					GunCurrentAmmoCount: 1
+					GunFireMode: "SEMI"
+					GunId: "ulv_guns:flintlock"
+					HasBulletInBarrel: 1b
+				}
+			}
+			id: "552CE2EEDF6E42EB"
+			tasks: [
+				{
+					id: "5FE7150A8CA6D207"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 1
+							GunFireMode: "SEMI"
+							GunId: "ulv_guns:flintlock"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "48A198F65C434EC2"
+					item: {
+						Count: 1
+						id: "tacz:ammo"
+						tag: {
+							AmmoId: "ulv_guns:lead_shot"
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"62F1A506C308991C"
+				"2E3C021FEAE6A490"
+			]
+			icon: {
+				Count: 1
+				id: "tacz:modern_kinetic_gun"
+				tag: {
+					GunCurrentAmmoCount: 1
+					GunFireMode: "SEMI"
+					GunId: "tacz:springfield1873"
+					HasBulletInBarrel: 1b
+				}
+			}
+			id: "55557E2689DB8DAD"
+			tasks: [
+				{
+					id: "1E83FFC1C170AEE3"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 1
+							GunFireMode: "SEMI"
+							GunId: "tacz:springfield1873"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4F85D08FD0749FE6"
+					item: {
+						Count: 1
+						id: "tacz:ammo"
+						tag: {
+							AmmoId: "tacz:45_70"
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2E3C021FEAE6A490"]
+			icon: "tfg:lv_universal_circuit"
+			id: "165215273D49B85B"
+			tasks: [{
+				id: "45104EE451968CD0"
+				item: "gtceu:lv_assembler"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["165215273D49B85B"]
+			icon: "tfg:mv_universal_circuit"
+			id: "0B6E37EACC69D5AB"
+			tasks: [{
+				id: "24DE4399CA232E1C"
+				item: "gtceu:mv_assembler"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0B6E37EACC69D5AB"]
+			id: "07A777BAAB2DBCFC"
+			tasks: [{
+				id: "35B435B79ECBE1C4"
+				item: "tfg:advanced_clockwork_mechanism"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["165215273D49B85B"]
+			icon: {
+				Count: 1
+				id: "tacz:modern_kinetic_gun"
+				tag: {
+					GunCurrentAmmoCount: 4
+					GunFireMode: "SEMI"
+					GunId: "create_armorer:pistol_revolver_torque"
+					HasBulletInBarrel: 1b
+				}
+			}
+			id: "3BDC99511009E616"
+			tasks: [
+				{
+					id: "68CF2CA933A92E47"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 4
+							GunFireMode: "SEMI"
+							GunId: "create_armorer:pistol_revolver_torque"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "721B06917C6DD9DD"
+					item: {
+						Count: 1
+						id: "tacz:ammo"
+						tag: {
+							AmmoId: "create_armorer:rbapb"
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["07A777BAAB2DBCFC"]
+			icon: {
+				Count: 1
+				id: "tacz:ammo"
+				tag: {
+					AmmoId: "create_armorer:rbapb"
+				}
+			}
+			id: "06F4A26A75821EE3"
+			tasks: [
+				{
+					id: "1FFBF12AA96B6A5B"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 0
+							GunFireMode: "SEMI"
+							GunId: "create_armorer:pistol_auto_stress"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "35FB3B077185F82C"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 25
+							GunFireMode: "AUTO"
+							GunId: "create_armorer:smg_auto_crank"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["07A777BAAB2DBCFC"]
+			icon: {
+				Count: 1
+				id: "tacz:ammo"
+				tag: {
+					AmmoId: "create_armorer:slap"
+				}
+			}
+			id: "469EAB390D1CD900"
+			tasks: [
+				{
+					id: "2E7F41954D82077B"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 20
+							GunFireMode: "AUTO"
+							GunId: "create_armorer:rifle_assult_crane"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "14C0D9219DB28C3A"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 10
+							GunFireMode: "SEMI"
+							GunId: "create_armorer:sniper_semi_clockwork"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6AD2B8F29CFBFC21"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 40
+							GunFireMode: "AUTO"
+							GunId: "create_armorer:mg_platemag_flywheel"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["07A777BAAB2DBCFC"]
+			icon: {
+				Count: 1
+				id: "tacz:ammo"
+				tag: {
+					AmmoId: "tacz:30_06"
+				}
+			}
+			id: "71610D4B0503B4E5"
+			tasks: [{
+				id: "4E802D0889F35AA4"
+				item: {
+					Count: 1
+					id: "tacz:modern_kinetic_gun"
+					tag: {
+						GunCurrentAmmoCount: 2
+						GunFireMode: "SEMI"
+						GunId: "tacz:m700"
+						HasBulletInBarrel: 1b
+					}
+				}
+				type: "item"
+			}]
+			x: 16.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0B6E37EACC69D5AB"]
+			icon: "tfg:ev_universal_circuit"
+			id: "400B303E339E1D60"
+			tasks: [{
+				id: "34124DDD4D29AF6A"
+				item: "gtceu:ev_assembler"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["400B303E339E1D60"]
+			id: "278F18477F9B7E08"
+			tasks: [{
+				id: "3495E2D9731C0A6C"
+				item: "tfg:certus_mechanism"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["278F18477F9B7E08"]
+			icon: {
+				Count: 1
+				id: "tacz:ammo"
+				tag: {
+					AmmoId: "applied_armorer:hard_core_quartz_bullet"
+				}
+			}
+			id: "4B461F9C79FCEA29"
+			tasks: [
+				{
+					id: "31D805FC42618A72"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 25
+							GunFireMode: "AUTO"
+							GunId: "applied_armorer:moritz_rifle_ar77"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "03660F23E136C07E"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 7
+							GunFireMode: "SEMI"
+							GunId: "applied_armorer:moritz_sniper_semi_k30"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 20.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["07A777BAAB2DBCFC"]
+			icon: {
+				Count: 1
+				id: "tacz:ammo"
+				tag: {
+					AmmoId: "tacz:12g"
+				}
+			}
+			id: "705F033824965EEC"
+			tasks: [
+				{
+					id: "7F001D08B4151A58"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 4
+							GunFireMode: "SEMI"
+							GunId: "create_armorer:shotgun_pump_bearing"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "19C4E11E69F9C18E"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 2
+							GunFireMode: "BURST"
+							GunId: "tacz:db_short"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "20F07176EDF669F7"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 2
+							GunFireMode: "SEMI"
+							GunId: "tacz:db_long"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 16.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["278F18477F9B7E08"]
+			icon: {
+				Count: 1
+				id: "tacz:ammo"
+				tag: {
+					AmmoId: "applied_armorer:fluix_infused_grenade"
+				}
+			}
+			id: "5F51397EAAAF4E80"
+			tasks: [{
+				id: "55184E49E060D9CD"
+				item: {
+					Count: 1
+					id: "tacz:modern_kinetic_gun"
+					tag: {
+						GunCurrentAmmoCount: 2
+						GunFireMode: "SEMI"
+						GunId: "applied_armorer:moritz_gernade_gl3"
+						HasBulletInBarrel: 1b
+					}
+				}
+				type: "item"
+			}]
+			x: 22.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["278F18477F9B7E08"]
+			icon: {
+				Count: 1
+				id: "tacz:ammo"
+				tag: {
+					AmmoId: "applied_armorer:etched_quartz_bullet"
+				}
+			}
+			id: "2AB4598D31E40BCD"
+			tasks: [
+				{
+					id: "219DDEE16FE84FD8"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 17
+							GunFireMode: "SEMI"
+							GunId: "applied_armorer:niklas_pistol_semi_right"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2ECDF71CF1684E4E"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 10
+							GunFireMode: "SEMI"
+							GunId: "applied_armorer:niklas_pistol_semi_pride"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "36EFC56ACE910BF2"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 34
+							GunFireMode: "SEMI"
+							GunId: "applied_armorer:niklas_pistol_double_win_win"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2AF50DFBB67DD26E"
+					item: {
+						Count: 1
+						id: "tacz:modern_kinetic_gun"
+						tag: {
+							GunCurrentAmmoCount: 35
+							GunFireMode: "AUTO"
+							GunId: "applied_armorer:niklas_smg_freedom"
+							HasBulletInBarrel: 1b
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 20.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["278F18477F9B7E08"]
+			icon: {
+				Count: 1
+				id: "tacz:ammo"
+				tag: {
+					AmmoId: "applied_armorer:cluster_quartz_bullet"
+				}
+			}
+			id: "6018267C22D44D54"
+			tasks: [{
+				id: "55043D6E4A3A08B4"
+				item: {
+					Count: 1
+					id: "tacz:modern_kinetic_gun"
+					tag: {
+						GunCurrentAmmoCount: 5
+						GunFireMode: "AUTO"
+						GunId: "applied_armorer:moritz_shotgun_sg914"
+						HasBulletInBarrel: 1b
+					}
+				}
+				type: "item"
+			}]
+			x: 22.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["400B303E339E1D60"]
+			icon: {
+				Count: 1
+				id: "tacz:ammo"
+				tag: {
+					AmmoId: "create_armorer:40mmhe"
+				}
+			}
+			id: "0B1BEF4DB50A58C6"
+			tasks: [{
+				id: "75A218CE86D785C4"
+				item: {
+					Count: 1
+					id: "tacz:modern_kinetic_gun"
+					tag: {
+						GunCurrentAmmoCount: 1
+						GunFireMode: "SEMI"
+						GunId: "create_armorer:cannon_40mm_salamander"
+						HasBulletInBarrel: 1b
+					}
+				}
+				type: "item"
+			}]
+			x: 18.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["55BF74AD2E6EF14A"]
+			id: "0EDFCD5F30AAE7D7"
+			tasks: [{
+				id: "313B6D8CDAD79169"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+					id: "tfc:metal/anvil/bronze"
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "55BF74AD2E6EF14A"
+			tasks: [{
+				id: "66BCA596B2ED7344"
+				item: "tfc:rock/loose/gabbro"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["55BF74AD2E6EF14A"]
+			icon: {
+				Count: 1
+				id: "gtceu:stone_knife"
+				tag: {
+					Damage: 0
+					DisallowContainerItem: 0b
+					GT.Behaviours: { }
+					GT.Tool: {
+						AttackDamage: 1.0f
+						AttackSpeed: 3.0f
+						DefaultEnchantments: [ ]
+						MaxDamage: 47
+					}
+					HideFlags: 2
+				}
+			}
+			id: "66DCC10D1FB19E75"
+			tasks: [{
+				id: "649CFA1B2001D3B1"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:knives)"
+					}
+				}
+				title: "Any #tfc:knives"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0EDFCD5F30AAE7D7"]
+			id: "1A8751142C4D5942"
+			tasks: [{
+				id: "58EE183C4957F2EE"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:shields)"
+					}
+				}
+				title: "Any #tfc:shields"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0EDFCD5F30AAE7D7"]
+			id: "0F100B271DD4A689"
+			tasks: [
+				{
+					id: "1080A91633F7BA0E"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:metal/helmet/bronze"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "419489E562BB31D1"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:metal/chestplate/bronze"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4097138A2D13D5F8"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:metal/greaves/bronze"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0C54692437349E47"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:metal/boots/bronze"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0EDFCD5F30AAE7D7"]
+			id: "0B36E8C3AC52E177"
+			tasks: [{
+				id: "3E760025B380279A"
+				item: {
+					Count: 1
+					id: "minecraft:bow"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -1.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["55BF74AD2E6EF14A"]
+			icon: {
+				Count: 1
+				id: "tfc:stone/javelin/igneous_extrusive"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "56B7191D184B499C"
+			tasks: [{
+				id: "7BB64DC7BFAFAD45"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:javelins)"
+					}
+				}
+				title: "Any #tfc:javelins"
+				type: "item"
+			}]
+			x: -3.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0EDFCD5F30AAE7D7"]
+			id: "72933FC755718687"
+			tasks: [
+				{
+					id: "0A45EC3817097A72"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "gtceu:bronze_sword"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								AttackDamage: 5.0f
+								AttackSpeed: -2.4f
+								DefaultEnchantments: [ ]
+								MaxDamage: 1151
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1044D27ACA71F592"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:metal/mace/bronze"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "658F2B4A4470753D"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "gtceu:bronze_butchery_knife"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								AttackDamage: 3.5f
+								AttackSpeed: -1.3f
+								DefaultEnchantments: [ ]
+								MaxDamage: 1151
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "30386B5B587721FC"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "gtceu:bronze_hammer"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								DefaultEnchantments: [ ]
+								HarvestLevel: 2
+								MaxDamage: 1151
+								ToolSpeed: 7.0f
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "45DCE23A557226AD"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "gtceu:bronze_scythe"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								AoEColumn: 2
+								AoELayer: 2
+								AoERow: 2
+								MaxAoEColumn: 2
+								MaxAoELayer: 2
+								MaxAoERow: 2
+							}
+							GT.Tool: {
+								AttackDamage: 7.0f
+								AttackSpeed: -3.0f
+								DefaultEnchantments: [ ]
+								HarvestLevel: 2
+								MaxDamage: 3455
+								ToolSpeed: 7.0f
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["165215273D49B85B"]
+			icon: {
+				Count: 1
+				id: "gtceu:lv_diamond_chainsaw"
+				tag: {
+					Charge: 2147483647L
+					Damage: 0
+					DisallowContainerItem: 0b
+					GT.Behaviours: {
+						DisableShields: 1b
+						HarvestIce: 1b
+						TreeFelling: 1b
+					}
+					GT.Tool: {
+						DefaultEnchantments: [ ]
+						HarvestLevel: 3
+						MaxDamage: 4607
+						ToolSpeed: 16.0f
+					}
+					HideFlags: 2
+					MaxCharge: 2147483647L
+				}
+			}
+			id: "776632D85771A644"
+			tasks: [{
+				id: "61FE3D50B5176268"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(forge:tools/chainsaws)"
+					}
+				}
+				title: "Any #forge:tools/chainsaws"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["400B303E339E1D60"]
+			icon: {
+				Count: 1
+				id: "gtceu:nano_saber"
+				tag: {
+					Active: 1b
+					Charge: 3849152L
+				}
+			}
+			id: "28908AAFF06D32BC"
+			tasks: [{
+				id: "740F42CBCEB9771B"
+				item: "gtceu:nano_saber"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["55BF74AD2E6EF14A"]
+			icon: {
+				Count: 1
+				id: "gtceu:stone_axe"
+				tag: {
+					Damage: 0
+					DisallowContainerItem: 0b
+					GT.Behaviours: {
+						DisableShields: 1b
+						TreeFelling: 1b
+					}
+					GT.Tool: {
+						DefaultEnchantments: [ ]
+						HarvestLevel: 1
+						MaxDamage: 47
+						ToolSpeed: 3.2f
+					}
+					HideFlags: 2
+				}
+			}
+			id: "016982E15135026B"
+			tasks: [{
+				id: "3CAAA57F8BBC22D9"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:axes)"
+					}
+				}
+				title: "Any #tfc:axes"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 2.0d
+		}
+	]
+	title: "Tips - Combat"
+}
