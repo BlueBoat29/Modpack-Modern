@@ -185,6 +185,8 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
+					title: "Any #tfc:usable_on_tool_rack"
 					type: "item"
 				}
 				{
@@ -196,6 +198,7 @@
 							AmmoId: "ulv_guns:lead_shot"
 						}
 					}
+					match_nbt: true
 					optional_task: true
 					type: "item"
 				}
@@ -232,6 +235,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -243,6 +247,7 @@
 							AmmoId: "tacz:45_70"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 			]
@@ -332,6 +337,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -343,6 +349,7 @@
 							AmmoId: "create_armorer:rbapb"
 						}
 					}
+					match_nbt: true
 					optional_task: true
 					type: "item"
 				}
@@ -373,6 +380,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -387,6 +395,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 			]
@@ -416,6 +425,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -430,6 +440,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -444,6 +455,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 			]
@@ -472,6 +484,7 @@
 						HasBulletInBarrel: 1b
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 16.0d
@@ -535,6 +548,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -549,6 +563,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 			]
@@ -578,6 +593,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -592,6 +608,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -606,6 +623,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 			]
@@ -634,6 +652,7 @@
 						HasBulletInBarrel: 1b
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 22.0d
@@ -662,6 +681,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -676,6 +696,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -690,6 +711,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -704,6 +726,7 @@
 							HasBulletInBarrel: 1b
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 			]
@@ -732,6 +755,7 @@
 						HasBulletInBarrel: 1b
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 22.0d
@@ -759,6 +783,7 @@
 						HasBulletInBarrel: 1b
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 18.0d
@@ -876,69 +901,45 @@
 			id: "0F100B271DD4A689"
 			tasks: [
 				{
-					id: "1080A91633F7BA0E"
+					id: "03E10424828B049E"
 					item: {
 						Count: 1
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "tfc:metal/helmet/bronze"
+						id: "ftbfiltersystem:smart_filter"
 						tag: {
-							Damage: 0
+							"ftbfiltersystem:filter": "or(item(tfc:metal/helmet/bismuth_bronze)item(tfc:metal/helmet/black_bronze)item(tfc:metal/helmet/bronze)item(tfc:metal/helmet/copper)item(tfc:metal/helmet/wrought_iron)item(tfc:metal/helmet/steel)item(tfc:metal/helmet/black_steel)item(tfc:metal/helmet/blue_steel)item(tfc:metal/helmet/red_steel))"
 						}
 					}
 					type: "item"
 				}
 				{
-					id: "419489E562BB31D1"
+					id: "3263E7E5F6A354EF"
 					item: {
 						Count: 1
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "tfc:metal/chestplate/bronze"
+						id: "ftbfiltersystem:smart_filter"
 						tag: {
-							Damage: 0
+							"ftbfiltersystem:filter": "or(item(tfc:metal/chestplate/bismuth_bronze)item(tfc:metal/chestplate/black_bronze)item(tfc:metal/chestplate/bronze)item(tfc:metal/chestplate/copper)item(tfc:metal/chestplate/wrought_iron)item(tfc:metal/chestplate/steel)item(tfc:metal/chestplate/black_steel)item(tfc:metal/chestplate/blue_steel)item(tfc:metal/chestplate/red_steel))"
 						}
 					}
 					type: "item"
 				}
 				{
-					id: "4097138A2D13D5F8"
+					id: "1ABE3804A9D215C7"
 					item: {
 						Count: 1
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "tfc:metal/greaves/bronze"
+						id: "ftbfiltersystem:smart_filter"
 						tag: {
-							Damage: 0
+							"ftbfiltersystem:filter": "or(item(tfc:metal/greaves/bismuth_bronze)item(tfc:metal/greaves/black_bronze)item(tfc:metal/greaves/bronze)item(tfc:metal/greaves/copper)item(tfc:metal/greaves/wrought_iron)item(tfc:metal/greaves/steel)item(tfc:metal/greaves/black_steel)item(tfc:metal/greaves/blue_steel)item(tfc:metal/greaves/red_steel))"
 						}
 					}
 					type: "item"
 				}
 				{
-					id: "0C54692437349E47"
+					id: "680996F48E4FF24A"
 					item: {
 						Count: 1
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "tfc:metal/boots/bronze"
+						id: "ftbfiltersystem:smart_filter"
 						tag: {
-							Damage: 0
+							"ftbfiltersystem:filter": "or(item(tfc:metal/boots/bismuth_bronze)item(tfc:metal/boots/black_bronze)item(tfc:metal/boots/bronze)item(tfc:metal/boots/copper)item(tfc:metal/boots/wrought_iron)item(tfc:metal/boots/steel)item(tfc:metal/boots/black_steel)item(tfc:metal/boots/blue_steel)item(tfc:metal/boots/red_steel))"
 						}
 					}
 					type: "item"
@@ -981,43 +982,24 @@
 					id: "1044D27ACA71F592"
 					item: {
 						Count: 1
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "tfc:metal/mace/bronze"
+						id: "ftbfiltersystem:smart_filter"
 						tag: {
-							Damage: 0
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:maces)"
 						}
 					}
+					title: "Any #tfc:maces"
 					type: "item"
 				}
 				{
 					id: "658F2B4A4470753D"
 					item: {
 						Count: 1
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "gtceu:bronze_butchery_knife"
+						id: "ftbfiltersystem:smart_filter"
 						tag: {
-							Damage: 0
-							DisallowContainerItem: 0b
-							GT.Behaviours: { }
-							GT.Tool: {
-								AttackDamage: 3.5f
-								AttackSpeed: -1.3f
-								DefaultEnchantments: [ ]
-								MaxDamage: 1151
-							}
-							HideFlags: 2
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(forge:tools/butchery_knives)"
 						}
 					}
+					title: "Any #forge:tools/butchery_knives"
 					type: "item"
 				}
 			]
@@ -1166,16 +1148,17 @@
 				id: "74BF9D624474F180"
 				item: {
 					Count: 1
-					id: "minecraft:bow"
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						Damage: 0
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(forge:bows)"
 					}
 				}
+				title: "Any #forge:bows"
 				type: "item"
 			}]
 			title: "{quests.combat_tips.bow.title}"
-			x: -4.0d
-			y: -2.0d
+			x: -3.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["55BF74AD2E6EF14A"]
@@ -1220,67 +1203,262 @@
 					id: "13B2BD126D624131"
 					item: {
 						Count: 1
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "gtceu:bronze_sword"
+						id: "ftbfiltersystem:smart_filter"
 						tag: {
-							Damage: 0
-							DisallowContainerItem: 0b
-							GT.Behaviours: { }
-							GT.Tool: {
-								AttackDamage: 5.0f
-								AttackSpeed: -2.4f
-								DefaultEnchantments: [ ]
-								MaxDamage: 1151
-							}
-							HideFlags: 2
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:swords)"
 						}
 					}
+					title: "Any #tfc:swords"
 					type: "item"
 				}
 				{
 					id: "4A19406718221AD3"
 					item: {
 						Count: 1
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:scythes)"
 						}
-						id: "gtceu:bronze_scythe"
+					}
+					title: "Any #tfc:scythes"
+					type: "item"
+				}
+			]
+			title: "{quests.combat_tips.mold_weapons.title}"
+			x: -5.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["45B3A5C226C0EC9F"]
+			id: "634D0DFB4037B316"
+			tasks: [{
+				id: "34DD6A9664C9CB7B"
+				item: {
+					Count: 1
+					id: "minecraft:shield"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -5.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["45B3A5C226C0EC9F"]
+			id: "00D957B20B4A12F3"
+			tasks: [
+				{
+					id: "4DF59D20C09C06A5"
+					item: {
+						Count: 1
+						id: "minecraft:leather_helmet"
 						tag: {
 							Damage: 0
-							DisallowContainerItem: 0b
-							GT.Behaviours: {
-								AoEColumn: 2
-								AoELayer: 2
-								AoERow: 2
-								MaxAoEColumn: 2
-								MaxAoELayer: 2
-								MaxAoERow: 2
-							}
-							GT.Tool: {
-								AttackDamage: 7.0f
-								AttackSpeed: -3.0f
-								DefaultEnchantments: [ ]
-								HarvestLevel: 2
-								MaxDamage: 3455
-								ToolSpeed: 7.0f
-							}
-							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "131FAA3AC55E9344"
+					item: {
+						Count: 1
+						id: "minecraft:leather_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "194CB4D364FB88AE"
+					item: {
+						Count: 1
+						id: "minecraft:leather_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "62988AB9373F7B33"
+					item: {
+						Count: 1
+						id: "minecraft:leather_boots"
+						tag: {
+							Damage: 0
 						}
 					}
 					type: "item"
 				}
 			]
-			title: "{quests.combat_tips.mold_weapons.title}"
-			x: -4.0d
-			y: 2.0d
+			x: -3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5CDA3E5AEB6D6339"]
+			id: "1D83CA22152163EF"
+			tasks: [{
+				id: "0FDF6BA34D18B263"
+				item: {
+					Count: 1
+					id: "tacz:ammo_box"
+					tag: {
+						Level: 0
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			title: "{quests.combat_tips.steel_ammo.title}"
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"5CDA3E5AEB6D6339"
+				"24158DEE63DAEB41"
+			]
+			id: "56ADEA4C00824362"
+			tasks: [{
+				id: "1B3B55799CB9B445"
+				item: {
+					Count: 1
+					id: "applied_ammo_box:ammo_box"
+					tag: {
+						internalCurrentPower: 1600000.0d
+					}
+				}
+				type: "item"
+			}]
+			title: "{quests.combat_tips.wireless_ammo.title}"
+			x: 18.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5CDA3E5AEB6D6339"]
+			id: "1FB1870CA923C94D"
+			tasks: [{
+				id: "5A600FCF0508A8CA"
+				item: {
+					Count: 1
+					id: "tacz:ammo_box"
+					tag: {
+						Level: 1
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			title: "{quests.combat_tips.magnalium_ammo.title}"
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5CDA3E5AEB6D6339"]
+			id: "32E406869A84E2CA"
+			tasks: [{
+				id: "2A4184AA3B3D2E86"
+				item: {
+					Count: 1
+					id: "tacz:ammo_box"
+					tag: {
+						Level: 2
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			title: "{quests.combat_tips.desh_ammo.title}"
+			x: 15.0d
+			y: 4.5d
+		}
+		{
+			id: "2C2C58B077ACBF71"
+			tasks: [{
+				id: "54136F9CEB744468"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "or(nbt(strict:{AttachmentId:\"create_armorer:extended_mag_ca_1\"})nbt(strict:{AttachmentId:\"create_armorer:extended_mag_ca_2\"})nbt(strict:{AttachmentId:\"create_armorer:extended_mag_ca_3\"})nbt(strict:{AttachmentId:\"applied_armorer:extended_mag_aa_1\"})nbt(strict:{AttachmentId:\"applied_armorer:extended_mag_aa_2\"})nbt(strict:{AttachmentId:\"applied_armorer:extended_mag_aa_3\"})nbt(strict:{AttachmentId:\"applied_armorer:extended_mid_mag_aa_1\"})nbt(strict:{AttachmentId:\"applied_armorer:extended_mid_mag_aa_2\"})nbt(strict:{AttachmentId:\"applied_armorer:extended_mid_mag_aa_3\"}))"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: 14.25d
+			y: -5.0d
+		}
+		{
+			id: "7A7D0CBC84FC515A"
+			tasks: [{
+				id: "40FCFCE05919E280"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "item(tacz:attachment)or(nbt(fuzzy:{AttachmentId:\"create_armorer:grip_wooden\"})nbt(fuzzy:{AttachmentId:\"create_armorer:grip_gantry_shaft\"})nbt(fuzzy:{AttachmentId:\"applied_armorer:grip_light\"})nbt(fuzzy:{AttachmentId:\"applied_armorer:grip_stable\"})nbt(fuzzy:{AttachmentId:\"create_armorer:grip_shaft\"})nbt(fuzzy:{AttachmentId:\"applied_armorer:grip_hf_17\"})nbt(fuzzy:{AttachmentId:\"applied_armorer:grip_sl_2\"})nbt(fuzzy:{AttachmentId:\"applied_armorer:grip_lf11\"}))"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: 12.9d
+			y: -5.5d
+		}
+		{
+			id: "1E7A53E11BF639F9"
+			tasks: [{
+				id: "588FD45A042CC703"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "or(nbt(fuzzy:{AttachmentId:\"applied_armorer:muzzle_classic\"})nbt(fuzzy:{AttachmentId:\"applied_armorer:muzzle_ns_1\"})nbt(fuzzy:{AttachmentId:\"applied_armorer:muzzle_commander\"})nbt(fuzzy:{AttachmentId:\"applied_armorer:muzzle_bs_mod4\"}))"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: 9.5d
+			y: -6.6d
+		}
+		{
+			id: "5CDA3E5AEB6D6339"
+			tasks: [{
+				id: "02071E24188D0067"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "or(item(tacz:ammo))"
+					}
+				}
+				type: "item"
+			}]
+			title: "{quests.combat_tips.any_ammo.title}"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			id: "3336D54AA0BB14BE"
+			tasks: [{
+				id: "3EDBD274C1375E98"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "or(nbt(fuzzy:{AttachmentId:\"create_armorer:sight_simple\"})nbt(fuzzy:{AttachmentId:\"create_armorer:sight_reflex\"})nbt(fuzzy:{AttachmentId:\"applied_armorer:si_pricision\"})nbt(fuzzy:{AttachmentId:\"applied_armorer:si_double_sided_mirror\"})nbt(fuzzy:{AttachmentId:\"create_armorer:sight_standard\"})nbt(fuzzy:{AttachmentId:\"applied_armorer:si_ms_12\"})nbt(fuzzy:{AttachmentId:\"create_armorer:sight_medium_distance\"})nbt(fuzzy:{AttachmentId:\"applied_armorer:scope_ms_14\"})nbt(fuzzy:{AttachmentId:\"tacz:scope_1873_6x\"})nbt(fuzzy:{AttachmentId:\"create_armorer:scope_telephoto\"})nbt(fuzzy:{AttachmentId:\"applied_armorer:scope_xgs_905\"}))"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: 14.5d
+			y: -7.5d
 		}
 	]
 	title: "Tips - Combat"
