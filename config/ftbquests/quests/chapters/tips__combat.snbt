@@ -20,26 +20,54 @@
 		}
 	}
 	id: "72E4C93BA4A0AD00"
-	order_index: 4
+	images: [{
+		height: 4.0d
+		image: "applied_armorer:textures/gun/hud/moritz_sniper_semi_k30.png"
+		rotation: 0.0d
+		width: 8.0d
+		x: 13.5d
+		y: -6.0d
+	}]
+	order_index: 5
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["0EDFCD5F30AAE7D7"]
-			id: "611C053A562DA9F0"
-			tasks: [{
-				id: "00495DAC40B0F961"
-				item: {
-					Count: 1
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
 					}
-					id: "tfc:metal/anvil/wrought_iron"
 				}
-				type: "item"
-			}]
+				id: "tfc:metal/anvil/wrought_iron"
+			}
+			id: "611C053A562DA9F0"
+			size: 1.5d
+			tasks: [
+				{
+					id: "589AB2C0FCE86092"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:metal/anvil/wrought_iron"
+					}
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0197F629D0B5B08D"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
+			title: "{quests.combat_tips.iron_main.title}"
 			x: 3.0d
 			y: 0.0d
 		}
@@ -73,21 +101,41 @@
 		}
 		{
 			dependencies: ["611C053A562DA9F0"]
-			id: "2E3C021FEAE6A490"
-			tasks: [{
-				id: "3A2365D1C475B3EA"
-				item: {
-					Count: 1
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
 					}
-					id: "tfc:metal/anvil/black_steel"
 				}
-				type: "item"
-			}]
+				id: "tfc:metal/anvil/black_steel"
+			}
+			id: "2E3C021FEAE6A490"
+			size: 1.5d
+			tasks: [
+				{
+					id: "71D7678CDD6C364C"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "tfc:metal/anvil/black_steel"
+					}
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "139619DD12A7589E"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
+			title: "{quests.combat_tips.steel_main.title}"
 			x: 6.0d
 			y: 0.0d
 		}
@@ -205,11 +253,21 @@
 			dependencies: ["2E3C021FEAE6A490"]
 			icon: "tfg:lv_universal_circuit"
 			id: "165215273D49B85B"
-			tasks: [{
-				id: "45104EE451968CD0"
-				item: "gtceu:lv_assembler"
-				type: "item"
-			}]
+			size: 1.5d
+			tasks: [
+				{
+					id: "51331F413C1FDD10"
+					item: "gtceu:lv_assembler"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "008547E2849C7E56"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
+			title: "{quests.combat_tips.lv_main.title}"
 			x: 9.0d
 			y: 0.0d
 		}
@@ -217,22 +275,34 @@
 			dependencies: ["165215273D49B85B"]
 			icon: "tfg:mv_universal_circuit"
 			id: "0B6E37EACC69D5AB"
-			tasks: [{
-				id: "24DE4399CA232E1C"
-				item: "gtceu:mv_assembler"
-				type: "item"
-			}]
+			size: 1.5d
+			tasks: [
+				{
+					id: "7853FD614B60608F"
+					item: "gtceu:mv_assembler"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "4E44AA968A515658"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
+			title: "{quests.combat_tips.mv_main.title}"
 			x: 12.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["0B6E37EACC69D5AB"]
 			id: "07A777BAAB2DBCFC"
+			size: 1.5d
 			tasks: [{
 				id: "35B435B79ECBE1C4"
 				item: "tfg:advanced_clockwork_mechanism"
 				type: "item"
 			}]
+			title: "{quests.combat_tips.adv_clock_main.title}"
 			x: 15.0d
 			y: 0.0d
 		}
@@ -411,22 +481,34 @@
 			dependencies: ["0B6E37EACC69D5AB"]
 			icon: "tfg:ev_universal_circuit"
 			id: "400B303E339E1D60"
-			tasks: [{
-				id: "34124DDD4D29AF6A"
-				item: "gtceu:ev_assembler"
-				type: "item"
-			}]
+			size: 1.5d
+			tasks: [
+				{
+					id: "34124DDD4D29AF6A"
+					item: "gtceu:ev_assembler"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0EE0A9DF55D7D04B"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
+			title: "{quests.combat_tips.ev_main.title}"
 			x: 18.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["400B303E339E1D60"]
 			id: "278F18477F9B7E08"
+			size: 1.5d
 			tasks: [{
 				id: "3495E2D9731C0A6C"
 				item: "tfg:certus_mechanism"
 				type: "item"
 			}]
+			title: "{quests.combat_tips.certus_main.title}"
 			x: 21.0d
 			y: 0.0d
 		}
@@ -683,33 +765,56 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["55BF74AD2E6EF14A"]
+			dependencies: ["45B3A5C226C0EC9F"]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "tfc:metal/anvil/bronze"
+			}
 			id: "0EDFCD5F30AAE7D7"
-			tasks: [{
-				id: "313B6D8CDAD79169"
-				item: {
-					Count: 1
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
+			size: 1.5d
+			tasks: [
+				{
+					id: "7C1F481F134D4242"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:bronze_anvils)"
 						}
 					}
-					id: "tfc:metal/anvil/bronze"
+					optional_task: true
+					title: "Any #tfc:bronze_anvils"
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					id: "5702F158547E9952"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
+			title: "{quests.combat_tips.bronze_main.title}"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
+			icon: "tfc:rock/loose/gabbro"
 			id: "55BF74AD2E6EF14A"
+			size: 1.5d
 			tasks: [{
-				id: "66BCA596B2ED7344"
-				item: "tfc:rock/loose/gabbro"
-				type: "item"
+				dimension: "minecraft:overworld"
+				icon: "gtceu:overworld_marker"
+				id: "32C9D640115FC6CD"
+				title: "{quests.stone_age.temperature.task}"
+				type: "dimension"
 			}]
-			x: -3.5d
+			title: "{quests.combat_tips.stone_main.title}"
+			x: -8.0d
 			y: 0.0d
 		}
 		{
@@ -743,8 +848,9 @@
 				title: "Any #tfc:knives"
 				type: "item"
 			}]
-			x: -2.5d
-			y: 2.0d
+			title: "{quests.combat_tips.knife.title}"
+			x: -7.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["0EDFCD5F30AAE7D7"]
@@ -761,6 +867,7 @@
 				title: "Any #tfc:shields"
 				type: "item"
 			}]
+			title: "{quests.combat_tips.shield.title}"
 			x: -1.0d
 			y: 1.5d
 		}
@@ -841,23 +948,6 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["0EDFCD5F30AAE7D7"]
-			id: "0B36E8C3AC52E177"
-			tasks: [{
-				id: "3E760025B380279A"
-				item: {
-					Count: 1
-					id: "minecraft:bow"
-					tag: {
-						Damage: 0
-					}
-				}
-				type: "item"
-			}]
-			x: -1.0d
-			y: -1.5d
-		}
-		{
 			dependencies: ["55BF74AD2E6EF14A"]
 			icon: {
 				Count: 1
@@ -879,39 +969,14 @@
 				title: "Any #tfc:javelins"
 				type: "item"
 			}]
-			x: -3.5d
-			y: -2.0d
+			title: "{quests.combat_tips.javelin.title}"
+			x: -7.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["0EDFCD5F30AAE7D7"]
 			id: "72933FC755718687"
 			tasks: [
-				{
-					id: "0A45EC3817097A72"
-					item: {
-						Count: 1
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "gtceu:bronze_sword"
-						tag: {
-							Damage: 0
-							DisallowContainerItem: 0b
-							GT.Behaviours: { }
-							GT.Tool: {
-								AttackDamage: 5.0f
-								AttackSpeed: -2.4f
-								DefaultEnchantments: [ ]
-								MaxDamage: 1151
-							}
-							HideFlags: 2
-						}
-					}
-					type: "item"
-				}
 				{
 					id: "1044D27ACA71F592"
 					item: {
@@ -955,70 +1020,9 @@
 					}
 					type: "item"
 				}
-				{
-					id: "30386B5B587721FC"
-					item: {
-						Count: 1
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "gtceu:bronze_hammer"
-						tag: {
-							Damage: 0
-							DisallowContainerItem: 0b
-							GT.Behaviours: { }
-							GT.Tool: {
-								DefaultEnchantments: [ ]
-								HarvestLevel: 2
-								MaxDamage: 1151
-								ToolSpeed: 7.0f
-							}
-							HideFlags: 2
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "45DCE23A557226AD"
-					item: {
-						Count: 1
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-						id: "gtceu:bronze_scythe"
-						tag: {
-							Damage: 0
-							DisallowContainerItem: 0b
-							GT.Behaviours: {
-								AoEColumn: 2
-								AoELayer: 2
-								AoERow: 2
-								MaxAoEColumn: 2
-								MaxAoELayer: 2
-								MaxAoERow: 2
-							}
-							GT.Tool: {
-								AttackDamage: 7.0f
-								AttackSpeed: -3.0f
-								DefaultEnchantments: [ ]
-								HarvestLevel: 2
-								MaxDamage: 3455
-								ToolSpeed: 7.0f
-							}
-							HideFlags: 2
-						}
-					}
-					type: "item"
-				}
 			]
-			x: 1.0d
-			y: -1.5d
+			x: 0.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["165215273D49B85B"]
@@ -1113,7 +1117,169 @@
 				title: "Any #tfc:axes"
 				type: "item"
 			}]
-			x: -4.5d
+			title: "{quests.combat_tips.axe.title}"
+			x: -9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["55BF74AD2E6EF14A"]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					Parent: {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+				id: "tfc:ceramic/scythe_blade_mold"
+			}
+			id: "45B3A5C226C0EC9F"
+			size: 1.5d
+			tasks: [
+				{
+					id: "4FC134F32F693083"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:fired_molds)"
+						}
+					}
+					optional_task: true
+					title: "Any #tfc:fired_molds"
+					type: "item"
+				}
+				{
+					id: "42BA2C54E7F433F9"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
+			title: "{quests.combat_tips.mold_main.title}"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["45B3A5C226C0EC9F"]
+			id: "538780D3B9B11070"
+			tasks: [{
+				id: "74BF9D624474F180"
+				item: {
+					Count: 1
+					id: "minecraft:bow"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "{quests.combat_tips.bow.title}"
+			x: -4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["55BF74AD2E6EF14A"]
+			icon: {
+				Count: 1
+				id: "gtceu:stone_hammer"
+				tag: {
+					Damage: 0
+					DisallowContainerItem: 0b
+					GT.Behaviours: { }
+					GT.Tool: {
+						DefaultEnchantments: [ ]
+						HarvestLevel: 1
+						MaxDamage: 47
+						ToolSpeed: 5.2f
+					}
+					HideFlags: 2
+				}
+			}
+			id: "370D8B4F0C198D49"
+			tasks: [{
+				id: "617F298748C1698D"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:hammers)"
+					}
+				}
+				title: "Any #tfc:hammers"
+				type: "item"
+			}]
+			title: "{quests.combat_tips.hammer.title}"
+			x: -9.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["45B3A5C226C0EC9F"]
+			id: "793737B29E9EC373"
+			tasks: [
+				{
+					id: "13B2BD126D624131"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "gtceu:bronze_sword"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								AttackDamage: 5.0f
+								AttackSpeed: -2.4f
+								DefaultEnchantments: [ ]
+								MaxDamage: 1151
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4A19406718221AD3"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+						id: "gtceu:bronze_scythe"
+						tag: {
+							Damage: 0
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								AoEColumn: 2
+								AoELayer: 2
+								AoERow: 2
+								MaxAoEColumn: 2
+								MaxAoELayer: 2
+								MaxAoERow: 2
+							}
+							GT.Tool: {
+								AttackDamage: 7.0f
+								AttackSpeed: -3.0f
+								DefaultEnchantments: [ ]
+								HarvestLevel: 2
+								MaxDamage: 3455
+								ToolSpeed: 7.0f
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{quests.combat_tips.mold_weapons.title}"
+			x: -4.0d
 			y: 2.0d
 		}
 	]
