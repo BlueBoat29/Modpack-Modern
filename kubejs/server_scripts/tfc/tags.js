@@ -70,6 +70,7 @@ function registerTFCItemTags(event) {
         "framedblocks:framed_hammer",
         "framedblocks:framed_key",
         "mcw_tfc_aio:roofing_hammer",
+        "mcw_tfc_aio:pliers",
         "tfclunchbox:lunchbox",
         "tfclunchbox:cooling_lunchbox",
         "tfclunchbox:electric_lunchbox",
@@ -111,14 +112,6 @@ function registerTFCItemTags(event) {
     event.add("minecraft:fishes", "tfc:food/rainbow_trout");
     event.add("minecraft:fishes", "tfc:food/smallmouth_bass");
 
-    // Make eggs not useless
-    event.add("tfc:foods/usable_in_salad", "tfc:food/cooked_egg");
-    event.add("tfc:foods/usable_in_salad", "tfc:food/boiled_egg");
-    event.add("tfc:foods/usable_in_jam_sandwich", "tfc:food/cooked_egg");
-    event.add("tfc:foods/usable_in_jam_sandwich", "tfc:food/boiled_egg");
-    event.add("tfc:foods/usable_in_sandwich", "tfc:food/cooked_egg");
-    event.add("tfc:foods/usable_in_sandwich", "tfc:food/boiled_egg");
-
     // Чтобы жарились бревна из TFC в пиролиз. печке
     // Почему нельзя просто добавить тег в тег? (допустим minecraft:logs), потому что из-за этого ломаются все рецепты minecraft:logs, магия...
     global.TFC_WOOD_TYPES.forEach((woodType) => {
@@ -146,16 +139,6 @@ function registerTFCItemTags(event) {
     event.remove("tfc:blast_furnace_fuel", "minecraft:charcoal");
     event.add("tfc:blast_furnace_fuel", "gtceu:coke_gem");
     event.add("tfc:blast_furnace_fuel", "beneath:cursecoal");
-
-    // Create a tag for Steam Bloomery
-
-    event.add("tfc:steam_bloomery_basic_fuels", "minecraft:coal");
-    event.add("tfc:steam_bloomery_basic_fuels", "minecraft:charcoal");
-    event.add("tfc:steam_bloomery_basic_fuels", "gtceu:rich_raw_coal");
-    event.add("tfc:steam_bloomery_basic_fuels", "gtceu:raw_coal");
-    event.add("tfc:steam_bloomery_basic_fuels", "gtceu:poor_raw_coal");
-    event.add("tfc:steam_bloomery_basic_fuels", "gtceu:coal_dust");
-    event.add("tfc:steam_bloomery_basic_fuels", "gtceu:charcoal_dust");
 
     // Тэги для сундуков, чтобы отличать их виды
     global.TFC_WOOD_TYPES.forEach((woodType) => {
@@ -331,12 +314,6 @@ function registerTFCItemTags(event) {
     event.add("forge:cloth", "tfc:wool_cloth");
     event.add("forge:cloth", "tfc:silk_cloth");
 
-    // Piglin loved
-    event.add("minecraft:piglin_loved", "tfc:ore/small_native_gold");
-    event.add("minecraft:piglin_loved", "tfc:ore/poor_native_gold");
-    event.add("minecraft:piglin_loved", "tfc:ore/normal_native_gold");
-    event.add("minecraft:piglin_loved", "tfc:ore/rich_native_gold");
-
     // Bells
     event.add("tfc:bells", "tfc:bronze_bell");
     event.add("tfc:bells", "tfc:brass_bell");
@@ -432,36 +409,6 @@ function registerTFCBlockTags(event) {
     // Удаление тегов у руд
     event.removeAllTagsFrom("/tfc:ore/[^*]+/[^*]+/");
 
-    //#region Nether
-
-    event.add("beneath:nether_bush_plantable_on", "#tfc:clay_grass");
-    event.add("minecraft:small_dripleaf_placeable", "#tfc:clay_grass");
-    event.add("minecraft:big_dripleaf_placeable", "#tfc:clay_grass");
-    event.add("minecraft:frogs_spawnable_on", "#tfc:clay_grass");
-    event.add("minecraft:axolotls_spawnable_on", "#tfc:clay_grass");
-
-    event.add("minecraft:small_dripleaf_placeable", "#tfc:clay");
-    event.add("minecraft:big_dripleaf_placeable", "#tfc:clay");
-    event.add("minecraft:frogs_spawnable_on", "#tfc:clay");
-    event.add("minecraft:axolotls_spawnable_on", "#tfc:clay");
-
-    event.add("beneath:nether_bush_plantable_on", "#tfc:mud");
-    event.add("minecraft:frogs_spawnable_on", "#tfc:mud");
-
-    event.add("beneath:nether_bush_plantable_on", "#tfc:dirt");
-    event.add("minecraft:frogs_spawnable_on", "#tfc:dirt");
-
-    event.add("minecraft:base_stone_nether", "tfc:rock/raw/gneiss");
-    event.add("minecraft:base_stone_nether", "tfc:rock/raw/schist");
-    event.add("minecraft:base_stone_nether", "tfc:rock/raw/diorite");
-    event.add("minecraft:base_stone_nether", "tfc:rock/raw/granite");
-    event.add("minecraft:base_stone_nether", "tfc:rock/raw/gabbro");
-    event.add("minecraft:base_stone_nether", "tfc:rock/raw/basalt");
-    event.add("minecraft:nether_carver_replaceables", "#minecraft:base_stone_nether");
-    event.add("minecraft:frogs_spawnable_on", "#minecraft:base_stone_nether");
-
-    //#endregion
-
     // Lets the basin be put on top of a charcoal forge
     event.add("tfc:forge_invisible_whitelist", "create:basin");
 
@@ -486,8 +433,13 @@ function registerTFCBlockTags(event) {
 
     event.add('tfc:can_be_snow_piled', 'tfc:groundcover/feather');
 
-    event.add('tfcambiental:hot_stuff', 'tfc:pot');
-    event.add('tfcambiental:hot_stuff', 'tfc:grill');
+    event.add('minecraft:infiniburn_overworld', 'tfc:rock/magma/granite')
+    event.add('minecraft:infiniburn_overworld', 'tfc:rock/magma/diorite')
+    event.add('minecraft:infiniburn_overworld', 'tfc:rock/magma/gabbro')
+    event.add('minecraft:infiniburn_overworld', 'tfc:rock/magma/rhyolite')
+    event.add('minecraft:infiniburn_overworld', 'tfc:rock/magma/basalt')
+    event.add('minecraft:infiniburn_overworld', 'tfc:rock/magma/andesite')
+    event.add('minecraft:infiniburn_overworld', 'tfc:rock/magma/dacite')
 }
 
 /** @param {TagEvent.Fluid} event */
@@ -633,6 +585,10 @@ function registerTFCFluidTags(event) {
             if (temp >= 1300) {
                 event.add("tfchotornot:hot_whitelist", idStr);
             }
+            // Frostburns ya. (The zero check is to stop 'invalid' fluids from counting as too cold)
+            if (temp < 223 && temp > 0) {
+                event.add("tfchotornot:cold_whitelist", idStr);
+            }
             // Blue steel: can do heat, can't do cryo.
             if (temp >= 120) {
                 event.add("tfc:usable_in_blue_steel_bucket", idStr);
@@ -660,7 +616,9 @@ function registerTFCFluidTags(event) {
 			const isPlasmatic = wrapperHas(plasmaticWrapper);
             const isHidden = wrapperHas(hiddenWrapper);
 
-			if (isGaseous || isPlasmatic || isHidden) return;
+            if (isGaseous || isPlasmatic || isHidden)
+                return;
+
 			event.add('forge:liquid', idString);
 		};
 
@@ -706,6 +664,8 @@ function registerTFCFluidTags(event) {
     // Can use only neutral fluids.
     event.add('tfc:usable_in_barrel', '#forge:neutral_fluids');
     event.add('tfc:usable_in_wooden_bucket', '#forge:neutral_fluids');
+    // Ceramic jugs and glass bottles
+    event.add('tfc:usable_in_jug', '#forge:neutral_fluids');
     event.add('firmalife:usable_in_mixing_bowl', '#forge:neutral_fluids');
 
 	// All fluids are given the '#tfg:not_solid' tag incase we have a use for them regardless of state.
@@ -716,16 +676,19 @@ function registerTFCFluidTags(event) {
 	/***********************************************************************************************************/
 
     event.add("tfc:ingredients", "tfc:spring_water");
+	event.add('tfc:drinkables', 'tfc:spring_water')
 
-    event.add("tfc:alcohols", "tfcagedalcohol:aged_beer");
-    event.add("tfc:alcohols", "tfcagedalcohol:aged_cider");
-    event.add("tfc:alcohols", "tfcagedalcohol:aged_rum");
-    event.add("tfc:alcohols", "tfcagedalcohol:aged_sake");
-    event.add("tfc:alcohols", "tfcagedalcohol:aged_vodka");
-    event.add("tfc:alcohols", "tfcagedalcohol:aged_whiskey");
-    event.add("tfc:alcohols", "tfcagedalcohol:aged_corn_whiskey");
-    event.add("tfc:alcohols", "tfcagedalcohol:aged_rye_whiskey");
-    event.add("tfc:alcohols", "tfcagedalcohol:aged_mead");
+    event.add('tfg:alcohols', '#tfc:alcohols')
+    event.add("tfg:alcohols", "tfcagedalcohol:aged_beer");
+    event.add("tfg:alcohols", "tfcagedalcohol:aged_cider");
+    event.add("tfg:alcohols", "tfcagedalcohol:aged_rum");
+    event.add("tfg:alcohols", "tfcagedalcohol:aged_sake");
+    event.add("tfg:alcohols", "tfcagedalcohol:aged_vodka");
+    event.add("tfg:alcohols", "tfcagedalcohol:aged_whiskey");
+    event.add("tfg:alcohols", "tfcagedalcohol:aged_corn_whiskey");
+    event.add("tfg:alcohols", "tfcagedalcohol:aged_rye_whiskey");
+    event.add("tfg:alcohols", "tfcagedalcohol:aged_mead");
+    event.add("tfg:alcohols", "tfc_gurman:nalivka");
 
     // Добавляем тег для скрытия в EMI
     event.add("c:hidden_from_recipe_viewers", "tfc:metal/bismuth");
@@ -751,41 +714,4 @@ function registerTFCFluidTags(event) {
     event.add("c:hidden_from_recipe_viewers", "tfc:metal/high_carbon_black_steel");
     event.add("c:hidden_from_recipe_viewers", "tfc:metal/high_carbon_red_steel");
     event.add("c:hidden_from_recipe_viewers", "tfc:metal/high_carbon_blue_steel");
-}
-
-/** @param {TagEvent.Biome} event */
-function registerTFCBiomeTags(event) {
-    event.add("tfc:kaolin_clay_spawns_in", "tfc:rolling_hills");
-
-    global.TFC_BIOMES.forEach(biome => {
-        event.add('tfg:overworld_biomes', biome);
-    })
-}
-
-/** @param {TagEvent.PlacedFeature} event */
-function registerTFCPlacedFeatures(event) {
-    // Add back the non-ore ones
-    event.add("tfc:in_biome/veins", "tfc:vein/gravel");
-    event.add("tfc:in_biome/veins", "tfc:vein/kaolin_disc");
-    event.add("tfc:in_biome/veins", "tfc:vein/granite_dike");
-    event.add("tfc:in_biome/veins", "tfc:vein/diorite_dike");
-    event.add("tfc:in_biome/veins", "tfc:vein/gabbro_dike");
-
-    // Geodes
-    event.add("tfc:in_biome/veins", "tfg:earth/geode/amethyst");
-    event.add("tfc:in_biome/veins", "tfg:earth/geode/barite");
-    event.add("tfc:in_biome/veins", "tfg:earth/geode/calcite");
-    event.add("tfc:in_biome/veins", "tfg:earth/geode/gypsum");
-    event.add("tfc:in_biome/veins", "tfg:earth/geode/opal");
-    event.add("tfc:in_biome/veins", "tfg:earth/geode/pyrite");
-    event.add("tfc:in_biome/veins", "tfg:earth/geode/quartzite");
-
-    // Crops
-    event.add("tfc:feature/crops", "tfg:earth/sunflower_patch");
-    event.add("tfc:feature/crops", "tfg:earth/rapeseed_patch");
-    event.add("tfc:feature/crops", "tfg:earth/flax_patch");
-
-    // Other decoration
-    event.add("tfc:in_biome/underground_decoration", "tfg:glow_lichen");
-    event.add("tfc:in_biome/underground_decoration", "tfg:earth/sulfur_patch");
 }

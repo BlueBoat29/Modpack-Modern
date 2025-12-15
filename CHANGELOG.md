@@ -1,15 +1,92 @@
 # Changelog
 
-## [Unreleased]
-### Mod updates
-New GregTech updates, both [7.3.0](https://github.com/GregTechCEu/GregTech-Modern/releases/tag/v7.3.0-1.20.1) and [7.4.0](https://github.com/GregTechCEu/GregTech-Modern/releases/tag/v7.4.0-1.20.1). TL;DR:
-- You can use screwdrivers on drums again
-- Diluted hydrochloric acid distillation circuits have been swapped, so now it's consistent with diluted sulfuric acid
-- Large rebalancing of small and large boiler fuel. Generally speaking, small boilers are worse while large ones are better, and solid fuels are now better and liquids are worse, but if you're putting all your coke oven output into a large bronze boiler, your rates should be mostly the same as before. Blaze burner liquid fuels have been adjusted to these new values as well.
-Added TFC Gurman, which adds even more food and drink
+## Unreleased
+### Breaking Changes
+- Rose Quartz moved namespaces, so you'll have to convert all your old rose quartz items into the new ones. You'll need to explore new chunks to find new geodes with the correct ore blocks.
+- The previous silicone rubber styrene butadiene rubber belts have been changed to a different item, so please break and recycle them before updating if you're using any.
+- Cleaning meal bag foil packs is now done in the chem bath instead of the ore washer. @Pyritie
+- Turning honey into sugar is now done in the extractor instead of the centrifuge. @Pyritie
+- Syngas crafting in the Vacuum Chamber will now output into the chamber itself instead of the Basin, so it won't get mixed up with the creosote (#2378) @Pyritie
 ### Changes
+#### Hot or Not
+- Added "too cold to handle" and "too light to handle" for cold things and lighter-than-air things. Uses the same mechanic as tongs. Lighter-than-air things can also be negated with something Very Heavy in your inventory, and all effects (including "too hot to handle") are negated by super tanks/chests and cells, but *not* drums or buckets. Check the `#tfg:hot_protection_equipment`, `#tfg:cold_protection_equipment`, and `#tfg:floating_protection_equipment` tags for equipment that makes you immune to these effects. The equipment also protects against pipes! @Pyritie
+- GregTech hot ingots are also now properly included in the "too hot to handle" system so the same protection applies @Pyritie
+- Added machine recipes for crafting tongs @Pyritie
+- All baby animals and more "medium" size animals can now be picked up (#2398) @Pyritie
+#### Medical Hazards
+- Added visual debuff effects for all medical conditions, so you're immediately notified when carrying something hazardous instead of wondering why you have Hunger II. They don't do anything by themselves, they're just a much more visible way of checking your conditions. @Pyritie
+- Early `#tfg:medicines` can now also cure medical conditions! Did you think they wouldn't come with side effects? @Pyritie
+- The medicines have also been rebalanced, so some of the stronger ones come with a downside, while the weaker ones have a stronger cure effect.
+- The medical condition effect that previously instantly killed you (which did not spawn a corpse) now gives you Wither III instead. @Pyritie
+#### Other
+- Added two more early game mechanical belts, and rubber+ belts are also now more expensive. @Pyritie
+- Primitive illagers will no longer endlessly respawn. Instead, now they only spawn as "structures", so once you kill them they will never return. @Pyritie
+- Doubled the durability of all space suits @Pyritie
+- Added a way to convert between vinegar and acetic acid (#2386) @Epicificator
+- Added a renderer to the electric greenhouse, so now you can visually see your crops grow! @RubenVerg
+- Added some distant horizons config options, for those who want to use it (#2406) @Mqrius
+- More animals now drop animal fat (#2367) @Pyritie
+- Nerfed how much biomass and plant balls are produced from certain vanilla plants (#2361) @Pyritie
+- Added some more ruined structures with a small bit of loot.
+### Bug fixes
+- Fixed aged sake, vodka, and whiskey losing their buff effects, but for real this time @Pyritie
+- Fixed fries and cheese curds not being able to be put on burgers. @Redeix
+- Fixed sliced brinza missing the proper cheese tags. @Redeix
+- Fixed pyroxenite and keratophyre bricks crafting 1 instead of 4 (#2373) @Pyritie
+- Fixed some issues with quest items (#2384, #2386) @Mqrius
+- Fixed some tag issues with foods (#2405) @thederpysockdude123
+- Fixed treated wooden planks from being excluded in the Domum Ornamentum and Facade whitelists (#2404) @thederpysockdude123
+- Fixed a recipe conflict for boiled and fried eggs (#2407) @Mqrius
+- Fixed a recipe conflict blocking the crafting of silicone rubber (#2387) @Mqrius
+- Fixed the backpack and QuarkTech helmet auto-feeding from feeding you while you're downed @Mqrius
+### Translation updates
+- Chinese (simplified) @jmecn
+- Japanese @sakura-gondra
+
+## [0.11.10] - 9-12-2025
+### Breaking Changes
+- Butyraldehyde in a chemical reactor now uses circuit 5 instead of 1 to avoid a conflict with Methanol @Pyritie
+### Other Changes
+- Added recipes for create's shadow and radiant casings (#2256) @Ujhik
+- Some small quest and field guide additions and fixes (#2348, #2356) @Pyritie @jmecn
+- Adjusted the spawn weights of primitive illagers @Pyritie
+### Bug fixes
+- Fixed a crash on boot on some linux systems (#2347, #2355) @Redeix @mgsmyrk
+- Fixed missing recipes for many fluid and item pipes (#2359) @Pyritie
+- Fixed missing cleanroom tags for the ad astra 3x3 doors, so now you can *actually* use them in a cleanroom @Pyritie
+- Fixed aged sake, vodka, and whiskey losing their buff effects @Pyritie
+- Fixed some inconsistencies with loose rocks into bricks (#2353) @Pyritie
+- Fixed a tag issue with some purified ores and Create's crushed ore tag (#2339) @Pyritie
+### Translation updates
+- Chinese (simplified) @jmecn
+- Japanese @sakura-gondra
+
+## [0.11.9] - 7-12-2025
+### Breaking Changes
+#### Beginning of the Power Update
+- Syngas is now available as a ULV/LV gas fuel - can be crafted from Charcoal and Creosote in a Brewery or Vacuum Chamber.
+- The Coal Liquefaction Tower is a new multiblock (craftable at MV) that you can use to make Reformate Gas. It has the same coildiscounts as the Cracker, and can be boosted with hydrogen.
+- Reformate Gas is the new gas Fuel starting at MV, with better yields and recipe loops at HV.
+- Many quests were updated to explain these changes.
+#### Update on Fission
+- The Nuclear Steam Turbine has now a baseline power production of 8192 EU/t. What this means is that you now need half as many turbines as before.
+- Thorium Fuel Rods got a boost of 50% steam production, so early Mars should be a bit easier.
+- Heat Exchanger can now run Radioactive Steam without Ammonium Formate. If you crave for power and don’t mind losing some materials for the Nano Circuit, this is a good deal
+- Massive change for steam yield. You now produce 160x more steam, but its yield is 160x less good (so nothing changes power-wise, but now you have to deal with pipe throughput)
+#### Other
+- All dynamo hatches on Large Turbines now void power when they are full. Be sure to control your turbines with some redstone when your batteries are full!
+- The tungsten processing line has been updated to now properly loop and balance all of its intermediates. The actual processes haven't changed, just the numbers, so you shouldn't have to change your setup much. It now also outputs a little extra oxygen instead of sodium (#2267) @SpicyNoodle5 @TomPlop
+- Removed black/red/blue arc furnace dust to ingot recipes, but changed the EBF recipes to MV (#2306) @applenper @Pyritie
+### Mod updates
+- Added TFC Gurman, which adds even more food and drink
+- Primitive Creatures has fixed its spawning of Huntmasters
+- New GregTech updates, both [7.3.0](https://github.com/GregTechCEu/GregTech-Modern/releases/tag/v7.3.0-1.20.1) and [7.4.0](https://github.com/GregTechCEu/GregTech-Modern/releases/tag/v7.4.0-1.20.1). TL;DR:
+    - You can use screwdrivers on drums again
+    - Diluted hydrochloric acid distillation circuits have been swapped, so now it's consistent with diluted sulfuric acid
+    - Large rebalancing of small and large boiler fuel. Generally speaking, small boilers are worse while large ones are better, and solid fuels are now better and liquids are worse, but if you're putting all your coke oven output into a large bronze boiler, your rates should be mostly the same as before. Blaze burner liquid fuels have been adjusted to these new values as well.
+### Other Changes
 - Many TACZ balance changes, found [here](https://github.com/TerraFirmaGreg-Team/Modpack-Modern/blob/dev/tacz/TACZ_CHANGELOG.md) @BlueBoat29
-- Add shapeless p2p recipes (#2234) @SpicyNoodle5
+- Add shapeless recipes for ae2 p2p clearing (#2234) @SpicyNoodle5
 - Added assembler, smelting and heating recipes for firmalife ovens (#2220) @SpicyNoodle5
 - Raised player-burning fluid threshold from 370K to 1300K @Redeix
 - Added partial unification to the gtceu Wax material @Redeix
@@ -20,11 +97,20 @@ Added TFC Gurman, which adds even more food and drink
 - Oilsands dust can now be centrifuged in the mechanical centrifuge @Pyritie
 - All oils (both the petrochem kind and the cooking kind) can now be used to fuel small boilers as well @Pyritie
 - Reduced the cost of the ME Ingredient Buffer @Pyritie
+- Renamed Blubber to Animal Fat and added it to the drop tables of more animals (pigs drop a fair bit, orcas drop a ton). You can extract it into Tallow and now also use it for biodiesel! @applenper @Pyritie
+- Glass bottles and ceramic jugs can now hold the same fluids as wooden barrels, buckets, etc @Pyritie
+- Added fluid/item capacity tooltips to many fluid/item containers @Pyritie
+- Spring water is now drinkable (it also heats you up a little) @Pyritie
+- The reinforced hang glider has been buffed, is now craftable as soon as you get aluminium, and is also much cheaper to repair (#2314) @jeuvke
+- You can now also use bismuth bronze and black bronze crates in recipes that previously required a normal bronze crate (#2328) @jeuvke
+- Freeze dried food no longer has any hydration (#2325) @mqrius
+- Added a mechanical crafting recipe for the Paving Cart @Pyritie
 ### Bug fixes
+- Fixed the horse crank not working at all @Pyritie
 - Fixed brown gravy recipe @Redeix
 - Fixed instant mac recipe requiring less cardboard than it gives back @Redeix
 - Fixed Ad Astra moon cheese nutrition values being inconsistent @Redeix
-- Fixed some quest typos @Pyritie
+- Fixed some quest typos @Pyritie @mqrius
 - Fixed duplicate bed dyeing recipe (#2229) @Pyritie
 - Fixed Basic Hermetic Casing missing a mineable tag and loot table (#2221) @Pyritie
 - Fixed some inconsistencies with gravel to sand recipe tiers (#2292) @Pyritie
@@ -33,9 +119,18 @@ Added TFC Gurman, which adds even more food and drink
 - Added missing food processor recipe for cocoa butter @Pyritie
 - Fixed recipe conflict with Epichlorohydrin and Sodium Hypochlorite (#2287) @Pyritie
 - Fixed summoned pet endermen not being able to survive in space or other planets @Pyritie
+- Fixed some recipe imbalances with trimethyl borate and related recipes @Pyritie
+- Fixed not being able to feed meat to the Cruncher (#2305) @Pyritie
+- Hopefully fixed rockets without a pilot getting stuck and not exploding? (#2137) @Pyritie
+- Fixed some missing blocks from the GT facade whitelist (#2299) @MoltonMontro
+- Changed the texture of the ME Stocking Input Bus + Hatch to match the hull used to craft them @Pyritie
+- Fixed warped/crimson trees only growing on mars mycelium and not mars dirt @Pyritie
+- Fixed a few missing crafting recipes for bricks in the assembler (#2333) @Pyritie
+- Fixed a recycling dupe with the maintenace hatch (#2321) @Pyritie
 ### Translation updates
 - Chinese (simplified) @jmecn
 - Japanese @sakura-gondra
+- Russian @Petr211071
 
 ## [0.11.8] - 19-11-2025
 ### Changes

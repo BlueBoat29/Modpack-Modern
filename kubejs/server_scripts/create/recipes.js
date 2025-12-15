@@ -985,70 +985,6 @@ const registerCreateRecipes = (event) => {
 		.duration(200)
 		.EUt(20)
 
-	// Электронная трубка
-	event.shaped('1x create:electron_tube', [
-		'FAG',
-		'BCB',
-		'DED'
-	], {
-		A: 'gtceu:glass_tube',
-		B: '#forge:bolts/steel',
-		C: 'gtceu:wood_plate',
-		D: 'gtceu:red_alloy_single_wire',
-		E: '#forge:plates/wrought_iron',
-		F: '#forge:tools/screwdrivers',
-		G: '#forge:tools/wire_cutters'
-	}).id('tfg:create/shaped/electron_tube')
-
-	event.recipes.createSequencedAssembly([
-		'2x create:electron_tube',
-	], 'gtceu:wood_plate', [
-		event.recipes.createDeploying('tfg:unfinished_electron_tube', ['tfg:unfinished_electron_tube', '#forge:plates/wrought_iron']),
-		event.recipes.createDeploying('tfg:unfinished_electron_tube', ['tfg:unfinished_electron_tube', 'gtceu:red_alloy_single_wire']),
-		event.recipes.createDeploying('tfg:unfinished_electron_tube', ['tfg:unfinished_electron_tube', 'gtceu:red_alloy_single_wire']),
-		event.recipes.createDeploying('tfg:unfinished_electron_tube', ['tfg:unfinished_electron_tube', 'gtceu:glass_tube']),
-	]).transitionalItem('tfg:unfinished_electron_tube').loops(1).id('tfg:create/sequenced_assembly/electron_tube')
-
-	event.recipes.gtceu.assembler('create:electron_tube')
-		.itemInputs('#forge:plates/wrought_iron', 'gtceu:glass_tube', '2x gtceu:red_alloy_single_wire')
-		.itemOutputs('2x create:electron_tube')
-		.duration(50)
-		.EUt(7)
-		.circuit(14)
-
-	event.shaped('4x create:electron_tube', [
-		'FAG',
-		'DCD'
-	], {
-		A: 'gtceu:glass_tube',
-		C: 'gtceu:plastic_circuit_board',
-		D: 'gtceu:red_alloy_single_wire',
-		F: '#forge:tools/screwdrivers',
-		G: '#forge:tools/wire_cutters'
-	}).id('tfg:create/shaped/electron_tube2')
-
-	event.recipes.gtceu.assembler('create:electron_tube2')
-		.itemInputs('gtceu:plastic_circuit_board', 'gtceu:glass_tube', '2x gtceu:red_alloy_single_wire')
-		.itemOutputs('4x create:electron_tube')
-		.duration(50)
-		.EUt(7)
-
-	event.shaped('4x create:electron_tube', [
-		' A ',
-		' B ',
-		' C '
-	], {
-		A: '#forge:tools/screwdrivers',
-		B: 'gtceu:nand_chip',
-		C: 'gtceu:plastic_circuit_board'
-	}).id('tfg:create/shaped/electron_tube3')
-
-	event.recipes.gtceu.assembler('create:electron_tube3')
-		.itemInputs('gtceu:plastic_circuit_board', 'gtceu:nand_chip')
-		.itemOutputs('4x create:electron_tube')
-		.duration(50)
-		.EUt(7)
-
 	// Тюбик с клеем
 	event.shaped('create:super_glue', [
 		'BA',
@@ -1993,14 +1929,6 @@ const registerCreateRecipes = (event) => {
 			.duration(32)
 			.EUt(GTValues.VA[GTValues.ULV])
 
-		//event.custom({
-		//	type: 'vintageimprovements:laser_cutting',
-		//	ingredients: [{ item: x.base }],
-		//	results: [{item: x.cut }],
-		//	energy: GTValues.VA[GTValues.ULV] * 32 * 4,
-		//	maxChargeRate: GTValues.VA[GTValues.ULV] * 4
-		//}).id(`tfg:vi/laser/create/${x.cut.split(':')[1]}`)
-
 		event.shaped(`2x create:layered_${x.cut.split('_')[1]}`, [
 			'AA'
 		], {
@@ -2150,7 +2078,8 @@ const registerCreateRecipes = (event) => {
 		.duration(50)
 		.EUt(GTValues.VA[GTValues.ULV])
 		.circuit(17)
-		.addMaterialInfo(true)
+		
+	TFGHelpers.registerMaterialInfo('create:redstone_link', { 'wrought_iron': 3 });
 
 	event.shaped('create:display_link', [
 		'FED',

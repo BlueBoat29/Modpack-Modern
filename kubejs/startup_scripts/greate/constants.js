@@ -1,4 +1,4 @@
-// priority: 0
+// priority: -100
 "use strict";
 
 global.GREATE_DISABLED_ITEMS = /** @type {const} */ ([
@@ -14,8 +14,9 @@ global.GREATE_DISABLED_ITEMS = /** @type {const} */ ([
     "gtceu:neutronium_alloy",
 
     "gtceu:neutronium_whisk",
-    "greate:polybenzimidazole_belt_connector",
+    "greate:polyethylene_belt_connector",
     "greate:polytetrafluoroethylene_belt_connector",
+    "greate:polybenzimidazole_belt_connector",
 
     "greate:andesite_alloy_crushing_wheel",
     "greate:andesite_alloy_encased_fan",
@@ -145,14 +146,14 @@ global.GREATE_DISABLED_ITEMS = /** @type {const} */ ([
     "gtceu:shadow_steel_rod",
     "gtceu:shadow_steel_screw",
     "gtceu:long_shadow_steel_rod",
-    "gtceu:shadow_steel_block",
+    "gtceu:shadow_steel_block"
 ]);
 
 global.GREATE_DISABLED_FLUIDS = /** @type {const} */ ([
     "gtceu:andesite_alloy",
     "gtceu:refined_radiance",
     "gtceu:chromatic_compound",
-    "gtceu:shadow_steel",
+    "gtceu:shadow_steel"
 ]);
 
 global.GREATE_DISABLED_TAGS = /** @type {const} */ ([
@@ -167,7 +168,7 @@ global.GREATE_DISABLED_TAGS = /** @type {const} */ ([
     "#forge:alloys/rhodium_plated_palladium",
     "#forge:alloys/naquadah_alloy",
     "#forge:alloys/darmstadtium",
-    "#forge:alloys/neutronium",
+    "#forge:alloys/neutronium"
 ]);
 
 global.GREATE_BELTS = /** @type {const} */ ([
@@ -175,7 +176,7 @@ global.GREATE_BELTS = /** @type {const} */ ([
     "greate:polybenzimidazole_belt_connector",
     "greate:polyethylene_belt_connector",
     "greate:polytetrafluoroethylene_belt_connector",
-    "greate:rubber_belt_connector",
+    "greate:rubber_belt_connector"
 ]);
 
 global.GREATE_CRUSHING_WHEELS = /** @type {const} */ ([
@@ -188,7 +189,7 @@ global.GREATE_CRUSHING_WHEELS = /** @type {const} */ ([
     "greate:rhodium_plated_palladium_crushing_wheel",
     "greate:naquadah_alloy_crushing_wheel",
     "greate:darmstadtium_crushing_wheel",
-    "greate:neutronium_crushing_wheel",
+    "greate:neutronium_crushing_wheel"
 ]);
 
 global.GREATE_ENCASED_FANS = /** @type {const} */ ([
@@ -201,7 +202,7 @@ global.GREATE_ENCASED_FANS = /** @type {const} */ ([
     "greate:rhodium_plated_palladium_encased_fan",
     "greate:naquadah_alloy_encased_fan",
     "greate:darmstadtium_encased_fan",
-    "greate:neutronium_encased_fan",
+    "greate:neutronium_encased_fan"
 ]);
 
 global.GREATE_MECHANICAL_MIXERS = /** @type {const} */ ([
@@ -214,7 +215,7 @@ global.GREATE_MECHANICAL_MIXERS = /** @type {const} */ ([
     "greate:rhodium_plated_palladium_mechanical_mixer",
     "greate:naquadah_alloy_mechanical_mixer",
     "greate:darmstadtium_mechanical_mixer",
-    "greate:neutronium_mechanical_mixer",
+    "greate:neutronium_mechanical_mixer"
 ]);
 
 global.GREATE_MECHANICAL_PRESSES = /** @type {const} */ ([
@@ -227,7 +228,7 @@ global.GREATE_MECHANICAL_PRESSES = /** @type {const} */ ([
     "greate:rhodium_plated_palladium_mechanical_press",
     "greate:naquadah_alloy_mechanical_press",
     "greate:darmstadtium_mechanical_press",
-    "greate:neutronium_mechanical_press",
+    "greate:neutronium_mechanical_press"
 ]);
 
 global.GREATE_MECHANICAL_PUMPS = /** @type {const} */ ([
@@ -240,7 +241,7 @@ global.GREATE_MECHANICAL_PUMPS = /** @type {const} */ ([
     "greate:rhodium_plated_palladium_mechanical_pump",
     "greate:naquadah_alloy_mechanical_pump",
     "greate:darmstadtium_mechanical_pump",
-    "greate:neutronium_mechanical_pump",
+    "greate:neutronium_mechanical_pump"
 ]);
 
 global.GREATE_MECHANICAL_SAWS = /** @type {const} */ ([
@@ -253,7 +254,7 @@ global.GREATE_MECHANICAL_SAWS = /** @type {const} */ ([
     "greate:rhodium_plated_palladium_mechanical_saw",
     "greate:naquadah_alloy_mechanical_saw",
     "greate:darmstadtium_mechanical_saw",
-    "greate:neutronium_mechanical_saw",
+    "greate:neutronium_mechanical_saw"
 ]);
 
 global.GREATE_MILLSTONES = /** @type {const} */ ([
@@ -266,5 +267,5 @@ global.GREATE_MILLSTONES = /** @type {const} */ ([
     "greate:rhodium_plated_palladium_millstone",
     "greate:naquadah_alloy_millstone",
     "greate:darmstadtium_millstone",
-    "greate:neutronium_millstone",
+    "greate:neutronium_millstone"
 ]);
