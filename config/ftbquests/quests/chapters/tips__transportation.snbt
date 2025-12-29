@@ -846,9 +846,15 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["78358ED2C6F6FCFD"]
+			dependencies: [
+				"78358ED2C6F6FCFD"
+				"2E3C021FEAE6A490"
+			]
+			dependency_requirement: "one_completed"
 			description: ["{quests.tfg_tips.warfare.desc}"]
 			guide_page: "tfc:field_guide tfc:firmaciv/cannon"
+			hide_dependency_lines: true
+			icon: "firmaciv:cannon"
 			id: "66FDACC7E7F9180C"
 			subtitle: "{quests.tfg_tips.warfare.subtitle}"
 			tasks: [
@@ -858,7 +864,17 @@
 					type: "item"
 				}
 				{
-					id: "35B1717D4096B87E"
+					id: "08700C77D2D2D25C"
+					item: "minecraft:gunpowder"
+					type: "item"
+				}
+				{
+					id: "5A0CB18B34B75B59"
+					item: "tfc:unrefined_paper"
+					type: "item"
+				}
+				{
+					id: "7F5B756D14B6BD79"
 					item: {
 						Count: 1
 						ForgeCaps: {
@@ -868,6 +884,17 @@
 							}
 						}
 						id: "alekiships:cannonball"
+					}
+					type: "item"
+				}
+				{
+					id: "14A9AC2EBF626DF5"
+					item: {
+						Count: 1
+						id: "minecraft:flint_and_steel"
+						tag: {
+							Damage: 0
+						}
 					}
 					type: "item"
 				}
