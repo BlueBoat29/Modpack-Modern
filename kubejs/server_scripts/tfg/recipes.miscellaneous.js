@@ -192,8 +192,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"X XX X",
 			"X    X"
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "tfg:trapdoor_casting_mold"},
@@ -205,8 +205,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			" XXXX ",
 			"      "
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "tfg:chain_casting_mold"},
@@ -218,8 +218,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"X    X",
 			"X XX X"
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "tfg:bell_casting_mold"},
@@ -231,8 +231,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"      ",
 			"      "
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "gtceu:plate_casting_mold"},
@@ -244,8 +244,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"X    X",
 			"XXXXXX"
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "gtceu:gear_casting_mold"},
@@ -257,8 +257,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"X    X",
 			"XX  XX"
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "gtceu:bottle_casting_mold"},
@@ -270,8 +270,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"X    X",
 			"X    X"
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "gtceu:ingot_casting_mold"},
@@ -283,8 +283,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"XX  XX",
 			"XXXXXX"
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "gtceu:ball_casting_mold"},
@@ -296,8 +296,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"XX  XX",
 			"XXXXXX"
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "gtceu:cylinder_casting_mold"},
@@ -309,8 +309,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"X    X",
 			"XX  XX"
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "gtceu:block_casting_mold"},
@@ -322,8 +322,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"      ",
 			"      "
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "gtceu:nugget_casting_mold"},
@@ -335,8 +335,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"XXXXXX",
 			"XXXXXX"
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "gtceu:anvil_casting_mold"},
@@ -348,8 +348,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"X    X",
 			"XXXXXX"
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "gtceu:name_casting_mold"},
@@ -361,8 +361,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"XXXXXX",
 			"XXXXXX"
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "gtceu:small_gear_casting_mold"},
@@ -374,8 +374,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"XXX XX",
 			"XXXXXX"
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "gtceu:rotor_casting_mold"},
@@ -387,8 +387,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"X XX X",
 			" XXXX "
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "gtceu:pill_casting_mold"},
@@ -400,8 +400,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			"X  XXX",
 			"XXXXXX"
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	event.custom({
 		"result": {"item": "gtceu:huge_pipe_casting_mold"},
@@ -413,8 +413,8 @@ function registerTFGMiscellaneousRecipes(event) {
 			" XXXX ",
 			"      "
 		],
-		"smithingType": "tfg:casting_mold",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:casting_mold",
+		"type": "tfg:artisan"	
 	})
 	
 	const pipe_sizes = [
@@ -463,8 +463,22 @@ function registerTFGMiscellaneousRecipes(event) {
 			"  X XX",
 			"XX  XX"
 		],
-		"smithingType": "tfg:resin_board",
-		"type": "tfg:smithing"	
+		"artisanType": "tfg:resin_board",
+		"type": "tfg:artisan"	
+	})
+	event.custom({
+		"result": {"item": "gtceu:phenolic_printed_circuit_board"},
+		"pattern": [
+			" XX X ",
+			"XX XX ",
+			" X   X",
+			" X   X",
+			" XX XX",
+			"XX XXX"
+			
+		],
+		"artisanType": "tfg:phenol_board",
+		"type": "tfg:artisan"	
 	})
 	
 }

@@ -53,6 +53,8 @@ const registerTFGItemTags = (event) => {
 	event.add('tfg:smithing_table_input', 'gtceu:empty_mold')
 	event.add('tfg:smithing_table_input', 'gtceu:resin_circuit_board')
 	event.add('tfg:smithing_table_input', 'gtceu:copper_single_wire')
+	event.add('tfg:smithing_table_input', 'gtceu:phenolic_circuit_board')
+	event.add('tfg:smithing_table_input', 'gtceu:silver_single_wire')
 	event.add('tfg:smithing_tools', '#forge:tools/hammers')
 	event.add('tfg:smithing_tools', '#forge:tools/mallets')
 	event.add('tfg:smithing_tools', '#forge:tools/files')
