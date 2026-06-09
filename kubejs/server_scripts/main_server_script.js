@@ -12,11 +12,12 @@ ServerEvents.tags('item', event => {
 	registerBeneathItemTags(event)
 	registerComputerCraftItemTags(event)
 	registerConstructionWandItemTags(event)
+	registerCopycatsItemTags(event)
 	registerCreateItemTags(event)
 	registerCreateAdditionsItemTags(event)
 	registerCreateConnectedItemTags(event)
 	registerCreateDecoItemTags(event)
-	registerCreateFactoryLogisticsItemTags(event)
+	registerCreateFluidLogisticsItemTags(event)
 	registerDomumOrnamentumItemTags(event)
 	registerDiggerHelmetItemTags(event)
 	registerEndermanOverhaulItemTags(event)
@@ -24,12 +25,14 @@ ServerEvents.tags('item', event => {
 	registerExposureItemTags(event)
 	registerFirmaCivItemTags(event)
 	registerFirmaLifeItemTags(event)
+	registerFramedBlocksItemTags(event)
 	registerFTBQuestsItemTags(event)
 	registerGreateItemTags(event)
 	registerGTCEUItemTags(event)
 	registerMacawsForTFCItemTags(event)
 	registerMinecraftItemTags(event)
 	registerModernMarkingsItemTags(event)
+	registerMTSItemTags(event)
 	registerHotOrNotItemTags(event)
 	registerPrimitiveCreaturesItemTags(event)
 	registerRailWaysItemTags(event)
@@ -38,7 +41,6 @@ ServerEvents.tags('item', event => {
 	registerSNSItemTags(event)
 	registerSpeciesItemTags(event)
 	registerTACZItemTags(event)
-	registerTFCGurmanItemTags(event)
 	registerTFCItemTags(event)
 	registerTFCScrapingKnivesItemTags(event)
 	registerTFGItemTags(event)
@@ -146,6 +148,8 @@ TFCEvents.data(event => {
 	registerTFCDataForGTCEU(event)
 	registerTFCDataForImmersiveAircraft(event);
 	registerTFCDataForMinecraft(event)
+	registerTFCDataForMTS(event)
+	registerTFCDataForMTSOCP(event)
 	registerTFCDataForSophisticatedBackpacks(event)
 	registerTFCDataForTACZ(event)
 	registerTFCDataForTFC(event)
@@ -189,12 +193,6 @@ GTCEuServerEvents.fluidVeins(event => {
 })
 
 
-/** Correct recipe IDs to replace invalid characters */
-function linuxUnfucker(value) {
-	const str = (value === undefined || value === null) ? "" : value.toString();
-	return str.replace(/[#/:\s]/g, "_").toLowerCase();
-};
-
 /**
  * Событие регистрации рецептов.
  * Срабатывает после инициализации датапаков и тегов.
@@ -224,11 +222,11 @@ ServerEvents.recipes(event => {
 	registerCreateCopycatsRecipes(event)
 	registerCreatedecoRecipes(event)
 	registerCreateExtraGaugesRecipes(event)
-	registerCreateFactoryLogisticsRecipes(event)
+	registerCreateFluidLogisticsRecipes(event)
 	registerCreateHorsePowerBlockRecipes(event)
 	registerCreateHypertubeRecipes(event)
 	registerCreateSoundOfSteamRecipes(event)
-	//registerCreateStockBridgeRecipes(event)
+	registerCreateStockBridgeRecipes(event)
 	registerDeaFissionRecipes(event)
 	registerDiggerHelmetRecipes(event)
 	registerDomumOrnamentumRecipes(event)
@@ -256,6 +254,8 @@ ServerEvents.recipes(event => {
 	registerMinecraftRecipes(event)
 	registerModernMarkingRecipes(event)
 	registerMoreRedRecipes(event)
+	registerMTSRecipes(event)
+	registerMTSOCPRecipes(event)
 	registerPrimitiveCreaturesRecipes(event)
 	registerRailWaysRecipes(event)
 	registerRnrRecipes(event)
@@ -271,7 +271,6 @@ ServerEvents.recipes(event => {
 	registerTFCBetterBFRecipes(event)
 	registerTFCLunchBoxRecipes(event)
 	registerTFCGroomingStationRecipes(event)
-	registerTFCGurmanRecipes(event)
 	registerTFGRecipes(event)
 	registerTFCTextileRecipes(event)
 	registerToolBeltRecipes(event)
