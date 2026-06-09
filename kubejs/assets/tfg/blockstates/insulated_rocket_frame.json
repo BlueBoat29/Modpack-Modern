@@ -1,0 +1,15 @@
+{
+  "multipart": [
+    {
+      "when": { "insulation_id": 1 },
+      "apply": { "model": "tfg:block/rocket/basalt_infill" }
+    },
+    {
+      "when": { "insulation_id": 2 },
+      "apply": { "model": "tfg:block/rocket/aes_infill" }
+    },
+	{
+      "apply": { "model": "tfg:block/rocket/rocket_t1_frame" }
+    }
+  ]
+}

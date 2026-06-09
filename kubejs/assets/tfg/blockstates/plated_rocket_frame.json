@@ -1,0 +1,12 @@
+{
+  "multipart": [
+    {
+      "when": { "plating_id": 1 },
+      "apply": { "model": "tfg:block/rocket/t1_plate" }
+    },
+    {
+      "when": { "plating_id": 2 },
+      "apply": { "model": "tfg:block/rocket/t2_plate" }
+    }
+  ]
+}
