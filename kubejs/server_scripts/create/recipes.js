@@ -5,7 +5,7 @@ const registerCreateRecipes = (event) => {
 
 	// Удаление рецептов мода create 
 	event.remove({
-		not: [			
+		not: [
 			{ id: 'create:crafting/kinetics/cuckoo_clock' },
 			{ id: 'create:crafting/kinetics/mysterious_cuckoo_clock' },
 			{ id: 'create:crafting/kinetics/smart_chute' },
@@ -48,9 +48,11 @@ const registerCreateRecipes = (event) => {
 			{ id: 'create:crafting/logistics/stock_link_clear'},
 			{ id: 'create:crafting/logistics/stock_ticker_clear'},
 			{ id: 'create:crafting/logistics/factory_gauge_clear'},
+			{ type: 'create:item_copying' },
 			{ output: '#create:table_cloths'} // Gotta do this to not purge the table cloth reset recipes
 		], mod: 'create'
 	})
+
 	// Make Bound Cardboard craftable with all string
 	event.replaceInput({id: 'create:crafting/materials/bound_cardboard_block' }, 'minecraft:string', '#forge:string')
 	
@@ -146,7 +148,7 @@ const registerCreateRecipes = (event) => {
 	}).id('tfg:create/shaped/basin')
 
 	event.recipes.gtceu.assembler('tfg:create/basin')
-		.itemInputs('5x #forge:ingots/iron')
+		.itemInputs('3x #forge:ingots/iron')
 		.circuit(3)
 		.itemOutputs('create:basin')
 		.duration(200)
@@ -2419,8 +2421,8 @@ const registerCreateRecipes = (event) => {
 	event.smelting('#forge:ingots/copper', 'create:crushed_raw_copper')
 	event.smelting('#forge:ingots/gold', 'create:crushed_raw_gold')
 	event.smelting('#forge:ingots/zinc', 'create:crushed_raw_zinc')
-	event.smelting('#forge:ingots/silver', 'create:crushed_raw_silver')
-	event.smelting('#forge:ingots/tin', 'create:crushed_raw_tin')
+	event.smelting('gtceu:silver_ingot', 'create:crushed_raw_silver')
+	event.smelting('gtceu:tin_ingot', 'create:crushed_raw_tin')
 	event.smelting('#forge:ingots/lead', 'create:crushed_raw_lead')
 
 }

@@ -51,6 +51,7 @@ const registerCreateItemTags = (event) => {
 
 	event.removeAll('create:crushed_raw_materials')
 
+	event.add('create:blaze_burner_fuel/regular', "tfg:dried_peat_brick")
 	event.add('create:blaze_burner_fuel/regular', "tfc:ore/lignite")
 	event.add('create:blaze_burner_fuel/regular', "tfc:ore/bituminous_coal")
 	event.add('create:blaze_burner_fuel/regular', "gtceu:coal_dust")
@@ -107,6 +108,9 @@ const registerCreateItemTags = (event) => {
 	event.remove('create:stone_types/deepslate', 'minecraft:deepslate')
 	event.remove('create:stone_types/dripstone', 'minecraft:dripstone_block')
 	event.remove('create:stone_types/blackstone', 'minecraft:blackstone')
+	event.remove('create:stone_types/tuff', 'minecraft:tuff')
+	event.remove('create:stone_types/scoria', 'create:scoria')
+	event.remove('create:stone_types/scorchia', 'create:scorchia')
 
 	event.add('forge:smooth_stone_slab', 'create:polished_cut_granite_slab')
 	event.add('forge:smooth_stone_slab', 'create:polished_cut_diorite_slab')
@@ -187,6 +191,13 @@ const registerCreateBlockTags = (event) => {
 	event.add('create:non_movable', 'tfg:carbonate_hornfels')
 	event.add('create:non_movable', 'tfg:pelitic_hornfels')
 	event.add('create:non_movable', 'tfg:mafic_hornfels')
+	event.add('create:non_movable', 'ad_astra:oxygen_distributor')
+	event.add('create:non_movable', 'ad_astra:gravity_normalizer')
+	event.add('create:non_movable', 'ad_astra:launch_pad')
+	event.add('create:non_movable', 'gtceu:hp_steam_miner')
+	event.add('create:non_movable', 'gtceu:lv_miner')
+	event.add('create:non_movable', 'gtceu:mv_miner')
+	event.add('create:non_movable', 'gtceu:hv_miner')
 
 	event.add('tfc:no_icicle_generation', 'create:chain_conveyor')
 

@@ -9,7 +9,8 @@ function registerTFCDataForTFG(event) {
 	registerTFGFoodData(event);
 	registerTFGCropRanges(event);
 	registerTFGFLPlanters(event);
-	registerTFGFauna(event);
+	registerOverworldFauna(event);
+	registerMarsFauna(event);
 	registerTFGEquipmentData(event);
 	registerTFGAquaponicsData(event);
 }
@@ -37,6 +38,8 @@ function registerTFGHeatData(event) {
 	event.itemHeat("tfc:powder/limonite", 1, null, null);
 	event.itemHeat("tfc:powder/sphalerite", 1, null, null);
 	event.itemHeat("tfc:powder/tetrahedrite", 1, null, null);
+	event.itemHeat("tfc:powder/pyrite", 1, null, null);
+	event.itemHeat("tfc:powder/lapis_lazuli", 1, null, null);
 
 	event.itemHeat('tfg:unfired_rod_mold', 1.0, null, null);
 	event.itemHeat('tfg:unfired_spindle_head_mold', 1.0, null, null);
@@ -204,7 +207,10 @@ function registerTFGItemSize(event) {
 	event.itemSize("gtceu:huge_duct_pipe", "normal", "medium", "huge_duct_pipe");
 
 	// Nuclear Rod
-	event.itemSize(Ingredient.of("#tfg:fission_rods"), "very_large", "heavy");
+	event.itemSize(Ingredient.of("#tfg:fission_rods"), "very_large", "very_heavy");
+
+	// Repair Kit
+	event.itemSize(Ingredient.of("#forge:repair_kit_materials"), "small", "medium");
 
 	// Cables
 	event.itemSize(Ingredient.of("#forge:single_cables").or("#forge:single_wires"), "tiny", "very_light", "cables_1x");
@@ -327,8 +333,8 @@ function registerTFGItemSize(event) {
 	)
 
 	//Universal Compost Bags
-	event.itemSize("tfg:universal_compost_browns_bag", "tiny", "medium")
-	event.itemSize("tfg:universal_compost_greens_bag", "tiny", "medium")
+	event.itemSize("tfg:universal_compost_browns_bag", "tiny", "light");
+	event.itemSize("tfg:universal_compost_greens_bag", "tiny", "light");
 
 
 	//Crafting Station
@@ -370,15 +376,22 @@ function registerTFGSupportData(event) {
 	event.support("tfg:rebar_support_horizontal", 4, 4, 8, "rebar_support");
 	event.support("tfg:steel_support_horizontal", 6, 6, 16, "steel_support");
 
-	const other_stone = ['migmatite', 'pyroxenite', 'travertine', 'keratophyre', 'anorthosite', 'norite', 'argillite', 'trachyte', 'komatiite', 'phonolite', 'permafrost', 'red_granite', 'stone'];
-	const stone_types = global.TFC_STONE_TYPES.concat(other_stone);
-
-	stone_types.forEach((stone) => {
-		event.support(`tfg:${stone}_support_horizontal`, 2, 2, 4, `${stone}_support`);
-	});
+	for (let [rockId, rock] of Object.entries(global.BIG_ROCK_TABLE)) {
+		if (rock.support) {
+			if (rockId === "light_concrete" || rockId === "dark_concrete")
+				continue;
+			event.support(`${rock.support}_horizontal`, 2, 2, 4, `${rockId}_support`);
+		}
+	}
 
 	global.AD_ASTRA_WOOD.forEach((wood) => {
 		event.support(`tfg:${wood.name}_support_horizontal`, 2, 2, 4, `${wood.name}_support`);
+	});
+	global.WAB_WOOD.forEach((wood) => {
+		event.support(`tfg:wood/support/${wood.name}_horizontal`, 2, 2, 4, `${wood.name}_support`);
+	});
+	global.TFG_NEW_WOOD_TYPES.forEach((wood) => {
+		event.support(`tfg:wood/support/${wood.name}_horizontal`, 2, 2, 4, `${wood.name}_support`);
 	});
 }
 

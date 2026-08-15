@@ -455,5 +455,39 @@ const registerGTCEURecipes = (event) => {
 
 	event.replaceInput({ id: 'gtceu:shaped/cracking_unit' }, '#gtceu:circuits/hv', '#gtceu:circuits/ev')
 
+  // Allow alternate rubbers for hazmat pieces
 
+  const HAZMAT_PIECES_TO_REPLACE = [
+    "chestpiece",
+    "leggings",
+    "boots"
+  ]
+  HAZMAT_PIECES_TO_REPLACE.forEach(piece => {
+    event.replaceInput({ id: `gtceu:assembler/hazmat_${piece}` },
+      '#forge:plates/rubber', '#tfg:rubber_plates');
+  })
+
+  	// Buff Bauxite Line
+
+	global.modifyRecipe(event, "gtceu:mixer/bauxite_slurry_from_washed_bauxite", {
+        newId: "tfg:bauxite_slurry_from_washed_bauxite",
+        itemInputs: { "forge:purified_ores/bauxite": 24 },
+    	fluidReplacements: { "forge:water": "minecraft:water" }
+    })
+
+	global.modifyRecipe(event, "gtceu:mixer/bauxite_slurry_from_crushed_bauxite", {
+        newId: "tfg:bauxite_slurry_from_crushed_bauxite",
+        itemInputs: { "forge:crushed_ores/bauxite": 24 },
+    	fluidReplacements: { "forge:water": "minecraft:water" }
+    })
+
+	event.remove({ id: 'gtceu:electromagnetic_separator/bauxite_slag_separation' })
+
+	event.recipes.gtceu.electromagnetic_separator('tfg:bauxite_slag_separation')
+		.itemInputs(Item.of('gtceu:bauxite_slag_dust', 1))
+		.itemOutputs(Item.of('gtceu:salt_dust', 1))
+		.chancedOutput(Item.of('gtceu:chromium_dust', 1), 7500, 0)
+		.chancedOutput(Item.of('gtceu:neodymium_dust', 1), 2000, 0)
+		.duration(2.5*20)
+		.EUt(GTValues.VA[GTValues.MV])
 }

@@ -4,7 +4,8 @@
 function registerTFGDirtRecipes(event) {
 
 	// Dirt creation
-	event.recipes.gtceu.macerator('tfg:dirt_from_bio_chaff')
+	event.remove({ id: 'gtceu:macerator/dirt_from_bio_chaff' })
+	event.recipes.gtceu.macerator('tfg:loam_dirt_from_bio_chaff')
 		.itemInputs('gtceu:bio_chaff')
 		.itemOutputs('tfc:dirt/loam')
 		.duration(300)
@@ -223,6 +224,11 @@ function registerTFGDirtRecipes(event) {
 		event.shapeless(`tfg:muddy_roots/${dirtType}`, [`tfg:mud/${dirtType}`, 'tfc:tree_roots'])
 			.id(`tfg:shapeless/muddy_roots_${dirtType}`);
 	});
+
+	// Drying peat into bricks
+
+	event.recipes.firmalife.drying(`4x tfg:dried_peat_brick`, `tfc:peat`)
+		.id(`tfg:drying/peat_drying`);
 
 
 	// #region Wattle and daub

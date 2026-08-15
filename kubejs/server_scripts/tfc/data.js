@@ -34,6 +34,21 @@ const registerTFCHeats = (event) => {
 
 
 const registerTFCFuels = (event) => {
+	event.fuel('tfg:dried_peat_brick', 627, 750, 0.7)
+
+	event.fuel('patchouli:guide_book', 50, 199, 0.7)
+	event.fuel('ftbquests:book', 50, 199, 0.7)
+	event.fuel('tfc:wool', 150, 199, 0.7)
+	event.fuel('primitive_creatures:grh', 150, 199, 0.7)
+	event.fuel('tfc:straw', 150, 199, 0.7)
+	event.fuel('#tfc:moss', 150, 199, 0.7)
+	event.fuel('beneath:crimson_straw', 150, 199, 0.7)
+	event.fuel('beneath:warped_straw', 150, 199, 0.7)
+	event.fuel('tfg:groundcover/palm_husk', 150, 199, 0.7)
+	event.fuel('tfg:plant/moss_campion', 150, 199, 0.7)
+	event.fuel('tfg:plant/elegant_sunburst_lichen', 150, 199, 0.7)
+	event.fuel('tfc:blubber', 400, 650, 0.4)
+
 	event.fuel('gtceu:coke_gem', 1415, 4400, 1.0)
 	event.fuel('gtceu:coke_dust', 1415, 1200, 0.95)
 
@@ -51,6 +66,23 @@ const registerTFCFuels = (event) => {
 	event.fuel('gtceu:coal_dust', 1415, 600, 0.85)
 	event.fuel('gtceu:small_coal_dust', 1415, 600 / 4, 0.85)
 	event.fuel('gtceu:tiny_coal_dust', 1415, 600 / 9, 0.85)
+
+	event.fuel('tfg:wood/wood/beech', 720, 3000, 0.95)
+    event.fuel('tfg:wood/log/beech', 720, 3000, 0.95)
+	event.fuel('tfg:wood/stripped_wood/beech', 720, 3000, 0.95)
+    event.fuel('tfg:wood/stripped_log/beech', 720, 3000, 0.95)
+    event.fuel('tfg:wood/wood/araucaria', 627, 3000, 0.95)
+    event.fuel('tfg:wood/log/araucaria', 627, 3000, 0.95)
+    event.fuel('tfg:wood/stripped_wood/araucaria', 627, 3000, 0.95)
+    event.fuel('tfg:wood/stripped_log/araucaria', 627, 3000, 0.95)
+	event.fuel('tfg:wood/wood/mahoe', 651, 3000, 0.95)
+    event.fuel('tfg:wood/log/mahoe', 651, 3000, 0.95)
+	event.fuel('tfg:wood/stripped_wood/mahoe', 651, 3000, 0.95)
+    event.fuel('tfg:wood/stripped_log/mahoe', 651, 3000, 0.95)
+    event.fuel('wan_ancient_beasts:ginkgo_wood', 690, 3000, 0.95)
+    event.fuel('wan_ancient_beasts:ginkgo_log', 690, 3000, 0.95)
+    event.fuel('wan_ancient_beasts:stripped_ginkgo_wood', 690, 3000, 0.95)
+    event.fuel('wan_ancient_beasts:stripped_ginkgo_log', 690, 3000, 0.95)
 }
 
 
@@ -61,6 +93,9 @@ const registerTFCLampFuels = (event) => {
 	event.lampFuel('gtceu:oil_medium', '#tfc:lamps', 1000)
 	event.lampFuel('gtceu:oil_heavy', '#tfc:lamps', 1000)
 	event.lampFuel('gtceu:seed_oil', '#tfc:lamps', 7000)
+	event.lampFuel('gtceu:fish_oil', '#tfc:lamps', 7000)
+	event.lampFuel('tfg:peanut_oil', '#tfc:lamps', 7000)
+	event.lampFuel('tfg:palm_oil', '#tfc:lamps', 7000)
 	event.lampFuel("gtceu:glowstone", "#tfc:lamps", -1)
 }
 
@@ -122,6 +157,6 @@ const registerTFCFertilizers = (event) => {
 
 
 const registerTFCKnappingTypes = (event) => {
-	event.knappingType('minecraft:flint', 1, 1, 'tfc:item.knapping.stone', true, false, true, 'minecraft:flint', 'tfg:flint')
-	event.knappingType('tfc:straw', 4, 4, 'tfc:item.knapping.leather', false, false, false, 'tfc:straw', 'tfg:straw')
+	event.knappingType('minecraft:flint', 2, 1, 'tfc:item.knapping.stone', false, false, true, 'minecraft:flint', 'tfg:flint')
+	event.knappingType('tfc:straw', 4, 4, 'tfc:item.knapping.leather', true, false, false, 'tfc:straw', 'tfg:straw')
 }

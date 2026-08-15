@@ -85,7 +85,11 @@ function registerTFCItemTags(event) {
 		"primitive_creatures:reh",
 		"species:harpoon",
 		"species:crankbow",
-		"tfg:trowel"
+		"tfg:trowel",
+		"tfc:ceramic/pot",
+		"minecraft:lead",
+		"gtceu:brick_wooden_form",
+		"firmalife:watering_can"
 	];
 	usableOnToolRack.forEach((entry) => {
 		event.add("tfc:usable_on_tool_rack", entry);
@@ -209,6 +213,7 @@ function registerTFCItemTags(event) {
 	event.add("tfc:forge_fuel", "gtceu:small_coal_dust");
 	event.add("tfc:forge_fuel", "gtceu:tiny_coal_dust");
 
+	event.add("tfc:forge_fuel", "tfg:dried_peat_brick");
 	event.add("tfc:forge_fuel", "beneath:cursecoal");
 
 	event.add("tfc:forge_fuel", "gtceu:coke_gem");
@@ -463,7 +468,7 @@ function registerTFCItemTags(event) {
     event.add('forge:dyes/green', 'tfc:powder/malachite')
     event.add('forge:dyes/brown', 'tfc:powder/garnierite')
     event.add('forge:dyes/yellow', 'tfc:powder/limonite')
-    event.add('forge:dyes/yellow', 'tfc:powder/gold')
+    event.add('forge:dyes/yellow', 'tfc:powder/native_gold')
 
 	//Hanging Signs Soft & Hard Wood
 	global.TFC_EQUIPMENT_METALS.forEach(metal => {
@@ -490,9 +495,22 @@ function registerTFCItemTags(event) {
 
     event.add('tfc:starts_fires_with_items', 'gtceu:matches');
     event.add('tfc:starts_fires_with_durability', 'gtceu:matchbox');
-    event.add('tfc:starts_fires_with_durability', 'gtceu:invar_lighter');
-    event.add('tfc:starts_fires_with_durability', 'gtceu:platinum_lighter');
     event.add('forge:tools/igniter', 'tfc:firestarter');
+
+	event.add('tfc:firepit_fuel', 'tfc:groundcover/driftwood');
+	event.add('tfc:firepit_logs', 'tfc:groundcover/driftwood');
+	event.add('tfc:pit_kiln_logs', 'tfc:groundcover/driftwood');
+	event.add('firmalife:oven_fuel', 'tfc:groundcover/driftwood');
+	event.add('tfc:firepit_kindling', '#tfc:moss');
+	event.add('tfc:firepit_kindling', 'tfc:wool');
+	event.add('tfc:firepit_kindling', 'tfc:blubber');
+	event.add('tfc:firepit_kindling', 'tfg:plant/moss_campion');
+	event.add('tfc:firepit_kindling', 'tfg:plant/elegant_sunburst_lichen');
+	event.add('tfc:firepit_kindling', 'primitive_creatures:grh');
+	event.add('tfc:firepit_kindling', 'patchouli:guide_book');
+	event.add('tfc:firepit_kindling', 'ftbquests:book');
+	event.add('tfc:firepit_logs', '#tfc:firepit_kindling');
+	event.add('tfc:firepit_fuel', '#tfc:firepit_kindling');
 
     //TODO: properly allow GT fluid containers to work with TFC crafting recipes.
     /** @type {{Item[]}} */
@@ -625,6 +643,27 @@ function registerTFCBlockTags(event) {
 	event.add('tfg:dead_crops', "tfc:dead_crop/melon");
 	event.add('tfg:dead_crops', "tfc:dead_crop/red_bell_pepper");
 	event.add('tfg:dead_crops', "tfc:dead_crop/yellow_bell_pepper");
+
+	event.add('minecraft:logs', '#tfc:fruit_tree_branch');
+
+	// Glass
+	event.add('tfc:mineable_with_glass_saw', 'ae2:quartz_glass');
+	event.add('tfc:mineable_with_glass_saw', 'ae2:quartz_vibrant_glass');
+	event.add('tfc:mineable_with_glass_saw', 'gtceu:tempered_glass');
+	event.add('tfc:mineable_with_glass_saw', 'gtceu:laminated_glass');
+	event.add('tfc:mineable_with_glass_saw', 'gtceu:fusion_glass');
+	event.add('tfc:mineable_with_glass_saw', 'gtceu:cleanroom_glass');
+	event.add('tfc:mineable_with_glass_saw', 'tfg:casings/machine_casing_bioculture_glass');
+	event.add('tfc:mineable_with_glass_saw', 'expatternprovider:assembler_matrix_glass');
+	event.add('tfc:mineable_with_glass_saw', 'create:framed_glass_door');
+	event.add('tfc:mineable_with_glass_saw', 'create:framed_glass_trapdoor');
+	event.add('tfc:mineable_with_glass_saw', '#minecraft:impermeable'); // idk what this tag does but every window block has it
+	event.add('tfc:mineable_with_glass_saw', 'createdeco:andesite_window_pane');
+	event.add('tfc:mineable_with_glass_saw', 'createdeco:copper_window_pane');
+	event.add('tfc:mineable_with_glass_saw', 'createdeco:iron_window_pane');
+	event.add('tfc:mineable_with_glass_saw', 'createdeco:industrial_iron_window_pane');
+	event.add('tfc:mineable_with_glass_saw', 'createdeco:brass_window_pane');
+	event.add('tfc:mineable_with_glass_saw', 'createdeco:zinc_window_pane');
 }
 
 /** @param {TagEvent.Fluid} event */

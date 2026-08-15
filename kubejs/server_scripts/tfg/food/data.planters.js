@@ -4,6 +4,8 @@
 /** @param {Internal.TFCDataEventJS} event */
 function registerTFGFLPlanters(event) {
 	const $FarmlandBlockEntity = Java.loadClass("net.dries007.tfc.common.blockentities.FarmlandBlockEntity")
+	const $PalmTree = Java.loadClass('su.terrafirmagreg.core.common.data.PalmTrees');
+	const PALMS = $PalmTree.values().map(palm => palm.getSerializedName());
 
 	//#region Earth
 
@@ -179,7 +181,7 @@ function registerTFGFLPlanters(event) {
 		3,
 		0.15,
 		"tfg:ghost_pepper_seeds",
-		"tfg:ghost_pepper_product",
+		"beneath:ghost_pepper",
 		$FarmlandBlockEntity.NutrientType.NITROGEN,
 		[
 			"tfg:block/crop/ghost_pepper_1",
@@ -227,6 +229,46 @@ function registerTFGFLPlanters(event) {
 		],
 		null
 	);
+
+	PALMS.forEach(palm => {
+		if (palm !== 'coconut') {
+			event.firmalifePlantable(
+				`tfg:palm_tree/${palm}_sapling`,
+				'hanging',
+				2,
+				4,
+				0.5,
+				`3x tfg:food/${palm}`,
+				`6x tfg:food/${palm}`,
+				$FarmlandBlockEntity.NutrientType.POTASSIUM,
+				[
+					'tfg:block/palm_tree/palm_fruit_planter_0',
+					'tfg:block/palm_tree/palm_fruit_planter_1',
+					'tfg:block/palm_tree/palm_fruit_planter_2',
+					'tfg:block/palm_tree/palm_fruit_planter_3',
+				],
+				`tfg:block/palm_tree/palm_fruit_planter_${palm}`
+			);
+		} else {
+			event.firmalifePlantable(
+				`tfg:palm_tree/${palm}_sapling`,
+				'hanging',
+				2,
+				4,
+				1,
+				`3x tfg:palm_tree/${palm}_fruit_green`,
+				`3x tfg:palm_tree/${palm}_fruit_brown`,
+				$FarmlandBlockEntity.NutrientType.POTASSIUM,
+				[
+					'tfg:block/palm_tree/palm_fruit_planter_0',
+					'tfg:block/palm_tree/palm_fruit_planter_1',
+					'tfg:block/palm_tree/palm_fruit_planter_2',
+					'tfg:block/palm_tree/palm_fruit_planter_3',
+				],
+				`tfg:block/palm_tree/palm_fruit_planter_${palm}`
+			);
+		}
+	});
 
 	//#endregion
 	//#region Mars

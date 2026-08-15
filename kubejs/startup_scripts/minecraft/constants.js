@@ -18,19 +18,22 @@ global.MINECRAFT_HIDED_ITEMS = [
 	"minecraft:structure_block", 
 
     // unobtainable but used in worldgen
+    "minecraft:torch",
     "minecraft:lantern",
     "minecraft:raw_iron_block",
 	"minecraft:infested_deepslate",
+    "minecraft:golden_carrot",
     // unobtainable but used for recipe displays
 	"minecraft:grass_block", 
     "minecraft:furnace",
     // mob heads
-    "minecraft:player_head",
 	"minecraft:piglin_head", 
 	"minecraft:zombie_head", 
 	"minecraft:dragon_head", 
 	"minecraft:creeper_head", 
 	"minecraft:wither_skeleton_skull", 
+    // quest reward
+    "minecraft:grass",
 ];
 
 global.MINECRAFT_DYE_NAMES = [

@@ -5,16 +5,16 @@
  * 
  * @param {TagEvent.Item} event 
  */
-const registerMinecraftItemTags = (event) => {
-	global.MINECRAFT_HIDED_ITEMS.forEach(item => {
-		event.add('c:hidden_from_recipe_viewers', item)
-	})
-	
+const registerMinecraftItemTags = (event) => {	
 	event.removeAllTagsFrom("minecraft:lantern");
 	event.removeAllTagsFrom("minecraft:raw_iron_block");
 	event.removeAllTagsFrom("minecraft:grass_block");
 	event.removeAllTagsFrom("minecraft:infested_deepslate");
 	event.removeAllTagsFrom("minecraft:furnace");
+
+	global.MINECRAFT_HIDED_ITEMS.forEach(item => {
+		event.add('c:hidden_from_recipe_viewers', item)
+	})
 
 	// Hide potions
 	event.add('c:hidden_from_recipe_viewers', /minecraft.*potion.*/)
@@ -78,13 +78,6 @@ const registerMinecraftBlockTags = (event) => {
 	event.add('minecraft:enderman_holdable', '#forge:gravel')
 	event.add('minecraft:enderman_holdable', '#forge:sand')
 	event.add('minecraft:enderman_holdable', '#forge:cobblestone')
-	event.add('minecraft:enderman_holdable', '#tfc:plants')
-	event.add('minecraft:enderman_holdable', '#tfg:plants/beneath')
-	event.add('minecraft:enderman_holdable', '#tfg:moon_plants')
-	event.add('minecraft:enderman_holdable', '#tfg:mars_plants')
-	event.add('minecraft:enderman_holdable', '#tfg:venus_plants')
-	event.add('minecraft:enderman_holdable', '#tfg:mercury_plants')
-	event.add('minecraft:enderman_holdable', '#tfg:europa_plants')
 	event.add('minecraft:enderman_holdable', 'tfc:pumpkin')
 	event.add('minecraft:enderman_holdable', 'tfc:melon')
 	event.add('minecraft:enderman_holdable', 'betterend:cave_pumpkin')

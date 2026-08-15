@@ -57,10 +57,14 @@ function registerSpeciesRecipes(event) {
 
 	event.shaped('species:harpoon', [
 		'A',
-		'B',
 		'B'
 	], {
-		A: 'tfc:metal/javelin_head/wrought_iron',
+		A: [
+			'tfc:metal/javelin_head/bronze', 
+			'tfc:metal/javelin_head/bismuth_bronze',
+			'tfc:metal/javelin_head/black_bronze', 
+			'tfc:metal/javelin_head/wrought_iron'
+		],
 		B: 'firmaciv:rope_coil'
 	}).id('tfg:shaped/harpoon')
 
@@ -118,6 +122,7 @@ function registerSpeciesRecipes(event) {
 		.itemOutputs('species:wicked_mask')
 		.EUt(GTValues.VA[GTValues.ULV])
 		.duration(200)
+        .circuit(1)
 
 	event.recipes.firmalife.mixing_bowl()
 		.outputItem('2x species:wicked_treat')
@@ -167,12 +172,12 @@ function registerSpeciesRecipes(event) {
 
 	event.recipes.gtceu.macerator('tfg:werefang')
 		.itemInputs("species:werefang")
-		.itemOutputs("minecraft:bone_meal")
+		.itemOutputs("3x minecraft:bone_meal")
 		.duration(50)
 		.EUt(2)
 		.category(GTRecipeCategories.MACERATOR_RECYCLING);
 
-	event.recipes.tfc.quern("minecraft:bone_meal", "species:werefang")
+	event.recipes.tfc.quern("3x minecraft:bone_meal", "species:werefang")
 		.id("tfg:quern/werefang")
 
 	event.recipes.gtceu.macerator('tfg:bone_spike')

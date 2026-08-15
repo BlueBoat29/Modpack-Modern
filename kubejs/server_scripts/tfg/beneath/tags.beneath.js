@@ -149,8 +149,8 @@ function registerTFGBeneathBlockTags(event) {
 	event.add('minecraft:base_stone_nether', "#minecraft:sand");
 	event.add('minecraft:base_stone_nether', "#forge:sandstone");
 
-	event.add('tfc:creeping_plantable_on', '#minecraft:base_stone_nether')
-	event.add('tfc:creeping_stone_plantable_on', '#minecraft:base_stone_nether')
+	event.add('tfc:creeping_plantable_on', '#forge:stone')
+	event.add('tfc:creeping_stone_plantable_on', '#forge:stone')
 	event.add('minecraft:axolotls_spawnable_on', '#minecraft:base_stone_nether')
 	event.add('minecraft:frogs_spawnable_on', '#minecraft:base_stone_nether')
 	event.add('beneath:nether_bush_plantable_on', '#minecraft:base_stone_nether')
@@ -205,6 +205,7 @@ function registerTFGBeneathBlockTags(event) {
 	event.add('minecraft:mineable/hoe', 'minecraft:cobweb');
 	event.add('minecraft:mineable/shovel', 'minecraft:cobweb');
 	event.add('minecraft:mineable/axe', 'minecraft:cobweb');
+	event.remove('minecraft:mineable/sword', 'minecraft:cobweb');
 
 	event.add("beneath:nether_bush_plantable_on", "#tfc:clay_grass");
 	event.add("minecraft:small_dripleaf_placeable", "#tfc:clay_grass");
@@ -255,6 +256,12 @@ function registerTFGBeneathPlacedFeatures(event) {
 	event.add('tfg:nether_lakes_and_geodes', "tfg:nether/terrain/spring_water_lake");
 	event.add('tfg:nether_lakes_and_geodes', "minecraft:basalt_pillar");
 	event.add('tfg:nether_lakes_and_geodes', "tfg:earth/geode/amethyst");
+	event.add('tfg:nether_lakes_and_geodes', "tfg:earth/geode/barite")
+	event.add('tfg:nether_lakes_and_geodes', "tfg:earth/geode/calcite")
+	event.add('tfg:nether_lakes_and_geodes', "tfg:earth/geode/gypsum")
+	event.add('tfg:nether_lakes_and_geodes', "tfg:earth/geode/opal")
+	event.add('tfg:nether_lakes_and_geodes', "tfg:earth/geode/pyrite")
+	event.add('tfg:nether_lakes_and_geodes', "tfg:earth/geode/red_garnet")
 	event.add('tfg:nether_lakes_and_geodes', 'tfg:nether/terrain/cave_column')
 	event.add('tfg:nether_lakes_and_geodes', 'tfg:nether/terrain/large_cave_spike')
 	event.add('tfg:nether_lakes_and_geodes', 'tfg:nether/terrain/huge_column');

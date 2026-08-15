@@ -8,11 +8,11 @@ const NEW_MOB_MAX_HP = {
 	// beneath mobs
 	"minecraft:piglin": 20,
 	"minecraft:wither_skeleton": 30,
-	"species:leaf_hanger": 16,
-	"species:cliff_hanger": 16,
+	"species:leaf_hanger": 20,
+	"species:cliff_hanger": 20,
 	"species:spectre": 16,
-	"species:ghoul": 60,
-	"species:bewereager": 40,
+	"species:ghoul": 40,
+	"species:bewereager": 50,
 	"species:mammutilation": 50,
 
 	// moon mobs
@@ -37,7 +37,6 @@ const NEW_MOB_MAX_HP = {
 	"species:springling": 60,
 	"species:quake": 130,
 	"species:cruncher": 1200,
-	"wan_ancient_beasts:snatcher": 60,
 
 	// venus mobs
 	"endermanoverhaul:savanna_enderman": 86,
