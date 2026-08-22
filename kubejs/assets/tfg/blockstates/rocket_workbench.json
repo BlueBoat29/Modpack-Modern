@@ -1,0 +1,35 @@
+{
+	"variants": {
+		"facing=north,has_blueprint=false": {
+			"model": "tfg:block/rocket_workbench",
+			"y": 270
+		},
+		"facing=south,has_blueprint=false": {
+			"model": "tfg:block/rocket_workbench",
+			"y": 90
+		},
+		"facing=east,has_blueprint=false": {
+			"model": "tfg:block/rocket_workbench"
+		},
+		"facing=west,has_blueprint=false": {
+			"model": "tfg:block/rocket_workbench",
+			"y": 180
+		},
+		
+		"facing=north,has_blueprint=true": {
+			"model": "tfg:block/rocket_workbench_blueprint",
+			"y": 270
+		},
+		"facing=south,has_blueprint=true": {
+			"model": "tfg:block/rocket_workbench_blueprint",
+			"y": 90
+		},
+		"facing=east,has_blueprint=true": {
+			"model": "tfg:block/rocket_workbench_blueprint"
+		},
+		"facing=west,has_blueprint=true": {
+			"model": "tfg:block/rocket_workbench_blueprint",
+			"y": 180
+		}
+	}
+}
