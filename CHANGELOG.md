@@ -1,11 +1,58 @@
 # Changelog
 
 ## Unreleased
+### Breaking changes
+- Chromium through Ferrochrome now requires Circuit 2 @TomPlop
 ### Changes
+#### Ambiental
+- Tiger and lion clothing are now cooling instead of warming @ashleney
+- Rebalanced all clothing into several tiers. For warming: primitive and insulated have +2 warmth, wool has +4 warmth, and animal clothes have +8. For cooling: silk, burlap, and linen are -2 warmth, animal clothes have -4, and new phantom silk and red elk clothes have -8. Clothing that's more difficult to obtain has more durability and insulation to compensate. @ashleney
+- Armor no longer affects player temperature (yes this includes the blue steel diving suit, though it does still make you fireproof) @ashleney
+- All recipes have been changed @Pyritie
+- Added new clothing: phantom silk (cooling), red elk (cooling), and cotton @ashleney @Atraxia @Pyritie
+#### Other changes
+- Add more informations to the GUI of the Large Boiler and Geologic Vulcanizer (fluid consumption) @TomPlop
+- Geological Vulcanizer now consummes less Natural Gas with each parallel @TomPlop
+- The Gas Well now depletes fluid vein way slower (same as the MV Fluid Rig) @TomPlop
+- Added combustion engines for generating SU from combustible fuels. You can use any fluid that works in a GregTech combustion generator or gas turbine (#4766) @Pyritie
 - Added two more "start room" variations to mineshafts, and added monsters to it @Pyritie
 - Reduced the amount of mobs (and treasure) in Beneath towers, so they are more useful for traveling @Pyritie
+- Added a new crop: cotton! Find it in the Beneath @Pyritie
 - The harpoon can now also be crafted with bronze, has much more durability, and can be repaired @Pyritie
+- Using TFC alloying recipes in the EMI recipe tree now actually shows the correct ratios @ashleney
+- Zoglins and zombie horses now also drop some raw hide @Pyritie
+- Improved the anvil GUI when not using the anvil helper resource pack @ashleney
+- Changed the recipe for sequenced pulse generator to use brass instead of tin bronze (#4732) @Pyritie
+- Added easier recipes for crafting arrows out of bones (#4736) @Pyritie
+- Added some 3D molecules to the molecular structure view (#4754) @BlueBoat29
+- Added recipes to convert rose quartz tiles back into blocks (#4768) @applenper
+- Added more cloth blocks @Pyritie
+- Added earlier ways to compress fertilizers into their "pure" form which give 100% nutrients at once @Pyritie
+- Changed a bunch of textures
+- Added new quests for concrete and steel supports, and fixed the drum/crate quests missing black/bismuth bronze (#4784) @zxro
 ### Bug fixes
+- Fixed mobs suffocating to death inside supports @Pyritie
+- Fixed the hose pulley collecting "flowing" oil fluid instead of normal oil fluid @Pyritie
+- Fixed mussels and barnacles being placed on sand @Pyritie
+- Fixed illages having floating road blocks (#4730) @Filiipa
+- Fixed the bluemap resource pack so it understands the newer grass blocks (#4752) @jmecn
+- Fixed recipes not loading correctly on certain linux distros @Pyritie
+- Fixed flint knapping not consuming the flint when starting (#4744) @Pyritie
+### Mods
+#### ArborFirmaCraft
+- Added new EMI pages for tree tapping @Redeix
+#### TerraFirmaCraft
+- Fixed a crash when sometimes generating chunks with a sealed barrel from structures (such as in the Beneath) @Pyritie
+#### Wakes
+- Fixed several issues involving shaders
+#### Create: Fluid Logistic
+- Added CC:Tweaked compatibility
+- Fixed factory gauge promises overclearing
+- Fixed factory gauges connected to a fluid packager leading to world corruption
+#### ExtendedAE
+- Added exact mode for Precise Export Bus
+#### TACZ/PlayerRevive compatibility
+- Fixed an issue where holding sneak would make you "unsneak" for a tick every few seconds
 
 ## [0.13.7] - 7-08-2026
 ### Changes
