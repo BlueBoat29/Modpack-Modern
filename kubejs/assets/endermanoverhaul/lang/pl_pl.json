@@ -89,6 +89,7 @@
 	"item.endermanoverhaul.warped_forest_enderman_spawn_egg": "Jajo przyzywające endermana ze spaczonego lasu",
 	"item.endermanoverhaul.warped_pearl": "Spaczona perła",
 	"item.endermanoverhaul.windswept_hills_enderman_spawn_egg": "Jajo przyzywające księżycowego endermana",
+	"itemGroup.endermanoverhaul.main": "Enderman Overhaul",
 	"subtitles.endermanoverhaul.entity.ancient_pearl.hit": "Starożytna perła uderza",
 	"subtitles.endermanoverhaul.entity.bubble_pearl.hit": "Bąbelkowa perła pęka",
 	"subtitles.endermanoverhaul.entity.bubble_pearl.thrown": "Bąbelkowa perła jest rzucana",
@@ -118,7 +119,7 @@
 	"tooltip.endermanoverhaul.hood": "Pozwala spojrzeć na endermany, nie denerwując ich",
 	"tooltip.endermanoverhaul.icy_pearl": "Zamraża pobliskie cele przy trafieniu",
 	"tooltip.endermanoverhaul.not_bound": "Niepowiązane",
-	"tooltip.endermanoverhaul.soul_pearl_1": "Shift-PPM, by przypisać byt",
+	"tooltip.endermanoverhaul.soul_pearl_1": "Shift+PPM, aby przypisać byt",
 	"tooltip.endermanoverhaul.soul_pearl_2": "Teleportuje przypisany byt do celu",
 	"tooltip.endermanoverhaul.summoner_pearl": "Teleportuje pobliskie cele przy trafieniu",
 	"tooltip.endermanoverhaul.warped_pearl": "Aplikuje Odporność II podczas teleportowania"

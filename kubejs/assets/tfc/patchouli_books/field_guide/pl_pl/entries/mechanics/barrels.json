@@ -22,7 +22,7 @@
     {
       "type": "patchouli:text",
       "text": "$(li)Barrels can be filled by clicking an empty one on a fluid block in the world.$()$(li)Barrels will slowly fill up with water in the rain.$()$(li)Icicles melting above barrels also adds water to them.$()$(li)Sealing a barrel will eject items that are not in the center slot.$()",
-      "title": "Barrel Tips"
+      "title": "Wskazówki dotyczące beczek"
     },
     {
       "type": "patchouli:text",
@@ -85,7 +85,7 @@
           "Y": "tfc:wood/barrel/kapok[facing=north,rack=true,sealed=false]"
         }
       },
-      "name": "Sideways Barrels",
+      "name": "Poziome beczki",
       "text": "Sideways barrels show their sealed state using the $(thing)Tap$(). If the tap is sideways, it is sealed.",
       "enable_visualize": false
     },
@@ -98,7 +98,7 @@
       "images": [
         "tfc:textures/gui/book/tutorial/barrel_drip.png"
       ],
-      "text": "A barrel dripping.",
+      "text": "Kapiąca beczka.",
       "border": true
     }
   ],

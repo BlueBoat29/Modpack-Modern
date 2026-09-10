@@ -32,7 +32,7 @@
     {
       "type": "patchouli:text",
       "text": "Ocean floors are composed of $(l:the_world/geology#igneous_extrusive)igneous extrusive$() rock - rocks that are formed by magma which cools quickly. Underneath igneous extrusive rock will likely be a $(l:the_world/geology)igneous intrusive$() rock of the same $(item)grade$().$(br2)For example, under $(thing)Basalt$() (a mafic, igneous extrusive rock), will likely be $(thing)Gabbro$() (a mafic, igneous intrusive rock).",
-      "title": "Ocean Floors"
+      "title": "Dno oceaniczne"
     },
     {
       "type": "patchouli:text",
@@ -51,7 +51,7 @@
     {
       "type": "patchouli:text",
       "text": "Finally, in mountainous regions you might also see $(thing)uplift$(), where a metamorphic or igneous intrusive rock is found on the surface. Uplift rocks can be found above other continental sedimentary or higher-grade metamorphic rocks.$(br2)In addition, $(l:https://en.wikipedia.org/wiki/Dike_%28geology%29)Dikes$() - small vertical slices of igneous intrusive rock - may appear scattered around the world,",
-      "title": "Uplift Regions"
+      "title": "Obszary wypiętrzenia"
     },
     {
       "type": "patchouli:text",

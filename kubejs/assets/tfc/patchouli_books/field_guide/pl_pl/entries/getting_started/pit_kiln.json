@@ -1,5 +1,5 @@
 {
-  "name": "Pit Kilns",
+  "name": "Piece ziemne",
   "category": "tfc:getting_started",
   "icon": "tfc:textures/gui/book/icons/pit_kiln.png",
   "pages": [
@@ -24,7 +24,7 @@
         "tfc:textures/gui/book/tutorial/pit_kiln_4.png",
         "tfc:textures/gui/book/tutorial/pit_kiln_5.png"
       ],
-      "text": "Tutorial: creating a pit kiln.",
+      "text": "Samouczek: tworzenie pieca ziemnego.",
       "border": true
     }
   ],

@@ -66,6 +66,7 @@ function registerTFGPrimitiveItemTags(event) {
     event.add('tfg:lightweight_cloth', 'tfg:phantom_silk')
     event.add('tfg:lightweight_cloth', 'tfg:polycaprolactam_fabric')
 	event.add('forge:cloth', 'tfg:phantom_silk')
+	event.add('forge:cloth', 'tfc_textile:cotton_cloth')
 	event.add('forge:cloth', 'tfg:polycaprolactam_fabric')
 	event.add('tfc:high_quality_cloth', 'tfg:phantom_silk')
 	event.add('tfc:high_quality_cloth', 'tfg:polycaprolactam_fabric')
@@ -98,6 +99,8 @@ function registerTFGPrimitiveItemTags(event) {
 	event.add('tfg:artisan_table_tools', '#forge:tools/buzzsaws')
 	event.add('tfg:artisan_table_tools', 'tfc:gem_saw')
 	event.add('tfg:artisan_table_tools', '#create:sandpaper')
+
+	event.add('tfg:feathers', ['minecraft:feather', 'tfg:wraptor_wool', 'wan_ancient_beasts:glider_feather']);
 }
 
 function registerTFGPrimitiveBlockTags(event) {
